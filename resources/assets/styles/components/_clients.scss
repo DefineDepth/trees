@@ -1,0 +1,30 @@
+.clients {
+  &__section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  
+  &__image {}
+
+  &__content {
+    margin-top: 72px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 20px;
+
+    &::before {
+      content: '\\';
+      color: var(--color-red);
+      margin-right: 10px;
+    }
+  }
+}

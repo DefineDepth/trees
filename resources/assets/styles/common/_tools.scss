@@ -1,0 +1,55 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  // xxl: 1320px
+  xxl: 1580px
+);
+
+
+
+.ratio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    width: 100%;
+    content: "";
+  }
+}
+
+$aspect-ratios: ((1:1),
+  (2:1),
+  (2:3),
+  (3:2),
+  (3:4),
+  (4:3),
+  (16:9)) !default;
+
+//
+// Generate a series of ratio classes to be used like so:
+//
+// @example
+//   <div class="ratio ratio-16:9">
+//
+//
+@each $ratio in $aspect-ratios {
+
+  @each $antecedent,
+  $consequent in $ratio {
+    @if (type-of($antecedent) !=number) {
+      @error "`#{$antecedent}` needs to be a number."
+    }
+
+    @if (type-of($consequent) !=number) {
+      @error "`#{$consequent}` needs to be a number."
+    }
+
+    &.ratio-#{$antecedent}\:#{$consequent}::before {
+      padding-bottom: ($consequent/$antecedent) * 100%;
+    }
+  }
+}

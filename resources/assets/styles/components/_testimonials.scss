@@ -1,0 +1,41 @@
+.testimonials {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  
+  &__content {}
+
+  &__header {
+    display: flex;
+  }
+
+  &__stars {
+    display: flex;
+
+    span {
+      font-size: 32px;
+      color: var(--color-teal);
+    }
+
+    span + span {
+      margin-left: 10px;
+    }
+  }
+
+  &__author {
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  &__text {
+    font-size: 42px;
+    line-height: 64px;
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+}
