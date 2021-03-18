@@ -8,8 +8,10 @@
       With the launch of Seattle’s Best Coffee at Subway restaurants, a twist …
     </p>
 
-    <a href="#" class="clients__button">
-      Case Study
-    </a>
+    <div class="clients__button">
+      <a href="#" class="button -dash">
+        Case Study
+      </a>
+    </div>
   </div>
 </div>

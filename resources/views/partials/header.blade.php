@@ -1,10 +1,14 @@
-<header class="banner">
-  <div class="container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
-    <nav class="nav-primary">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-      @endif
-    </nav>
+<header class="headerBar">
+  <div class="headerBar__container">
+    <div class="headerBar__menu">
+      <button class="headerBar__menu__button">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="headerBar__logo">
+      TREES
+    </div>
   </div>
 </header>

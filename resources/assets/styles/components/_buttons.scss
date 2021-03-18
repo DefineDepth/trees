@@ -1,0 +1,23 @@
+button {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+.button.-dash {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+
+  &::before {
+    content: '\\';
+    color: var(--color-red);
+    margin-right: 8px;
+  }
+
+  &:hover {
+    // text-decoration: none;
+  }
+}

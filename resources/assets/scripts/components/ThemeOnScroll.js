@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger, no-console */
-
 // import APP from '../util/global';
 // import ScrollMagic from 'scrollmagic'
 import gsap from '../vendors/gsap.min.js'
@@ -16,7 +14,13 @@ export default class ThemeOnScroll {
       gsap.timeline({
         scrollTrigger: {
           trigger: el,
+          scrub: 1,
+
           onEnter: () => {
+            console.log("onEnter");
+            document.querySelector('.body-theme').classList.add('dark-theme');
+          },
+          onEnterBack: () => {
             console.log("onEnter");
             document.querySelector('.body-theme').classList.add('dark-theme');
           },
@@ -28,7 +32,8 @@ export default class ThemeOnScroll {
             console.log("onLeave");
             document.querySelector('.body-theme').classList.remove('dark-theme');
           },
-          start: "bottom bottom",
+          start: "top center",
+          end: "bottom center",
         },
       });
     });

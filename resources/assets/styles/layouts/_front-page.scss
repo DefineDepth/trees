@@ -1,6 +1,11 @@
 .front-header {
-  padding-top: 340px;
-  padding-bottom: 320px;
+  padding-top: 320px;
+  padding-bottom: 140px;
+
+  @include media-below(lg) {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
 
   &__subtitle {
     font-weight: 500;
@@ -16,5 +21,33 @@
     line-height: 84px;
     margin-top: 40px;
     color: black;
+    
+    @include media-below(lg) {
+      font-size: 24px;
+      line-height: 38px;
+      margin-top: 22px;
+    }
+  }
+}
+
+.headline {
+  &__container {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    width: 40%;
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(100%);
+    }
+
+    span.is-visible {
+      position: relative;
+      transform: translateY(0);
+    }
   }
 }

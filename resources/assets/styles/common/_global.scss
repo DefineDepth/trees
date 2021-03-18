@@ -11,7 +11,6 @@ html {
 body {
   font-family: var(--font-primary);
   overflow-x: hidden;
-  // background-color: white;
   color: black;
   width: 100%;
   max-width: 100%;
@@ -20,35 +19,59 @@ body {
   line-height: 32px;
 }
 
-body.body-theme {
-  background-color: white !important;
+body {
+  background-color: white;
   transition: background-color 0.25s ease-out;
+
+  .text-grey {
+    color: rgba(black, 0.6);
+  }
+
+  .bg-grey {
+    background-color: #F7F7F7;
+  }
   
   h1, h2, h3, h4, h5, h6 {
     transition: color 0.25s ease-out;
-    color: black !important;
+    color: black;
   }
 
   button,
   a,
   p {
     transition: color 0.25s ease-out;
-    color: black !important;
+    color: black;
   }
   
   &.dark-theme {
-    background-color: black !important;
+    background-color: black;
+
+    .text-grey {
+      color: rgba(white, 0.4);
+    }
+
+    .bg-grey {
+      background-color: rgba(white, 0.15);
+    }
   
     h1, h2, h3, h4, h5, h6 {
-      color: white !important;
+      color: white;
     }
 
     button,
     a,
     p {
-      color: white !important;
+      color: white;
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .img-image {
@@ -69,4 +92,14 @@ body.body-theme {
 
 .bg-white {
   background-color: white;
+}
+
+.y-space {
+  margin-top: -20px;
+  margin-bottom: -20px;
+
+  > * {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

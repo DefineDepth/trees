@@ -2,6 +2,23 @@
   padding-top: 150px;
   padding-bottom: 150px;
 
+  .wrap {
+    position: relative;
+  }
+
+  .img-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 42vw;
+    width: 100%;
+
+    img {
+      object-position: left;
+    }
+  }
+
   &__image {}
 
   &__subtitle {
@@ -26,7 +43,7 @@
     margin-top: 12px;
   }
 
-  &__tags {
+  &__links {
     display: flex;
     margin-top: 72px;
 

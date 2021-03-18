@@ -1,5 +1,7 @@
 import ThemeOnScroll from '../components/ThemeOnScroll'
+// import animatedHeadline from '../autoload/animatedHeadline'
 import FronPageText from '../components/FrontPageText'
+import feather from 'feather-icons';
 
 export default {
   init() {
@@ -7,6 +9,7 @@ export default {
 
     new ThemeOnScroll;
     new FronPageText;
+    feather.replace();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
