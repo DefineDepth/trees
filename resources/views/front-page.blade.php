@@ -56,16 +56,18 @@
       </div>
     </div>
 
-    <div class="row y-space">
-      @php $post_count = 0; @endphp
-      @foreach ($posts_posts as $post)
-        @if ($post_count < 3)
-          <div class="col-lg-4 col-md-6">
-            @include('partials.content-post-col-3', ['post' => $post])
-          </div>
-          @php $post_count++; @endphp
-        @endif
-      @endforeach
+    <div class="swiper swiper-container -section">
+      <div class="row y-space swiper-wrapper">
+        @php $post_count = 0; @endphp
+        @foreach ($posts_posts as $post)
+          @if ($post_count < 3)
+            <div class="col-lg-4 col-md-6 swiper-slide">
+              @include('partials.content-post-col-3', ['post' => $post])
+            </div>
+            @php $post_count++; @endphp
+          @endif
+        @endforeach
+      </div>
     </div>
   </div>
 </section>

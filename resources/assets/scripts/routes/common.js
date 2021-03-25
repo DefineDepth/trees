@@ -1,6 +1,7 @@
 import ThemeOnScroll from '../components/ThemeOnScroll'
 // import animatedHeadline from '../autoload/animatedHeadline'
 import FronPageText from '../components/FrontPageText'
+import SectionSlider from '../components/SectionSlider'
 import feather from 'feather-icons';
 
 export default {
@@ -9,6 +10,7 @@ export default {
 
     new ThemeOnScroll;
     new FronPageText;
+    new SectionSlider;
     feather.replace();
   },
   finalize() {
