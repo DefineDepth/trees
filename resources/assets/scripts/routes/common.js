@@ -1,7 +1,11 @@
 import ThemeOnScroll from '../components/ThemeOnScroll'
 // import animatedHeadline from '../autoload/animatedHeadline'
 import FronPageText from '../components/FrontPageText'
-import SectionSlider from '../components/SectionSlider'
+import SectionPostSlider from '../components/SectionPostSlider'
+import SectionClientsSlider from '../components/SectionClientsSlider'
+import InstagramSlider from '../components/InstagramSlider'
+import MenuBarScroll from '../components/MenuBarScroll'
+import Menu from '../components/Menu'
 import feather from 'feather-icons';
 
 export default {
@@ -10,7 +14,11 @@ export default {
 
     new ThemeOnScroll;
     new FronPageText;
-    new SectionSlider;
+    new SectionPostSlider;
+    new SectionClientsSlider;
+    new InstagramSlider;
+    new MenuBarScroll;
+    new Menu;
     feather.replace();
   },
   finalize() {

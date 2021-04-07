@@ -1,11 +1,35 @@
 @import "~swiper/swiper-bundle.min.css";
 
-.swiper.-section .swiper {
+.swiper-section {
+  overflow: hidden;
+}
 
+.swiper.swiper-container.-section {
+  @include media-below(md) {
+    overflow: visible;
 
-  &-container {}
+    .row {
+      flex-wrap: nowrap;
+      margin: 0;
+    }
 
-  &-wrapper {}
+    .row > * {
+      padding: 0;
+      flex: unset;
+      flex-shrink: 0;
+      max-width: unset;
+    }
+  }
 
-  &-slide {}
+  .swiper-wrapper {
+    box-sizing: inherit;
+    width: unset;
+    
+    @include media-below(md) {
+      width: 100%;
+      box-sizing: content-box;
+    }
+  }
+
+  .swiper-slide {}
 }

@@ -22,11 +22,12 @@ class FrontPage extends Controller
     return get_field(__FUNCTION__);
   }
 
-  public function posts_posts()
+  public function posts()
   {
     $posts = get_posts([
       'post_type' => 'post',
-      'fields' => 'ids'
+      'fields' => 'ids',
+      'numberposts' => -1,
     ]) ?: [];
     return $posts;
   }

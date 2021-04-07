@@ -126,6 +126,17 @@ function locate_template($templates)
     return \locate_template(filter_templates($templates));
 }
 
+function get_page_id_by_template(string $template)
+{
+
+    $pages = get_pages(array(
+        'meta_key' => '_wp_page_template',
+        'meta_value' =>  $template
+    ));
+
+    return !empty($pages) ? $pages[0]->ID : null;
+}
+
 /**
  * Determine whether to show the sidebar
  * @return bool

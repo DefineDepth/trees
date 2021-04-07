@@ -41,7 +41,7 @@
 </section>
 
 
-<section class="front-blog__col-3">
+<section class="front-blog__col-3 swiper-section">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -56,10 +56,10 @@
       </div>
     </div>
 
-    <div class="swiper swiper-container -section">
+    <div class="swiper swiper-container -section js-post">
       <div class="row y-space swiper-wrapper">
         @php $post_count = 0; @endphp
-        @foreach ($posts_posts as $post)
+        @foreach ($posts as $post)
           @if ($post_count < 3)
             <div class="col-lg-4 col-md-6 swiper-slide">
               @include('partials.content-post-col-3', ['post' => $post])
@@ -123,7 +123,8 @@
     </div>
   
     <div class="img-bg">
-      <div class="ratio ratio-4:3">
+      {{-- <div class="ratio ratio-4:3"> --}}
+      <div class="ratio ratio-21:11">
         <img class="img-image img-image-ratio" src="{{ $about_image['url'] }}" alt="image">
       </div>
     </div>
@@ -135,21 +136,23 @@
   <div class="container">
 
     @php $post_count_2 = 0; @endphp
-    @foreach ($posts_posts as $post)
+    @foreach ($posts as $post)
       @if ($post_count_2 > 2)
-        <div class="row">
-          <div class="col-12">
-            <div class="sectionLink -pb-sm">
-              <div class="sectionLink__line"></div>
-              <div class="sectionLink__arrow">
-                <a href="#">
-                  <span class="icon" data-feather="arrow-right"></span>
-                </a>
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <div class="sectionLink -pb-sm">
+                <div class="sectionLink__line"></div>
+                <div class="sectionLink__arrow">
+                  <a href="#">
+                    <span class="icon" data-feather="arrow-right"></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          @include('partials.content-post-col-1', ['post' => $post])
         </div>
-        @include('partials.content-post-col-1')
         @endif
       @php $post_count_2++; @endphp
     @endforeach
@@ -158,20 +161,28 @@
 </section>
 
 
-<section class="clients__section js-theme-dark" data-theme="dark">
+<section class="clients__section swiper-section theme-dark-hidden js-theme-dark" data-theme="dark">
   <div class="container">
-    <div class="row">
-      @for ($i = 0; $i < 4; $i++)
-        <div class="col-lg-3 col-md-6">
-          @include('partials.content-clients')
-        </div>
-      @endfor
+    <div class="swiper swiper-container -section js-clients">
+      <div class="row clients-gap y-space swiper-wrapper">
+        @php
+          $loop = new WP_Query( array(
+            'post_type' => 'client',
+            'posts_per_page' => 4
+          ) ); 
+        @endphp
+        @foreach ($loop->posts as $post)
+          <div class="col-xl-3 col-lg-4 col-md-6 swiper-slide">
+            @include('partials.content-clients')
+          </div>
+        @endforeach
+      </div>
     </div>
   </div>
 </section>
 
 
-<section class="testimonials js-theme-dark" data-theme="dark">
+<section class="testimonials theme-dark-hidden js-theme-dark" data-theme="dark">
   <div class="container">
     <div class="row">
       <div class="col-lg-11">
@@ -201,37 +212,7 @@
 </section>
 
 
-<section class="instagram__section bg-grey">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h3 class="instagram__title">
-          @trees on Instagram
-        </h3>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-md-6">
-        <div class="instagram__feed">
-          <div class="ratio ratio-1:1 bg-black"></div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-md-6">
-        <div class="instagram__feed">
-          <div class="ratio ratio-1:1 bg-black"></div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-md-6">
-        <div class="instagram__feed">
-          <div class="ratio ratio-1:1 bg-black"></div>
-        </div>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-md-6">
-        <div class="instagram__feed">
-          <div class="ratio ratio-1:1 bg-black"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+@include('sections.instagram')
 
 
 @endsection

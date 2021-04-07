@@ -3,6 +3,7 @@
 namespace App\Fields;
 
 use App\Fields\FrontPage;
+use App\PostTypes\Client;
 
 
 // if (!function_exists('acf')) {
@@ -17,3 +18,4 @@ use App\Fields\FrontPage;
 
 
 new FrontPage();
+new Client;

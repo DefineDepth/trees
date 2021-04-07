@@ -1,3 +1,4 @@
+@import "common/fonts";
 @import "common/variables";
 @import "common/tools";
 
@@ -26,6 +27,11 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "layouts/front-page";
+@import "layouts/menu/background.scss";
+@import "layouts/menu/nav.scss";
+@import "layouts/insight";
+@import "layouts/portfolio";
+@import "layouts/about";
 
 @import "components/post-col-3";
 @import "components/front-about";

@@ -7,6 +7,11 @@
   &__header {
     display: flex;
     align-items: center;
+
+    @include media-below(md) {
+      margin-left: 0;
+      flex-direction: column;
+    }
   }
 
   &__stars {
@@ -17,6 +22,10 @@
       color: var(--color-teal);
       stroke-width: 1;
       fill: var(--color-teal);
+
+      @include media-below(md) {
+
+      }
     }
 
     .icon + .icon {
@@ -30,16 +39,31 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+
+    @include media-below(md) {
+      margin-left: 0;
+      margin-top: 24px;
+    }
   }
 
   &__text {
     font-size: 42px;
     line-height: 64px;
     margin-top: 30px;
+    
+    @include media-below(md) {
+      font-size: 24px;
+      line-height: 42px;
+      margin-top: 24px;
+    }
   }
 
   &__button {
     display: block;
     margin-top: 40px;
+
+    @include media-below(md) {
+      margin-top: 28px;
+    }
   }
 }

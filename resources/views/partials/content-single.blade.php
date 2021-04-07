@@ -1,13 +1,29 @@
-<article @php post_class() @endphp>
-  <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
-  </header>
-  <div class="entry-content">
-    @php the_content() @endphp
+<section class="posts-page__section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <article @php post_class('posts-page__article') @endphp>
+          <div class="posts-page__header">
+            <p class="posts-page__category">
+              {{ get_the_category($post)[0]->name }}
+            </p>
+
+            <h1 class="posts-page__title">
+              {!! get_the_title() !!}
+            </h1>
+
+            <p class="posts-page__excerpt">
+              {!! get_the_excerpt() !!}
+            </p>
+            
+            {{-- @include('partials/entry-meta') --}}
+          </div>
+        
+          <div class="posts-page__content">
+            @php the_content() @endphp
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php comments_template('/partials/comments.blade.php') @endphp
-</article>
+</section>

@@ -1,0 +1,41 @@
+.posts-page {
+  &__section {
+    padding-top: 280px;
+    padding-bottom: 160px;
+  }
+
+  &__article {}
+
+  &__header {}
+
+  &__category {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    color: var(--color-text-teal);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 500;
+  }
+
+  &__excerpt {
+    font-size: 40px;
+    line-height: 52px;
+    margin-top: 12px;
+  }
+
+  &__content {
+    margin-top: 35px;
+
+    p {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+}

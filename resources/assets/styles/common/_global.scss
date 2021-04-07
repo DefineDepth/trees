@@ -19,6 +19,13 @@ body {
   line-height: 32px;
 }
 
+.container {
+  @include media-below(sm) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
 body {
   background-color: white;
   transition: background-color 0.25s ease-out;
@@ -42,9 +49,21 @@ body {
     transition: color 0.25s ease-out;
     color: black;
   }
+
+  .theme-dark-hidden {
+    position: relative;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
   
   &.dark-theme {
     background-color: black;
+
+    .theme-dark-hidden {
+      pointer-events: auto;
+      opacity: 1;
+    }
 
     .text-grey {
       color: rgba(white, 0.4);
@@ -72,6 +91,11 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+}
+
+.pointer-events {
+  &-none { pointer-events: none !important; }
+  &-auto { pointer-events: auto !important; }
 }
 
 .img-image {

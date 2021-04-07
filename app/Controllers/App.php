@@ -6,6 +6,12 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+
+    public function footer_scheme()
+    {
+        return '-teal';
+    }
+
     public function siteName()
     {
         return get_bloginfo('name');
@@ -30,4 +36,21 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+
+    public function about_link()
+    {
+        return get_the_permalink(\App\get_page_id_by_template('views/template-about.blade.php'));
+    }
+
+    public function insight_link()
+    {
+        return get_the_permalink(\App\get_page_id_by_template('views/template-insight.blade.php'));
+    }
+
+    public function portfolio_link()
+    {
+        return get_the_permalink(\App\get_page_id_by_template('views/template-portfolio.blade.php'));
+    }
+
 }

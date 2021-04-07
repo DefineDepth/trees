@@ -79,7 +79,10 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "feather-icons": "^4.28.0",
+    "fs": "0.0.1-security",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
+    "module": "^1.2.5",
+    "popper.js": "^1.14.7",
+    "scrollmagic": "^2.0.8"
   }
 }

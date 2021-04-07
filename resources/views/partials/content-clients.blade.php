@@ -1,17 +1,32 @@
+@php
+$post = get_post($post);
+@endphp
 <div class="clients">
   <div class="clients__image">
-    <div class="ratio ratio-4:3 bg-white"></div>
+    {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, null], false, [
+      'class' => 'bg-image js-lazy',
+    ]); !!}
   </div>
 
   <div class="clients__content">
-    <p class="clients__text">
-      With the launch of Seattle’s Best Coffee at Subway restaurants, a twist …
-    </p>
+    @if ( $post->client_text )
+      <p class="clients__text">
+        {{ $post->client_text }}
+      </p>
+    @endif
 
-    <div class="clients__button">
-      <a href="#" class="button -dash">
-        Case Study
-      </a>
-    </div>
+    @if ( $post->client_button_link['title'] )
+      <div class="clients__button">
+        @if ( $post->client_button_link['url'] )
+          <a href="{{ $post->client_button_link['url'] }}" class="button -dash">
+            {{ $post->client_button_link['title'] }}
+          </a>
+        @else
+          <a href="#" class="button -dash">
+            {{ $post->client_button_link['title'] }}
+          </a>
+        @endif
+      </div>
+    @endif
   </div>
 </div>
