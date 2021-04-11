@@ -51,7 +51,7 @@
 </section>
 
 
-<section class="about-page-services__section theme-dark-hidden js-theme-dark">
+<section class="about-page-services__section">
   <div class="container">
 
     @for ($i = 0; $i < 3; $i++)

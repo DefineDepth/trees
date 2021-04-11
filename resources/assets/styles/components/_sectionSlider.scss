@@ -4,6 +4,21 @@
   overflow: hidden;
 }
 
+.clients__section.swiper-section {
+  @include media-below(sm) {
+    .container:last-child {
+      padding-left: 18vw;
+      padding-right: 18vw;
+    }
+  }
+
+  .swiper.swiper-container.-section {
+    @include media-below(sm) {
+      left: -12vw;
+    }
+  }
+}
+
 .swiper.swiper-container.-section {
   @include media-below(md) {
     overflow: visible;
@@ -18,12 +33,16 @@
       flex: unset;
       flex-shrink: 0;
       max-width: unset;
+
+      display: flex;
+      align-items: stretch;
     }
   }
 
   .swiper-wrapper {
     box-sizing: inherit;
     width: unset;
+    height: unset;
     
     @include media-below(md) {
       width: 100%;

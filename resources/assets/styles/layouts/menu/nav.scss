@@ -35,7 +35,9 @@
 .nav-social {
   // display: flex;
 
-  &__item {}
+  &__item {
+    font-weight: 700;
+  }
 
   > div {
     display: inline-block;
@@ -47,6 +49,7 @@
 
   > div + div {
     &::before {
+      font-weight: 700;
       display: inline-block;
       content: '\\';
       color: var(--color-red);
@@ -56,7 +59,7 @@
 
   a {
     font-size: 14px;
-    color: white !important;
+    color: white;
   }
 }
 
@@ -74,15 +77,15 @@
   }
 
   a {
-    transition: color 0.3s ease-in-out;
+    // transition: color 0.3s ease-in-out;
 
     &:hover {
-      color: var(--accent-color);
+      // color: var(--accent-color);
     }
   
     &:not([href]):not([tabindex]) {
       // color: var(--menu-full-font-primary);
-      &:hover { color: var(--accent-color); }
+      // &:hover { color: var(--accent-color); }
     }
   }
 }
@@ -111,7 +114,8 @@
     }
 
     &:hover {
-      color: white;
+      text-decoration: none;
+      color: var(--color-teal);
     }
   }
 }

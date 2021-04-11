@@ -1,7 +1,7 @@
 .about-page-info {
   &__section {
     padding-top: 300px;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 
     @include media-below(md) {
       padding-top: 120px;
@@ -36,6 +36,7 @@
     margin-bottom: 40px;
 
     @include media-below(md) {
+      font-size: 10px;
       margin-bottom: 22px;
     }
   }
@@ -74,8 +75,8 @@
 
 .about-page-services {
   &__section {
-    padding-top: 300px;
-    padding-bottom: 170px;
+    padding-top: 80px;
+    padding-bottom: 220px;
 
     @include media-below(md) {
       padding-top: 120px;
@@ -85,11 +86,16 @@
     .container > div + div {
       margin-top: 60px;
     }
+
+    .container > div:last-child {
+      border-bottom: 1px solid black;
+      padding-bottom: 60px;
+    }
   }
 
   &__content {
     padding-top: 60px;
-    border-top: 1px solid rgba(white, 0.4);
+    border-top: 1px solid black;
   }
 
   &__title {

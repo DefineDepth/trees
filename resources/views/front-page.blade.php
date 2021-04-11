@@ -48,7 +48,7 @@
         <div class="sectionLink -pb">
           <div class="sectionLink__line"></div>
           <div class="sectionLink__arrow">
-            <a href="#">
+            <a href="{{ $insight_link }}">
               <span class="icon" data-feather="arrow-right"></span>
             </a>
           </div>
@@ -80,7 +80,7 @@
         <div class="sectionLink -pb">
           <div class="sectionLink__line"></div>
           <div class="sectionLink__arrow">
-            <a href="#">
+            <a href="{{ $about_link }}">
               <span class="icon" data-feather="arrow-right"></span>
             </a>
           </div>
@@ -113,9 +113,8 @@
             @endif
   
             <div class="front-about__links">
-              <p>Case studies</p>
-              <p>About us</p>
-              <p>At work</p>
+              <a href="{{ $portfolio_link }}">Case studies</a>
+              <a href="{{ $about_link }}">About us</a>
             </div>
           </div>
         </div>
@@ -161,7 +160,11 @@
 </section>
 
 
-<section class="clients__section swiper-section theme-dark-hidden js-theme-dark" data-theme="dark">
+<section class="clients__section swiper-section">
+  <div class="container">
+    <div class="clients__line"></div>
+  </div>
+  
   <div class="container">
     <div class="swiper swiper-container -section js-clients">
       <div class="row clients-gap y-space swiper-wrapper">
@@ -182,7 +185,7 @@
 </section>
 
 
-<section class="testimonials theme-dark-hidden js-theme-dark" data-theme="dark">
+<section class="testimonials">
   <div class="container">
     <div class="row">
       <div class="col-lg-11">

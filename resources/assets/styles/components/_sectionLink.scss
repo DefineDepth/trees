@@ -33,6 +33,10 @@
         height: 32px;
       }
     }
+
+    @include media-below(md) {
+      margin-top: 12px;
+    }
   }
 }
 

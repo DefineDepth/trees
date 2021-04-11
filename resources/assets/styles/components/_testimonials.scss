@@ -1,6 +1,11 @@
 .testimonials {
-  padding-top: 80px;
-  padding-bottom: 180px;
+  padding-top: 90px;
+  padding-bottom: 160px;
+
+  @include media-below(md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   
   &__content {}
 
@@ -11,6 +16,7 @@
     @include media-below(md) {
       margin-left: 0;
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -18,18 +24,17 @@
     display: flex;
 
     .icon {
-      font-size: 32px;
-      color: var(--color-teal);
+      width: 32px;
+      height: 32px;
       stroke-width: 1;
+      color: var(--color-teal);
       fill: var(--color-teal);
 
-      @include media-below(md) {
-
-      }
+      @include media-below(md) {}
     }
 
     .icon + .icon {
-      margin-left: 4px;
+      margin-left: 5px;
     }
   }
 
@@ -39,6 +44,7 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    font-weight: 500;
 
     @include media-below(md) {
       margin-left: 0;
@@ -50,6 +56,7 @@
     font-size: 42px;
     line-height: 64px;
     margin-top: 30px;
+    font-weight: 300;
     
     @include media-below(md) {
       font-size: 24px;

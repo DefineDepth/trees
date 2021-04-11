@@ -104,6 +104,15 @@ p {
   object-fit: cover;
 }
 
+a {
+  transition: color 0.1s ease-out;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-teal) !important;
+  }
+}
+
 .img-image-ratio {
   position: absolute;
   top: 0;

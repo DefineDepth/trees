@@ -1,28 +1,45 @@
 .clients {
   &__section {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 90px;
+
+    @include media-below(md) {
+      padding-top: 100px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 160px;
+    
+    @include media-below(md) {
+      margin-bottom: 80px;
+    }
   }
   
   &__image {
-    height: 80px;
+    // height: 80px;
     display: flex;
     align-items: center;
     
     @include media-below(md) {
-      height: 60px;
+      // height: 60px;
       width: 70%;
     }
 
     img {
-      object-fit: cover;
-      height: auto;
+      // object-fit: cover;
       max-width: 100%;
+      // width: 100%;
+      height: auto;
     }
   }
 
   &__content {
-    margin-top: 72px;
+    margin-top: 60px;
     
     @include media-below(lg) {
       margin-top: 50px;
@@ -43,7 +60,7 @@
   }
 
   &__button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 

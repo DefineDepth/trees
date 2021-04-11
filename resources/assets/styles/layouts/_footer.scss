@@ -55,7 +55,10 @@
     margin-top: 20px;
     
     @include media-below(md) {
-      justify-content: center;
+      margin-top: 24px;
+      // justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -65,7 +68,8 @@
     font-size: 16px;
 
     @include media-below(md) {
-      display: none;
+      // display: none;
+      margin-bottom: 4px;
     }
 
     .icon {
@@ -81,6 +85,7 @@
 
     > div + div {
       &::before {
+        font-weight: 700;
         content: '\\';
         color: var(--color-red);
         margin: 0 8px;

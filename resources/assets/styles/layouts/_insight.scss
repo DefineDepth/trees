@@ -27,6 +27,7 @@
     font-weight: 500;
     
     @include media-below(md) {
+      font-size: 10px;
       margin-bottom: 22px;
     }
   }
