@@ -10,7 +10,7 @@
 <section class="insight-header">
   <div class="container">
     <div class="row insight-header__gap">
-      <div class="col-xl-8 col-lg-7">
+      <div class="col-xl-7 col-lg-7">
         <p class="insight-header__subtitle">
           Industry insight
         </p>
@@ -22,10 +22,10 @@
         </p>
       </div>
 
-      <div class="col-xl-4 col-lg-5">
+      <div class="col-xl-5 col-lg-5">
         <div class="insight-header-quote">
           <p class="insight-header-quote__comment">
-            “I admire anybody who has the guts to write anything at all.”
+            “I admire anybody who has the<br>guts to write anything at all.”
           </p>
           <p class="insight-header-quote__author">
             E.B. White <span>\</span> Author of Charlotte’s Web

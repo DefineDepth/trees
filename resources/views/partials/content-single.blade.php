@@ -15,10 +15,18 @@
             <p class="posts-page__excerpt">
               {!! get_the_excerpt() !!}
             </p>
+
+            {{-- <p class="posts-page__excerpt">
+              {{ $post_quote }}
+            </p> --}}
             
             {{-- @include('partials/entry-meta') --}}
           </div>
         
+          <div class="posts-page__content">
+            {!! $post_header_content !!}
+          </div>
+          
           <div class="posts-page__content">
             @php the_content() @endphp
           </div>

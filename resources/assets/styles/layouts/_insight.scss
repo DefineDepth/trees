@@ -4,7 +4,7 @@
 
   @include media-below(md) {
     padding-top: 150px;
-    padding-bottom: 68px;
+    padding-bottom: 0;
   }
 
   &__gap {
@@ -60,30 +60,33 @@
 
 .insight-header-quote {
   background-color: black;
-  padding: 120px 60px;
+  padding: 120px 70px;
 
   p {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 42px;
     color: white;
   }
 
   @include media-below(md) {
-    padding: 80px 50px;
+    padding: 80px 32px;
     margin-top: 60px;
 
     p {
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 32px;
     }
   }
 
-  &__comment {
-    
-  }
+  &__comment {}
   
   &__author {
-    margin-top: 1rem;
+    margin-top: 50px;
+    font-weight: 700;
+
+    @include media-below(md) {
+      margin-top: 36px;
+    }
 
     span {
       color: var(--color-red);
