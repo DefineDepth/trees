@@ -160,10 +160,10 @@
 </section>
 
 
-<section class="clients__section swiper-section">
-  <div class="container">
+<section class="clients__section -border swiper-section">
+  {{-- <div class="container">
     <div class="clients__line"></div>
-  </div>
+  </div> --}}
   
   <div class="container">
     <div class="swiper swiper-container -section js-clients">
@@ -205,9 +205,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
 
-          <a href="#" class="testimonials__button button -dash">
-            Case Study
-          </a>
+          <div class="testimonials__button">
+            <a href="#" class="button -dash">
+              Case Study
+            </a>
+          </div>
         </div>
       </div>
     </div>

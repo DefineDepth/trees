@@ -9,14 +9,12 @@ $post = get_post($post);
       ]); !!}
     </div>
   </div>
-  <div class="postCard__content">
-    <h3 class="postCard__title">
-      {!! get_the_title($post) !!}
-    </h3>
-    <div class="postCard__text">
-      <p>
-        {!! get_the_excerpt($post) !!}
-      </p>
-    </div>
+  <h3 class="postCard__title">
+    {!! get_the_title($post) !!}
+  </h3>
+  <div class="postCard__text">
+    <p>
+      {!! get_the_excerpt($post) !!}
+    </p>
   </div>
 </article>

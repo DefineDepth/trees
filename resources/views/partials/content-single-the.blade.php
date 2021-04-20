@@ -1,4 +1,3 @@
-{{-- @include('partials/entry-meta') --}}
 <section class="post-single__section">
   <div class="container">
     <article @php post_class('post-single__article') @endphp>
@@ -58,7 +57,6 @@
 
             {{-- @php the_content() @endphp --}}
 
-            {{ get_the_title() }}
 
           </div>
         </div>

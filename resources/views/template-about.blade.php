@@ -53,8 +53,7 @@
 
 <section class="about-page-services__section">
   <div class="container">
-
-    @for ($i = 0; $i < 3; $i++)
+    @for ($i = 0; $i < 6; $i++)
       <div class="about-page-services__content">
         <div class="row">
           <div class="col-lg-4">
@@ -71,7 +70,6 @@
         </div>
       </div>
     @endfor
-
   </div>
 </section>
 
