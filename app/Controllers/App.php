@@ -43,6 +43,11 @@ class App extends Controller
         return get_the_permalink(\App\get_page_id_by_template('views/template-about.blade.php'));
     }
 
+    public function services_link()
+    {
+        return get_the_permalink(\App\get_page_id_by_template('views/template-services.blade.php'));
+    }
+
     public function insight_link()
     {
         return get_the_permalink(\App\get_page_id_by_template('views/template-insight.blade.php'));

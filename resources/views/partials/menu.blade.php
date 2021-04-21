@@ -38,11 +38,11 @@
               </li>
 
               <li>
-                <a href="#">Shop</a>
+                <a href="{{ $services_link }}">What We Do</a>
               </li>
 
               <li>
-                <a href="{{ $about_link }}">About Us</a>
+                <a href="{{ $about_link }}">Who We Are</a>
               </li>
 
               <li>

@@ -6,15 +6,14 @@ namespace App\PostTypes;
 use App\PostTypes\AbstractPostType;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Client extends AbstractPostType
+class Portfolio extends AbstractPostType
 {
 
-    // use VirtualPostContent, AboutArtist;
-
-    const POST_TYPE = 'client';
+    const POST_TYPE = 'portfolio';
     const POST_TYPE_OPTIONS = [
-        'has_archive' => false,
-        'supports' => ['title', 'thumbnail'],
+        'has_archive' => true,
+        'supports' => ['title', 'thumbnail', 'editor'],
+        'show_in_rest' => true,
     ];
 
     const HAS_META_BOXES = true;
@@ -38,9 +37,9 @@ class Client extends AbstractPostType
         $builder
             ->setLocation('post_type', '==', $this->post_type_name());
 
-        // $builder->addText('client_');
-        $builder->addTextarea('client_text');
-        $builder->addLink('client_button_link');
+        $builder->addText('post_quote');
+        $builder->addText('post_quote_author');
+        // $builder->addLink('post_button_link');
 
         $this->add_local_field_group($builder);
         return;

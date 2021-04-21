@@ -6,7 +6,7 @@
 
 .clients__section.swiper-section {
   @include media-below(sm) {
-    .container:last-child {
+    .slider-container {
       padding-left: 18vw;
       padding-right: 18vw;
     }

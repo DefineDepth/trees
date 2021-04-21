@@ -4,6 +4,8 @@ namespace App\Fields;
 
 use App\Fields\FrontPage;
 use App\PostTypes\Client;
+use App\PostTypes\Team;
+use App\PostTypes\Portfolio;
 use App\PostTypes\Post;
 
 
@@ -20,4 +22,6 @@ use App\PostTypes\Post;
 
 new FrontPage();
 new Client;
+new Team;
+new Portfolio;
 new Post;

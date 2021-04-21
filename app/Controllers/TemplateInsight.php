@@ -10,7 +10,7 @@ class TemplateInsight extends Controller
 
     public function footer_scheme()
     {
-        return '-teal';
+        return '-beige';
     }
 
     public function posts()

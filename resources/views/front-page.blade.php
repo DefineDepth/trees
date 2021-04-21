@@ -161,11 +161,7 @@
 
 
 <section class="clients__section -border swiper-section">
-  {{-- <div class="container">
-    <div class="clients__line"></div>
-  </div> --}}
-  
-  <div class="container">
+  <div class="container slider-container">   
     <div class="swiper swiper-container -section js-clients">
       <div class="row clients-gap y-space swiper-wrapper">
         @php
@@ -181,6 +177,10 @@
         @endforeach
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="border"></div>
   </div>
 </section>
 

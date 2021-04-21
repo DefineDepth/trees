@@ -51,25 +51,96 @@
 </section>
 
 
-<section class="about-page-services__section">
+<section class="about-page-team__section bg-grey">
   <div class="container">
-    @for ($i = 0; $i < 6; $i++)
-      <div class="about-page-services__content">
-        <div class="row">
-          <div class="col-lg-4">
-            <h3 class="about-page-services__title">
-              Brand<br>
-              Development
-            </h3>
+    <div class="row justify-content-between">
+      <div class="col-lg-4">
+        <h2 class="about-page-team__title">Diverse team<br>of creators</h2>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="about-page-team__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row about-page-team__grid">
+      @for ($i = 0; $i < 4; $i++)
+        <div class="col-lg-3 col-md-6">
+          <div class="team-card">
+            <div class="team-card__position">
+              Creative director
+            </div>
+            <div class="team-card__image">
+              <div class="ratio ratio-3:4 bg-white"></div>
+            </div>
+            <div class="team-card__name">Phil Padilla</div>
           </div>
+        </div>
+      @endfor
+    </div>
+  </div>
+</section>
+
+
+<section class="about-page-about__section bg-black">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-4">
+        <h2 class="about-page-about__title">Outside of<br>the office</h2>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="about-page-about__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="about-page-about__inner">
+
+      @for ($i = 0; $i < 3; $i++)
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="content">
+              <p class="subtitle">Category</p>
+              <h3 class="title">Great people lead to great ideas</h3>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
           <div class="col-lg-7">
-            <div class="about-page-services__text">
-              <p>Deep understanding of packaging, people and consumers, and the retail landscape they maneuver. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <div class="image bg-grey">
+              {{-- <img src="#" alt="image"> --}}
             </div>
           </div>
         </div>
+      @endfor
+
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="about-page-cta__section bg-black">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5">
+        <h2 class="about-page-cta__title">
+          This defines us. What you do next defines you.
+        </h2>
       </div>
-    @endfor
+
+      <div class="col-auto offset-lg-1">
+        <div class="about-page-cta__button">
+          <button>See the work</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
