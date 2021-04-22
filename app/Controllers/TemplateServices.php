@@ -13,4 +13,15 @@ class TemplateServices extends Controller
         return '-blue';
     }
 
+
+    public function header_first_block()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function header_second_block()
+    {
+        return get_field(__FUNCTION__);
+    }
+
 }

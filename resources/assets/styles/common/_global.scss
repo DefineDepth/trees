@@ -136,3 +136,60 @@ a {
     padding-bottom: 20px;
   }
 }
+
+
+
+.row {
+  &.-fluid {
+    position: unset;
+  }
+
+  &__side {
+    position: absolute;
+
+    &.-left {
+      left: 0;
+      padding-left: 0 !important;
+
+      @include media-below(md) {
+        padding-right: 0 !important;
+      }
+    }
+    
+    &.-right {
+      right: 0;
+      padding-right: 0 !important;
+
+      @include media-below(md) {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  @include media-below(md) {
+    &__side {
+      position: relative;
+      width: 100%;
+
+      &.-mobile-padding {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+      }
+    }
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+
+.y-space-big + .y-space-big {
+  margin-top: 200px;
+}
+
+
+.text {
+  &-left { text-align: left; }
+  &-center { text-align: center; }
+  &-right { text-align: right; }
+}

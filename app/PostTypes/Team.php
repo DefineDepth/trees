@@ -12,8 +12,7 @@ class Team extends AbstractPostType
     const POST_TYPE = 'team';
     const POST_TYPE_OPTIONS = [
         'has_archive' => false,
-        // 'supports' => ['title', 'thumbnail'],
-        'supports' => ['thumbnail'],
+        'supports' => ['title', 'thumbnail'],
     ];
 
     const HAS_META_BOXES = true;
@@ -38,9 +37,6 @@ class Team extends AbstractPostType
             ->setLocation('post_type', '==', $this->post_type_name());
 
 
-        $builder->addText('team_name', [
-            'label' => 'Name',
-        ]);
         $builder->addText('team_position', [
             'label' => 'Position',
         ]);

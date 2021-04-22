@@ -14,14 +14,13 @@
       <div class="col-xl-8 col-lg-10">
         <div class="about-page-info__content">
           <p class="about-page-info__subtitle">
-            WHO WE ARE
+            {{ $header_first_block['header_first_subtitle'] }}
           </p>
           <h2 class="about-page-info__title">
-            Empower people to energize positive change
+            {{ $header_first_block['header_first_title'] }}
           </h2>
           <div class="about-page-info__text">
-            <p>Experienced. Award-winning. Humble. We’ve built our designer-owned agency with one primary focus: To create engaging and memorable human experiences with design, driven by strategy and purpose for an undeniable impact. We specialize in multi-platform stories that connect brands with people.</p>
-            <p>We strive to play a meaningful role in society by producing purpose first products, services and experiences that empower people to energize a positive impact. Excited people do some pretty extraordinary things when they share a clear and compelling sense of purpose and vision.</p>
+            {!! $header_first_block['header_first_text'] !!}
           </div>
         </div>
       </div>
@@ -29,19 +28,18 @@
 
       <div class="col-xl-8 offset-xl-4 col-lg-10 offset-lg-2">
         <div class="about-page-info__image">
-          <img src="@asset('images/about-image.png')">
+          <img src="{{ $header_second_block['header_second_image']['url'] }}">
         </div>
 
         <div class="about-page-info__content">
           <p class="about-page-info__subtitle">
-            WHO WE ARE
+            {{ $header_second_block['header_second_subtitle'] }}
           </p>
           <h2 class="about-page-info__title">
-            Empower people to energize positive change
+            {{ $header_second_block['header_second_title'] }}
           </h2>
           <div class="about-page-info__text">
-            <p>Experienced. Award-winning. Humble. We’ve built our designer-owned agency with one primary focus: To create engaging and memorable human experiences with design, driven by strategy and purpose for an undeniable impact. We specialize in multi-platform stories that connect brands with people.</p>
-            <p>We strive to play a meaningful role in society by producing purpose first products, services and experiences that empower people to energize a positive impact. Excited people do some pretty extraordinary things when they share a clear and compelling sense of purpose and vision.</p>
+            {!! $header_second_block['header_second_text'] !!}
           </div>
         </div>
       </div>
@@ -55,30 +53,26 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-4">
-        <h2 class="about-page-team__title">Diverse team<br>of creators</h2>
+        <h2 class="about-page-team__title">
+          {!! $team_title !!}
+        </h2>
       </div>
 
       <div class="col-lg-7">
         <div class="about-page-team__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          {!! $team_text !!}
         </div>
       </div>
     </div>
 
     <div class="row about-page-team__grid">
-      @for ($i = 0; $i < 4; $i++)
+
+      @foreach ($team_posts as $post)
         <div class="col-lg-3 col-md-6">
-          <div class="team-card">
-            <div class="team-card__position">
-              Creative director
-            </div>
-            <div class="team-card__image">
-              <div class="ratio ratio-3:4 bg-white"></div>
-            </div>
-            <div class="team-card__name">Phil Padilla</div>
-          </div>
+          @include('partials.content-teams')
         </div>
-      @endfor
+      @endforeach
+
     </div>
   </div>
 </section>
@@ -88,39 +82,86 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-4">
-        <h2 class="about-page-about__title">Outside of<br>the office</h2>
+        <h2 class="about-page-about__title">
+          {!! $values_title !!}
+        </h2>
       </div>
 
       <div class="col-lg-7">
         <div class="about-page-about__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          {!! $values_text !!}
         </div>
       </div>
     </div>
 
 
     <div class="about-page-about__inner">
-
-      @for ($i = 0; $i < 3; $i++)
-        <div class="row align-items-center">
-          <div class="col-lg-5">
-            <div class="content">
-              <p class="subtitle">Category</p>
-              <h3 class="title">Great people lead to great ideas</h3>
-              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+      <div class="row align-items-center -fluid inner-item">
+        <div class="col-xl-7 col-lg-5 row__side -left -mobile-padding">
+          <div class="image bg-grey">
+            <img src="{{ $value_first['value_image']['url'] }}" alt="Value image">
           </div>
+        </div>
 
-          <div class="col-lg-7">
-            <div class="image bg-grey">
-              {{-- <img src="#" alt="image"> --}}
+        <div class="offset-xl-7 col-xl-5 offset-lg-5 col-lg-6">
+          <div class="content">
+            <p class="subtitle">
+              {{ $value_first['value_subtitle'] }}
+            </p>
+            <h3 class="title">
+              {!! $value_first['value_title'] !!}
+            </h3>
+            <div class="text">
+              {!! $value_first['value_text'] !!}
             </div>
           </div>
         </div>
-      @endfor
+      </div>
 
+      <div class="row align-items-center inner-item">
+        <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
+          <div class="content">
+            <p class="subtitle">
+              {{ $value_second['value_subtitle'] }}
+            </p>
+            <h3 class="title">
+              {!! $value_second['value_title'] !!}
+            </h3>
+            <div class="text">
+              {!! $value_second['value_text'] !!}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-7 col-lg-6 order-1 order-lg-2">
+          <div class="image bg-grey">
+            <img src="{{ $value_second['value_image']['url'] }}" alt="Value image">
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center inner-item">
+        <div class="col-xl-7 col-lg-6">
+          <div class="image bg-grey">
+            <img src="{{ $value_third['value_image']['url'] }}" alt="Value image">
+          </div>
+        </div>
+
+        <div class="col-xl-5 col-lg-6">
+          <div class="content">
+            <p class="subtitle">
+              {{ $value_third['value_subtitle'] }}
+            </p>
+            <h3 class="title">
+              {!! $value_third['value_title'] !!}
+            </h3>
+            <div class="text">
+              {!! $value_third['value_text'] !!}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
 
   </div>
 </section>
@@ -131,13 +172,13 @@
     <div class="row justify-content-center align-items-center">
       <div class="col-lg-5">
         <h2 class="about-page-cta__title">
-          This defines us. What you do next defines you.
+          {!! $cta_title !!}
         </h2>
       </div>
 
       <div class="col-auto offset-lg-1">
         <div class="about-page-cta__button">
-          <button>See the work</button>
+          <a href="{{ $cta_button_link['url'] }}">{{ $cta_button_link['title'] }}</a>
         </div>
       </div>
     </div>
