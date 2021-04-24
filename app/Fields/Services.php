@@ -58,9 +58,34 @@ class Services extends AbstractFields
 
 
         $builder
-            ->addTab('Team')
-            ->addText('team_title', [ 'label' => 'Title' ])
-            ->addWysiwyg('team_text', [ 'label' => 'Text' ]);
+            ->addTab('Services')
+            ->addText('services_subtitle', [ 'label' => 'Subtitle' ])
+            ->addText('services_title', [ 'label' => 'Title' ]);
+
+        $builder = $builder->addRepeater('services_repeater', [
+            // 'layout' => 'block',
+            'layout' => 'row',
+        ]);
+
+        $builder->addText('title', [ 'label' => 'Title' ]);
+        $builder->addWysiwyg('text', [ 'label' => 'Text' ]);
+
+        $builder = $builder->endRepeater();
+
+
+        $builder
+            ->addTab('Clients')
+            ->addText('clients_title', [ 'label' => 'Title' ])
+            ->addWysiwyg('clients_text', [ 'label' => 'Text' ]);
+
+        $builder = $builder->addRepeater('clients_repeater', [
+            // 'layout' => 'block',
+            'layout' => 'row',
+        ]);
+
+        $builder->addImage('image', [ 'label' => 'Image', ]);
+
+        $builder = $builder->endRepeater();
 
 
         $this->add_local_field_group($builder);

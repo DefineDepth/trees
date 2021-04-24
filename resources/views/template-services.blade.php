@@ -55,30 +55,63 @@
     <div class="row justify-content-center">
       <div class="col-12 text-center">
         <p class="services-page-services__subtitle">
-          Some
+          {{ $services_subtitle }}
         </p>
         <h2 class="services-page-services__title">
-          Some
+          {!! $services_title !!}
         </h2>
       </div>
     </div>
 
-    @for ($i = 0; $i < 6; $i++)
+
+    @foreach ($services_repeater as $item)
       <div class="services-page-services__content">
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="col-lg-4">
             <h3 class="services-page-services__item__title">
-              Brand<br>Development
+              {!! $item['title'] !!}
             </h3>
           </div>
           <div class="col-lg-7">
             <div class="services-page-services__item__text">
-              <p>Deep understanding of packaging, people and consumers, and the retail landscape they maneuver. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+              {!! $item['text'] !!}
             </div>
           </div>
         </div>
+      </div>    
+    @endforeach
+
+  </div>
+</section>
+
+
+<section class="services-page-clients__section bg-black">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-4">
+        <h2 class="services-page-clients__title">
+          {!! $clients_title !!}
+        </h2>
       </div>
-    @endfor
+
+      <div class="col-lg-7">
+        <div class="services-page-clients__text">
+          {!! $clients_text !!}
+        </div>
+      </div>
+    </div>
+
+    <div class="row services-page-clients__grid">
+      @foreach ($clients_repeater as $image)
+        <div class="col-xl-3 col-lg-4 col-6">
+          <div class="services-page-clients__item">
+            <div class="image">
+              <img src="{{ $image['image']['url'] }}" alt="Client image">
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
   </div>
 </section>
 

@@ -24,4 +24,36 @@ class TemplateServices extends Controller
         return get_field(__FUNCTION__);
     }
 
+
+    public function services_subtitle()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function services_title()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function services_repeater()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    
+    public function clients_title()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function clients_text()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function clients_repeater()
+    {
+        return get_field(__FUNCTION__);
+    }
+
 }
