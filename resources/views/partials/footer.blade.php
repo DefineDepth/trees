@@ -1,5 +1,13 @@
+@php
+  if ( !$container_style ) {
+    $container_style = 'container';
+  } else {
+    $container_style = 'container -fluid -p-left -p-right -row-normal';
+  }
+@endphp
+
 <footer class="footer__section {{ $footer_scheme }}">
-  <div class="container">
+  <div class="{{ $container_style }}">
     <div class="row">
       <div class="col-12">
         <div class="footer__cta">

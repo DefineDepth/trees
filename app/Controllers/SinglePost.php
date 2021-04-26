@@ -27,4 +27,18 @@ class SinglePost extends Controller
     return get_field(__FUNCTION__);
   }
 
+  public function posts()
+  {
+    $posts = get_posts([
+      'post_type' => 'post',
+      'fields' => 'ids',
+      'numberposts' => -1,
+    ]) ?: [];
+    return $posts;
+  }
+
+  public function container_style() {
+    return true;
+  }
+
 }
