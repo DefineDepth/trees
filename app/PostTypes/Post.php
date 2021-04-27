@@ -12,7 +12,7 @@ class Post extends AbstractPostType
     const POST_TYPE = 'post';
     const POST_TYPE_OPTIONS = [
         'has_archive' => true,
-        'supports' => ['title', 'thumbnail', 'gutenberg'],
+        'supports' => ['title', 'thumbnail', 'gutenberg', 'comments'],
     ];
 
     const HAS_META_BOXES = true;
@@ -36,19 +36,103 @@ class Post extends AbstractPostType
         $builder
             ->setLocation('post_type', '==', $this->post_type_name());
 
-        $builder->addWysiwyg('post_header_content', [
-            'label' => 'WYSIWYG Field',
-            'media_upload' => 1,
-        ]);
 
-        $builder->addImage('post_image', [
-            'label' => 'Image FIeld',
-        ]);
+        $builder = $builder->addGroup('post_header_content', [ 'layout' => 'row', 'label' => 'Header Content' ]);
+        $builder
+            ->addWysiwyg('content', [ 'label' => 'Content', ])
+            ->addImage('image', [ 'label' => 'Post Image Preview',])
+            ->addText('quote')
+            ->addText('quote_author')
+            ->addSelect('header_style', [
+                'label' => 'Header Color Style',
+                'choices' => [
+                    // 'custom' => 'Custom',
+                    '-black' => 'Black',
+                    '-blue' => 'Blue',
+                    '-teal' => 'Teal',
+                    '-beige' => 'Beige',
+                    '-orange' => 'Orange',
+                    '-red' => 'Red',
+                    '-light-yellow' => 'Light Yellow',
+                    '-light-azure' => 'Light Azure',
+                ],
+                'ajax' => 1,
+                'default_value' => '-black',
+            ])
+            ->addSelect('footer_style', [
+                'label' => 'Footer Color Style',
+                'choices' => [
+                    // 'custom' => 'Custom',
+                    '-black' => 'Black',
+                    '-blue' => 'Blue',
+                    '-teal' => 'Teal',
+                    '-beige' => 'Beige',
+                    '-orange' => 'Orange',
+                    '-red' => 'Red',
+                    '-light-yellow' => 'Light Yellow',
+                    '-light-azure' => 'Light Azure',
+                ],
+                'ajax' => 1,
+                'default_value' => '-black',
+            ])
+            ;
+        $builder = $builder->endGroup();
 
-        $builder->addText('post_quote');
-        $builder->addText('post_quote_author');
-        // $builder->addLink('post_button_link');
 
+        // $builder = $builder->addGroup('post_color_styles', [ 'layout' => 'row', 'label' => 'Post Color Styles' ]);
+        // $builder
+        //     ->addColorPicker('header_background', [
+        //         'label' => 'Post Author and Quote Background Color',
+        //         'default_value' => '#000000',
+        //     ])
+        //     ->addColorPicker('header_text', [
+        //         'label' => 'Post Author and Quote Text Color',
+        //         'default_value' => '#FFFFFF',
+        //     ])
+        //     ->addColorPicker('socials_background', [
+        //         'label' => 'Socials Icon Background Color',
+        //         'default_value' => '#FFFFFF',
+        //     ])
+        //     ->addColorPicker('socials_text', [
+        //         'label' => 'Socials Icon Color',
+        //         'default_value' => '#000000',
+        //     ])
+
+        //     ->addSelect('footer_style', [
+        //         'label' => 'Footer Predifined Style',
+        //         'conditional_logic' => [],
+        //         'choices' => [
+        //             'custom' => 'Custom',
+        //             '-black' => 'Black',
+        //             '-blue' => 'Blue',
+        //             '-teal' => 'Teal',
+        //             '-beige' => 'Beige',
+        //             '-orange' => 'Orange',
+        //             '-red' => 'Red',
+        //         ],
+        //         'ajax' => 1,
+        //         'default_value' => '-black',
+        //         'return_format' => 'value',
+        //     ])
+        //     ->addColorPicker('footer_background', [
+        //         'label' => 'Footer Background Color',
+        //         'default_value' => '#2D6A8B',
+        //         'instructions' => 'Works only if Predifined Style equals to custom',
+        //     ])
+        //     ->addColorPicker('footer_text', [
+        //         'label' => 'Footer Text Color',
+        //         'default_value' => '#FFFFFF',
+        //         'instructions' => 'Works only if Predifined Style equals to custom',
+        //     ])
+        //     ->addColorPicker('footer_circle', [
+        //         'label' => 'Footer Circle Color',
+        //         'default_value' => '#3B7595',
+        //         'instructions' => 'Works only if Predifined Style equals to custom',
+        //     ])
+        //     ;
+        // $builder = $builder->endGroup();
+        
+        
         $this->add_local_field_group($builder);
         return;
     }

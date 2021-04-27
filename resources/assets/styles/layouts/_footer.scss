@@ -9,6 +9,11 @@
     &.-beige .footer__cta { background-color: var(--color-beige); }
     &.-orange .footer__cta { background-color: var(--color-orange); }
     &.-red .footer__cta { background-color: var(--color-red); }
+    &.-light-azure {
+      .footer__cta { background-color: #E6F4F4; }
+      .footer__circle { background-color: #F2F6F6; }
+      .footer__title { color: #6BBCB9; }
+    }
 
     @include media-below(sm) {
       padding-top: 0;

@@ -4,15 +4,17 @@ if (post_password_required()) {
 }
 @endphp
 
-<section id="comments" class="comments">
+<div id="comments" class="post-single-comments">
   @if (have_comments())
-    <h2>
-      {!! sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>') !!}
-    </h2>
-
-    <ol class="comment-list">
-      {!! wp_list_comments(['style' => 'ol', 'short_ping' => true]) !!}
-    </ol>
+    <ul class="comment-list">
+      {!! wp_list_comments(
+        array(
+          'style'       => 'ul',
+          'short_ping'  => true,
+          'walker'      => new Trees_Walker_Comment(),
+        )
+      ); !!}
+    </ul>
 
     @if (get_comment_pages_count() > 1 && get_option('page_comments'))
       <nav>
@@ -33,6 +35,12 @@ if (post_password_required()) {
       {{ __('Comments are closed.', 'sage') }}
     </div>
   @endif
-
-  @php comment_form() @endphp
-</section>
+  
+  <div class="row">
+    <div class="col-12">
+      <div class="reply-form">
+        @php comment_form() @endphp
+      </div>
+    </div>
+  </div>
+</div>

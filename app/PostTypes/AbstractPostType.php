@@ -3,7 +3,6 @@
 namespace App\PostTypes;
 
 use PostTypes\PostType;
-// use App\Fields\Traits\Separator;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /** https://github.com/jjgrainger/PostTypes/  **/

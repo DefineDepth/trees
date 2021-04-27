@@ -132,6 +132,25 @@
     margin-top: 48px;
   }
 
+  &.-post-bottom {
+    margin-top: 80px;
+
+    @include media-below(md) {
+      margin-top: 60px;
+    }
+  }
+
+  &:not(.-post-bottom) {
+    .post-author__content {
+      @media (min-width: 992px) and (max-width: (1470px)) {
+        margin-left: 0;
+        padding-right: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+
   &.-grey {
     background-color: #F7F7F7;
     .post-author__content { color: black; }
@@ -147,6 +166,14 @@
   &.-teal {
     background-color: #E7F1F1;
     .post-author__content { color: black; }
+  }
+  &.-light-yellow {
+    background-color: #F2F2E5;
+    .quote, .author { color: black; }
+  }
+  &.-light-azure {
+    background-color: #E7F1F1;
+    .quote, .author { color: black; }
   }
 
   &__image {
@@ -164,7 +191,7 @@
   }
 
   &__content {
-    color: white;
+    // color: white;
     font-size: 18px !important;
     line-height: 26px !important;
     display: flex;
@@ -173,12 +200,12 @@
     margin-left: 20px;
     padding-right: calc(12px + 36px + 36px + 6px + 10px);
 
-    @media (min-width: 992px) and (max-width: (1470px)) {
-      margin-left: 0;
-      padding-right: 0;
-      width: 100%;
-      margin-top: 20px;
-    }
+    // @media (min-width: 992px) and (max-width: (1470px)) {
+    //   margin-left: 0;
+    //   padding-right: 0;
+    //   width: 100%;
+    //   margin-top: 20px;
+    // }
 
     @include media-below(md) {
       font-size: 12px !important;
@@ -231,7 +258,10 @@
       margin-left: 6px;
     }
 
-    .icon {}
+    .icon {
+      font-size: 16px;
+      color: black;
+    }
   }
 }
 
@@ -257,6 +287,14 @@
     .quote, .author { color: black; }
   }
   &.-teal {
+    background-color: #E7F1F1;
+    .quote, .author { color: black; }
+  }
+  &.-light-yellow {
+    background-color: #F2F2E5;
+    .quote, .author { color: black; }
+  }
+  &.-light-azure {
     background-color: #E7F1F1;
     .quote, .author { color: black; }
   }
@@ -293,7 +331,7 @@
   width: 100%;
   max-width: 100%;
 
-  .text-content {
+  .text-content:not(.-no-margin) {
     @include media-below(md) {
       margin-top: 80px;
     }
@@ -301,6 +339,8 @@
 
   &.container-md,
   .container-md {
+    padding: 0;
+
     @include media-below(md) {
       flex: unset;
       width: 100%;
@@ -356,7 +396,6 @@
 .post-single-content {
   padding-top: 200px;
   padding-bottom: 80px;
-
   width: 100%;
 
   @include media-below(md) {
@@ -370,16 +409,26 @@
   }
 
   .elementor-section:not(:first-child) {
-    // margin-top: 200px;
-    margin-top: 140px;
-    
-    @include media-below(md) {
+    .trees-block:not(.post-mt-) {
       margin-top: 140px;
+      
+      @include media-below(md) {
+        margin-top: 100px;
+      }
     }
   }
 
 
   .trees-block {
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      font-weight: 500;
+      color: #0000FF;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -430,9 +479,63 @@
 
 .trees-block {
   &-post_content_left {}
+
   &-post_content_right {}
-  &-post_media {}
+
+  &-post_title_text {
+    .title {
+      font-size: 32px !important;
+      line-height: 39px !important;
+      font-weight: 700;
+  
+      @include media-below(md) {
+        font-size: 32px !important;
+        line-height: 48px !important;
+        margin-bottom: 20px;
+      }
+  
+      &::after {
+        content: '';
+        display: block;
+        width: 78px;
+        height: 1px;
+        background-color: black;
+        margin-top: 40px;
+  
+        @include media-below(md) {
+          display: none;
+        }
+      }
+    }
+  
+    .text-content {
+      @include media-below(md) {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  &-post_media {
+    .image {
+
+      img {}
+    }
+  }
 }
+
+
+.post-mt {
+  &-sm { margin-top: 60px !important; }
+  &-md { margin-top: 140px !important; }
+  &-lg { margin-top: 200px !important; }
+
+  @include media-below(md) {
+    &-sm { margin-top: 60px !important; }
+    &-md { margin-top: 100px !important; }
+    &-lg { margin-top: 120px !important; }
+  }
+}
+
 
 .related-posts {
   padding: 0 !important;
@@ -442,8 +545,8 @@
     padding-bottom: 20px;
 
     @include media-below(md) {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      // padding-top: 80px !important;
+      padding-bottom: 80px !important;
     }
   }
 

@@ -42,23 +42,19 @@ class About extends AbstractFields
         $builder->addTab('Header');
 
         $builder = $builder->addGroup('header_first_block', [ 'layout' => 'row', 'label' => 'First Block' ]);
-
         $builder
             ->addText('header_first_subtitle', [ 'label' => 'Subtitle' ])
             ->addText('header_first_title', [ 'label' => 'Title' ])
             ->addWysiwyg('header_first_text', [ 'label' => 'Text' ]);
-
         $builder = $builder->endGroup();
         
 
         $builder = $builder->addGroup('header_second_block', [ 'layout' => 'row', 'label' => 'Second Block' ]);
-
         $builder
             ->addImage('header_second_image', [ 'label' => 'Image' ])
             ->addText('header_second_subtitle', [ 'label' => 'Subtitle' ])
             ->addText('header_second_title', [ 'label' => 'Title' ])
             ->addWysiwyg('header_second_text', [ 'label' => 'Text' ]);
-
         $builder = $builder->endGroup();
 
 
