@@ -3,10 +3,13 @@ import ThemeOnScroll from '../components/ThemeOnScroll'
 import FronPageText from '../components/FrontPageText'
 import SectionPostSlider from '../components/SectionPostSlider'
 import SectionClientsSlider from '../components/SectionClientsSlider'
+import PostFeaturesSlider from '../components/PostFeaturesSlider'
 import InstagramSlider from '../components/InstagramSlider'
 import MenuBarScroll from '../components/MenuBarScroll'
 import Menu from '../components/Menu'
 import feather from 'feather-icons';
+
+import 'lazysizes';
 
 export default {
   init() {
@@ -16,6 +19,7 @@ export default {
     new FronPageText;
     new SectionPostSlider;
     new SectionClientsSlider;
+    new PostFeaturesSlider;
     new InstagramSlider;
     new MenuBarScroll;
     new Menu;

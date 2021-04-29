@@ -90,29 +90,33 @@
 
 
   &__image {
-    img {
-      width: 100%;
-      height: auto;
-    }
-
     @include media-below(md) {
-      display: none;
-    }
-  }
-
-  &__mobile-image {
-    display: none;
-    margin-bottom: 60px;
-
-    @include media-below(md) {
-      display: block;
+      margin-top: 48px;
     }
 
     img {
       width: 100%;
       height: auto;
     }
+
+    // @include media-below(md) {
+    //   display: none;
+    // }
   }
+
+  // &__mobile-image {
+  //   display: none;
+  //   margin-bottom: 60px;
+
+  //   @include media-below(md) {
+  //     display: block;
+  //   }
+
+  //   img {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
 }
 
 
@@ -128,15 +132,11 @@
     flex-wrap: wrap;
   }
 
-  @include media-below(md) {
-    margin-top: 48px;
-  }
-
   &.-post-bottom {
-    margin-top: 80px;
+    margin-top: 100px;
 
     @include media-below(md) {
-      margin-top: 60px;
+      margin-top: 80px;
     }
   }
 
@@ -331,12 +331,6 @@
   width: 100%;
   max-width: 100%;
 
-  .text-content:not(.-no-margin) {
-    @include media-below(md) {
-      margin-top: 80px;
-    }
-  }
-
   &.container-md,
   .container-md {
     padding: 0;
@@ -410,7 +404,7 @@
 
   .elementor-section:not(:first-child) {
     .trees-block:not(.post-mt-) {
-      margin-top: 140px;
+      margin-top: 180px;
       
       @include media-below(md) {
         margin-top: 100px;
@@ -478,9 +472,163 @@
 
 
 .trees-block {
-  &-post_content_left {}
+  &-post_content_left {
+    .row {
+      margin-top: -40px;
+      margin-bottom: -40px;
 
-  &-post_content_right {}
+      > * {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    &.-with-bg {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      @include media-below(md) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  &-post_content_right {
+    .row {
+      margin-top: -40px;
+      margin-bottom: -40px;
+
+      > * {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    &.-with-bg {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      @include media-below(md) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  .text-content {
+    &.-dark {
+      color: black;
+      h2, p { color: black; }
+    }
+
+    &.-light {
+      color: white;
+      h2, p { color: white; }
+    }
+  }
+
+
+  &-post_cta {
+    .wrapper {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      border-top: 1px solid #D8D8D8;
+      border-bottom: 1px solid #D8D8D8;
+
+      @include media-below(md) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
+    }
+
+    .title {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 500;
+      
+      @include media-below(md) {
+        font-size: 34px;
+        text-align: center;
+      }
+    }
+
+    .button {
+      text-align: center;
+
+      @include media-below(md) {
+        margin-top: 40px;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        text-transform: uppercase;
+        color: white;
+        padding: 15px;
+        width: 140px;
+        height: 140px;
+        background-color: var(--color-red);
+        font-size: 14px;
+        line-height: 1.1;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  &-post_features {
+    .row {
+      margin: -20px !important;
+      > * { padding: 20px !important; }
+
+      @include media-below(md) {
+        margin: 0 !important;
+        > * { padding: 0 !important; }
+      }
+    }
+
+    .content {
+      background-color: #F7F7F7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 300px;
+      width: 100%;
+      padding: 40px 60px;
+      
+      @include media-below(md) {
+        padding: 40px 40px;
+        height: 260px;
+      }
+    }
+
+    .title {
+      font-size: 28px;
+      line-height: 1.4;
+      font-weight: 500;
+      letter-spacing: 0.04;
+
+      @include media-below(md) {
+        font-size: 21px;
+      }
+    }
+  }
+
+
+  &-post_two_colums_text {
+    .row {
+      margin-top: -40px;
+      margin-bottom: -40px;
+
+      > * {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+  }
 
   &-post_title_text {
     .title {
@@ -525,6 +673,7 @@
 
 
 .post-mt {
+  &-0 { margin-top: 0 !important; }
   &-sm { margin-top: 60px !important; }
   &-md { margin-top: 140px !important; }
   &-lg { margin-top: 200px !important; }

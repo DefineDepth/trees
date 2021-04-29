@@ -5,7 +5,8 @@ $post = get_post($post);
   <div class="postCard__image">
     <div class="ratio ratio-3:2">
       {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, 300] , false, [
-        'class' => 'img-image img-image-ratio js-lazy',
+        'class' => 'img-image img-image-ratio lazyload',
+        'data-src' => '{{ get_post_thumbnail_url($post) }}',
       ]); !!}
     </div>
   </div>

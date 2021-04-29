@@ -43,6 +43,14 @@ class Post extends AbstractPostType
             ->addImage('image', [ 'label' => 'Post Image Preview',])
             ->addText('quote')
             ->addText('quote_author')
+            ->addSelect('comments_align', [
+                'label' => 'Author & Comments Aligning',
+                'choices' => [
+                    'start' => 'Left',
+                    'end' => 'Right',
+                ],
+                'default_value' => 'start',
+            ])
             ->addSelect('header_style', [
                 'label' => 'Header Color Style',
                 'choices' => [

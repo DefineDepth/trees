@@ -39,7 +39,23 @@ if (post_password_required()) {
   <div class="row">
     <div class="col-12">
       <div class="reply-form">
-        @php comment_form() @endphp
+        @php comment_form([
+          'comment_field' =>
+            '
+            <p class="comment-form-comment">
+              <label for="comment">Comment</label>
+              <textarea
+                id="comment"
+                name="comment"
+                placeholder="' . _x( 'Comment', 'noun', 'trees' ) . '"
+                rows="3"
+                maxlength="65525"
+                required="required"
+              ></textarea>
+            </p>
+            '
+          ,
+        ]) @endphp
       </div>
     </div>
   </div>

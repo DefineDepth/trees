@@ -8,7 +8,8 @@ $post = get_post($post);
     @if ( get_post_thumbnail_id($post) )
       <div class="ratio ratio-3:4">
         {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, null], false, [
-          'class' => 'bg-image js-lazy',
+          'class' => 'bg-image lazyload',
+          'data-src' => '{{ get_post_thumbnail_url($post) }}',
         ]); !!}
       </div>    
     @else
