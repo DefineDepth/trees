@@ -6,6 +6,7 @@ import SectionClientsSlider from '../components/SectionClientsSlider'
 import PostFeaturesSlider from '../components/PostFeaturesSlider'
 import InstagramSlider from '../components/InstagramSlider'
 import MenuBarScroll from '../components/MenuBarScroll'
+import Parallax from '../components/Parallax'
 import Menu from '../components/Menu'
 import feather from 'feather-icons';
 
@@ -23,6 +24,7 @@ export default {
     new InstagramSlider;
     new MenuBarScroll;
     new Menu;
+    new Parallax;
     feather.replace();
   },
   finalize() {
