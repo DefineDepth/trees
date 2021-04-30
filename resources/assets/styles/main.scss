@@ -35,6 +35,10 @@
 @import "layouts/services";
 @import "layouts/comments";
 
+@import "layouts/portfolio-page/header";
+@import "layouts/portfolio-page/content";
+@import "layouts/portfolio-page/projects-nav";
+
 @import "components/post-col-3";
 @import "components/front-about";
 @import "components/clients";

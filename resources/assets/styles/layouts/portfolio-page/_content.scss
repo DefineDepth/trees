@@ -1,0 +1,13 @@
+.portfolio-page-content {
+  h1 {
+    text-align: center;
+  }
+  
+  .trees-block:not(.post-mt-) {
+    margin-top: 180px;
+    
+    @include media-below(md) {
+      margin-top: 100px;
+    }
+  }
+}
