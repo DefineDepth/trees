@@ -2,6 +2,10 @@
   Template Name: Home template
 --}}
 
+@php
+wp_redirect( 'http://localhost:3000/coming-soon/' );
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
