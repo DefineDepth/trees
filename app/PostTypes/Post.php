@@ -43,10 +43,19 @@ class Post extends AbstractPostType
             ->addImage('image', [ 'label' => 'Post Image Preview',])
             ->addText('quote')
             ->addText('quote_author')
+            ->addSelect('comments_column', [
+                'label' => 'Author & Comments Width',
+                'choices' => [
+                    '6' => '6 Columns',
+                    '7' => '7 Columns',
+                ],
+                'default_value' => '6',
+            ])
             ->addSelect('comments_align', [
                 'label' => 'Author & Comments Aligning',
                 'choices' => [
                     'start' => 'Left',
+                    'center' => 'Center',
                     'end' => 'Right',
                 ],
                 'default_value' => 'start',

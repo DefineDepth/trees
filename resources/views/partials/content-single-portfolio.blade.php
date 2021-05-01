@@ -47,9 +47,21 @@
     </div>
     
 
-    <div class="trees-block trees-block-post_title_text">
+    <div class="trees-block trees-block-gallery">
       <div class="container -fluid -p-left -p-right container-md">
-        <h1>Image</h1>
+        <div class="row -gap-30">
+          <div class="col-lg-6">
+            <div data-parallax="0.2" class="image-wrap ratio ratio-1:1">
+              <img data-parallax-target src="@asset('images/grid-cell.jpg')" alt="Image">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="image-wrap">
+              <img src="@asset('images/grid-cell.jpg')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -75,11 +87,118 @@
     </div>
 
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>slider dark-bg</h1>
+    
+    <div class="trees-block trees-block-image_slider">
+      <div class="container -fluid  container-md">
+        <div class="swiper-container js-portfolio-image-slider js-slider-col-1">
+          <div class="swiper-wrapper">
+            @for ($i = 0; $i < 3; $i++)
+              <div class="swiper-slide">
+                <div class="image-wrap ratio ratio-3:4">
+                  <img src="@asset('images/grid-cell.jpg')" alt="Image">
+                </div>
+              </div>
+            @endfor
+          </div>
+
+          <div class="swiper-pagination-wrapper">
+            <div class="swiper-pagination-counter">
+              001
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination-total">
+              006
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="trees-block trees-block-image_slider">
+      <div class="container -fluid  container-md">
+        <div class="swiper-container js-portfolio-image-slider js-slider-col-4">
+          <div class="swiper-wrapper">
+            @for ($i = 0; $i < 4; $i++)
+              <div class="swiper-slide">
+                <div class="image-wrap ratio ratio-1:1">
+                  <img src="@asset('images/grid-cell.jpg')" alt="Image">
+                </div>
+              </div>
+            @endfor
+          </div>
+
+          <div class="swiper-pagination-wrapper">
+            <div class="swiper-pagination-counter">
+              001
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination-total">
+              006
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="trees-block trees-block-portfolio_feature -content-left">
+      <div class="portfolio-feature__image">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__image__wrap">
+            <img src="@asset('images/grid-cell.jpg')" alt="Image">
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-feature__content">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__subtitle">
+            002
+          </div>
+  
+          <div class="portfolio-feature__wrap">
+            <h4 class="portfolio-feature__title">
+              Custom Tailored
+            </h4>
+            <div class="portfolio-feature__list">
+              <p>Key Value Propositions</p>
+              <p>Key Value Propositions</p>
+              <p>Key Value Propositions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trees-block trees-block-portfolio_feature -content-right">
+      <div class="portfolio-feature__image">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__image__wrap">
+            <img src="@asset('images/grid-cell.jpg')" alt="Image">
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-feature__content">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__subtitle">
+            002
+          </div>
+  
+          <div class="portfolio-feature__wrap">
+            <h4 class="portfolio-feature__title">
+              Custom Tailored
+            </h4>
+            <div class="portfolio-feature__list">
+              <p>Key Value Propositions</p>
+              <p>Key Value Propositions</p>
+              <p>Key Value Propositions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <div class="trees-block trees-block-post_title_text">

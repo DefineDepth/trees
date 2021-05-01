@@ -1,11 +1,11 @@
 <section class="projects-nav">
-  <div class="">
+  <div class="projects-nav__bg__wrap">
     <div class="row projects-nav__row">
 
       <div class="col-6">
         <div class="projects-nav__content -prev">
           <div class="projects-nav__bg">
-            <img src="#" alt="Prev project image">
+            <img src="@asset('images/qwe.png')" alt="Prev project image">
           </div>
 
           <div class="projects-nav__arrow"></div>
@@ -17,7 +17,7 @@
       <div class="col-6">
         <div class="projects-nav__content -next">
           <div class="projects-nav__bg">
-            <img src="#" alt="Next project image">
+            <img src="@asset('images/grid-cell.jpg')" alt="Next project image">
           </div>
 
           <div class="projects-nav__arrow"></div>

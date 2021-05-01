@@ -1,0 +1,34 @@
+.trees-block.trees-block-gallery {
+  .row {
+    &.-gap-0 {
+      margin: 0;
+      > * { padding: 0; }
+    }
+
+    &.-gap-30 {
+      margin: -15px;
+      > * { padding: 15px; }
+    }
+
+    &.-gap-60 {
+      margin: -30px;
+      > * { padding: 30px; }
+    }
+  }
+
+  .image-wrap {}
+
+  .image-wrap.ratio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

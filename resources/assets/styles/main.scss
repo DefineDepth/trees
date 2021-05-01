@@ -20,6 +20,11 @@
 @import "components/forms";
 @import "components/wp-classes";
 
+@import "components/blocks/base";
+@import "components/blocks/gallery";
+@import "components/blocks/imageSlider";
+@import "components/blocks/portfolioFeatures";
+
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

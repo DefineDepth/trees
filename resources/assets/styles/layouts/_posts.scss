@@ -675,13 +675,15 @@
 .post-mt {
   &-0 { margin-top: 0 !important; }
   &-sm { margin-top: 60px !important; }
-  &-md { margin-top: 140px !important; }
-  &-lg { margin-top: 200px !important; }
+  &-md { margin-top: 100px !important; }
+  &-lg { margin-top: 140px !important; }
+  &-xl { margin-top: 180px !important; }
 
   @include media-below(md) {
     &-sm { margin-top: 60px !important; }
-    &-md { margin-top: 100px !important; }
-    &-lg { margin-top: 120px !important; }
+    &-md { margin-top: 80px !important; }
+    &-lg { margin-top: 100px !important; }
+    &-xl { margin-top: 100px !important; }
   }
 }
 

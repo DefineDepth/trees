@@ -68,7 +68,7 @@
       <div class="content-bottom">
         <div class="container -fluid -p-left -p-right container-md">
           <div class="row justify-content-{{ $post_header_content['comments_align'] }}">
-            <div class="col-xl-6">
+            <div class="col-xl-{{ $post_header_content['comments_column'] }}">
               <div class="row">
                 <div class="col-md-auto col-12">
                   <div class="post-author -grey -post-bottom">
