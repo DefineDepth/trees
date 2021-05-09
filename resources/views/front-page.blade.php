@@ -2,10 +2,6 @@
   Template Name: Home template
 --}}
 
-@php
-wp_redirect( 'http://localhost:3000/coming-soon/' );
-@endphp
-
 @extends('layouts.app')
 
 @section('content')
@@ -201,18 +197,24 @@ wp_redirect( 'http://localhost:3000/coming-soon/' );
               @endfor
             </div>
             <div class="testimonials__author">
-              <p class="text-grey">Tom Pepe - CEO \ Timtam</p>
+              @if ( $testimonials_author )
+                <p>{!! $testimonials_author !!}</p>
+              @endif
             </div>
           </div>
 
           <div class="testimonials__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-          </div>
-
-          <div class="testimonials__button">
-            <a href="#" class="button -dash">
-              Case Study
-            </a>
+            <p>
+              @if ( $testimonials_content )
+                {!! $testimonials_content !!}
+              @endif
+              
+              @if ( $testimonials_link )
+                <a href="{{ $testimonials_link['url'] }}" class="testimonials__button button -dash">
+                  {{ $testimonials_link['title'] }}
+                </a>
+              @endif
+            </p>
           </div>
         </div>
       </div>

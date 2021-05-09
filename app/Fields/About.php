@@ -101,7 +101,8 @@ class About extends AbstractFields
         $builder
             ->addTab('CTA')
             ->addText('cta_title')
-            ->addLink('cta_button_link');
+            ->addLink('cta_button_link')
+        ;
 
 
         $this->add_local_field_group($builder);

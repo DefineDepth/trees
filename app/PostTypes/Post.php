@@ -60,6 +60,14 @@ class Post extends AbstractPostType
                 ],
                 'default_value' => 'start',
             ])
+            ->addSelect('post_lines', [
+                'label' => 'Post Header Lines',
+                'choices' => [
+                    '0' => 'Off',
+                    '1' => 'On',
+                ],
+                'default_value' => '0',
+            ])
             ->addSelect('header_style', [
                 'label' => 'Header Color Style',
                 'choices' => [

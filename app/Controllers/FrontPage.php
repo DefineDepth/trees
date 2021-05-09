@@ -52,5 +52,21 @@ class FrontPage extends Controller
   {
     return get_field(__FUNCTION__);
   }
+  
+  
+  public function testimonials_author()
+  {
+    return get_field(__FUNCTION__);
+  }
+
+  public function testimonials_content()
+  {
+    return get_field(__FUNCTION__);
+  }
+
+  public function testimonials_link()
+  {
+    return get_field(__FUNCTION__);
+  }
 
 }

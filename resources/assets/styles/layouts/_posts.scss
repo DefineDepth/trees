@@ -1,5 +1,6 @@
 .post-single {
   &__section {
+    overflow: hidden;
     padding-top: 280px;
     padding-bottom: 80px;
 
@@ -12,6 +13,27 @@
 }
 
 .post-single-header {
+  &__lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(26%) rotate(27deg);
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      width: 120vw;
+      height: 1px;
+      margin: 30px 0;
+      background-color: rgba(black, 0.5);
+      
+      @include media-below(md) {
+        margin: 20px 0;
+        background-color: rgba(black, 0.2);
+      }
+    }
+  }
+
   &__left {
     padding-right: 30px;
     
@@ -70,6 +92,7 @@
       margin-top: 30px;
       font-size: 21px;
       line-height: 42px;
+      font-weight: 300;
 
       @include media-below(md) {
         margin-top: 24px;

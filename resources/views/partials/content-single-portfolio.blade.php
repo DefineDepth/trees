@@ -1,4 +1,8 @@
 <section class="portfolio-page-header">
+  <div data-parallax="0.6" class="portfolio-page-header__image">
+    <img data-parallax-target src="@asset('images/pr-1/main/main.png')" alt="Project header image">
+  </div>
+
   <div class="portfolio-page-header__container">
     <div class="row">
       <div class="col-12">
@@ -21,6 +25,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="portfolio-page-content">
 
@@ -46,25 +51,17 @@
       </div>
     </div>
     
-
     <div class="trees-block trees-block-gallery">
-      <div class="container -fluid -p-left -p-right container-md">
+      <div class="container -fluid">
         <div class="row -gap-30">
-          <div class="col-lg-6">
-            <div data-parallax="0.2" class="image-wrap ratio ratio-1:1">
-              <img data-parallax-target src="@asset('images/grid-cell.jpg')" alt="Image">
-            </div>
-          </div>
-
-          <div class="col-lg-6">
+          <div class="col-12">
             <div class="image-wrap">
-              <img src="@asset('images/grid-cell.jpg')" alt="Image">
+              <img src="@asset('images/pr-1/1.png')" alt="Image">
             </div>
           </div>
         </div>
       </div>
     </div>
-
 
     <div class="trees-block trees-block-post_title_text">
       <div class="container -fluid -p-left -p-right container-md">
@@ -86,19 +83,30 @@
       </div>
     </div>
 
-
-    
     <div class="trees-block trees-block-image_slider">
       <div class="container -fluid  container-md">
         <div class="swiper-container js-portfolio-image-slider js-slider-col-1">
           <div class="swiper-wrapper">
-            @for ($i = 0; $i < 3; $i++)
-              <div class="swiper-slide">
-                <div class="image-wrap ratio ratio-3:4">
-                  <img src="@asset('images/grid-cell.jpg')" alt="Image">
-                </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ratio ratio-1:1">
+                <img src="@asset('images/pr-1/slider-1/1.png')" alt="Image">
               </div>
-            @endfor
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ratio ratio-1:1">
+                <img src="@asset('images/pr-1/slider-1/2.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ratio ratio-1:1">
+                <img src="@asset('images/pr-1/slider-1/3.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ratio ratio-1:1">
+                <img src="@asset('images/pr-1/slider-1/4.png')" alt="Image">
+              </div>
+            </div>
           </div>
 
           <div class="swiper-pagination-wrapper">
@@ -113,93 +121,6 @@
         </div>
       </div>
     </div>
-
-    <div class="trees-block trees-block-image_slider">
-      <div class="container -fluid  container-md">
-        <div class="swiper-container js-portfolio-image-slider js-slider-col-4">
-          <div class="swiper-wrapper">
-            @for ($i = 0; $i < 4; $i++)
-              <div class="swiper-slide">
-                <div class="image-wrap ratio ratio-1:1">
-                  <img src="@asset('images/grid-cell.jpg')" alt="Image">
-                </div>
-              </div>
-            @endfor
-          </div>
-
-          <div class="swiper-pagination-wrapper">
-            <div class="swiper-pagination-counter">
-              001
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-pagination-total">
-              006
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="trees-block trees-block-portfolio_feature -content-left">
-      <div class="portfolio-feature__image">
-        <div class="portfolio-feature__container__wrap">
-          <div class="portfolio-feature__image__wrap">
-            <img src="@asset('images/grid-cell.jpg')" alt="Image">
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-feature__content">
-        <div class="portfolio-feature__container__wrap">
-          <div class="portfolio-feature__subtitle">
-            002
-          </div>
-  
-          <div class="portfolio-feature__wrap">
-            <h4 class="portfolio-feature__title">
-              Custom Tailored
-            </h4>
-            <div class="portfolio-feature__list">
-              <p>Key Value Propositions</p>
-              <p>Key Value Propositions</p>
-              <p>Key Value Propositions</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="trees-block trees-block-portfolio_feature -content-right">
-      <div class="portfolio-feature__image">
-        <div class="portfolio-feature__container__wrap">
-          <div class="portfolio-feature__image__wrap">
-            <img src="@asset('images/grid-cell.jpg')" alt="Image">
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-feature__content">
-        <div class="portfolio-feature__container__wrap">
-          <div class="portfolio-feature__subtitle">
-            002
-          </div>
-  
-          <div class="portfolio-feature__wrap">
-            <h4 class="portfolio-feature__title">
-              Custom Tailored
-            </h4>
-            <div class="portfolio-feature__list">
-              <p>Key Value Propositions</p>
-              <p>Key Value Propositions</p>
-              <p>Key Value Propositions</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
 
     <div class="trees-block trees-block-post_title_text">
       <div class="container -fluid -p-left -p-right container-md">
@@ -221,25 +142,104 @@
       </div>
     </div>
 
+    <div class="trees-block trees-block-image_slider">
+      <div class="container -fluid  container-md">
+        <div class="swiper-container js-portfolio-image-slider js-slider-col-4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image-wrap ">
+                <img src="@asset('images/pr-1/slider-2/1.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ">
+                <img src="@asset('images/pr-1/slider-2/2.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ">
+                <img src="@asset('images/pr-1/slider-2/3.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap ">
+                <img src="@asset('images/pr-1/slider-2/4.png')" alt="Image">
+              </div>
+            </div>
+          </div>
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>slider dark-bg</h1>
+          <div class="swiper-pagination-wrapper">
+            <div class="swiper-pagination-counter">
+              001
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination-total">
+              006
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>feature left content 01</h1>
+
+    <div class="trees-block trees-block-portfolio_feature -content-left">
+      <div class="portfolio-feature__image">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__image__wrap">
+            <img src="@asset('images/pr-1/2.png')" alt="Image">
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-feature__content">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__subtitle">
+            001
+          </div>
+  
+          <div class="portfolio-feature__wrap">
+            <h4 class="portfolio-feature__title">
+              Interchangeable Sales Content
+            </h4>
+            <div class="portfolio-feature__list">
+              <p>Dynamic Mastheads</p>
+              <p>UX/UI & Strategy</p>
+              <p>Responsive Block Elements</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>feature right content 02</h1>
+    <div class="trees-block trees-block-portfolio_feature -content-right post-mt-0">
+      <div class="portfolio-feature__image">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__image__wrap">
+            <img src="@asset('images/pr-1/3.png')" alt="Image">
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-feature__content">
+        <div class="portfolio-feature__container__wrap">
+          <div class="portfolio-feature__subtitle">
+            002
+          </div>
+  
+          <div class="portfolio-feature__wrap">
+            <h4 class="portfolio-feature__title">
+              Custom Tailored
+            </h4>
+            <div class="portfolio-feature__list">
+              <p>Key Value Propositions</p>
+              <p>Call to Action's</p>
+              <p>Custom Iconography</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
+    
 
     <div class="trees-block trees-block-post_title_text">
       <div class="container -fluid -p-left -p-right container-md">
@@ -253,49 +253,104 @@
           <div class="col-lg-7">
             <div class="text-content">
               <p>With a saturated category, the details are often what defines differentiating aspects of the brand and products. Those details are often defined early within the design stage and set the foundation for a cohesive system from concept to delivery. Working hands on with the Shopify development team ensured quality control and the proper direction and execution of vision.</p>
-              <p>Here is a breakdown of the commonly underrated details utilized in this project.</p>
-              <p>Product & Supporting Iconography – Tech specific, no primary language is necessary.</p>
-              <p>Grey-tones-framework – One of the most underrated tools in the toolbox. These grey-tones have a real job, they frame out the product stage, building upon depth and function. Allowing the white aspects of each photo to pop. They bring structure to the module based system, and consistency whether desktop, tablet, or mobile.</p>
-              <p>How it works – Taking the learning curve head on, by visually conveying products main purpose, and key benefits with a story format. By offering clarity, consumer frustration and poor reviews are avoided downstream.</p>
-              <p>Pebblebee Bee – Painting the picture of the pathway, digitally retracing your steps and sourcing your prize.</p>
-              <p>Packaging System – With the updates of the Pebblebee ecommerce platform and design language, a refreshed packaging system was introduced for their presence in Costco. This opened the door to expanding to Costco Canada, which needed a multilingual solution on a time sensitive basis.</p>
+              <p><strong>Here is a breakdown of the commonly underrated details utilized in this project.</strong></p>
+              <p><strong>Product & Supporting Iconography</strong> – Tech specific, no primary language is necessary.</p>
+              <p><strong>Grey-tones-framework</strong> – One of the most underrated tools in the toolbox. These grey-tones have a real job, they frame out the product stage, building upon depth and function. Allowing the white aspects of each photo to pop. They bring structure to the module based system, and consistency whether desktop, tablet, or mobile.</p>
+              <p><strong>How it works</strong> – Taking the learning curve head on, by visually conveying products main purpose, and key benefits with a story format. By offering clarity, consumer frustration and poor reviews are avoided downstream.</p>
+              <p><strong>Pebblebee Bee</strong> – Painting the picture of the pathway, digitally retracing your steps and sourcing your prize.</p>
+              <p><strong>Packaging System</strong> – With the updates of the Pebblebee ecommerce platform and design language, a refreshed packaging system was introduced for their presence in Costco. This opened the door to expanding to Costco Canada, which needed a multilingual solution on a time sensitive basis.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="trees-block trees-block-post_title_text">
+    <div class="trees-block trees-block-gallery">
       <div class="container -fluid -p-left -p-right container-md">
-        <h1>Image</h1>
+        <div class="row -gap-30">
+          <div class="col-12">
+            <div class="image-wrap">
+              <img src="@asset('images/pr-1/4.png')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
+    <div class="trees-block trees-block-gallery">
       <div class="container -fluid -p-left -p-right container-md">
-        <h1>Image</h1>
+        <div class="row -gap-30">
+          <div class="col-12">
+            <div class="image-wrap">
+              <img src="@asset('images/pr-1/5.png')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
+    <div class="trees-block trees-block-gallery">
       <div class="container -fluid -p-left -p-right container-md">
-        <h1>Image</h1>
+        <div class="row -gap-30">
+          <div class="col-12">
+            <div class="image-wrap">
+              <img src="@asset('images/pr-1/6.jpg')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>image no container</h1>
+    <div class="trees-block trees-block-gallery">
+      <div class="container -fluid">
+        <div class="row -gap-30">
+          <div class="col-12">
+            <div class="image-wrap">
+              <img src="@asset('images/pr-1/7.png')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>slider dark-bg</h1>
+    <div class="trees-block trees-block-image_slider">
+      <div class="container -fluid  container-md">
+        <div class="swiper-container js-portfolio-image-slider js-slider-col-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image-wrap">
+                <img src="@asset('images/pr-1/slider-3/1.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap">
+                <img src="@asset('images/pr-1/slider-3/2.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap">
+                <img src="@asset('images/pr-1/slider-3/3.png')" alt="Image">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-wrap">
+                <img src="@asset('images/pr-1/slider-3/4.png')" alt="Image">
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination-wrapper">
+            <div class="swiper-pagination-counter">
+              001
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination-total">
+              006
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
 
     <div class="trees-block trees-block-post_title_text">
       <div class="container -fluid -p-left -p-right container-md">
@@ -316,33 +371,27 @@
       </div>
     </div>
 
-
-    <div class="trees-block trees-block-post_title_text">
-      <div class="container -fluid -p-left -p-right container-md">
-        <h1>two column images 100vh with parallax</h1>
+    <div class="trees-block trees-block-gallery">
+      <div class="container -fluid">
+        <div class="row -gap-0">
+          <div class="col-md-6">
+            <div data-parallax="0.6" class="image-wrap ratio ratio-1:1">
+              <img data-parallax-target src="@asset('images/pr-1/8.png')" alt="Image">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div data-parallax="-0.3" class="image-wrap ratio ratio-1:1">
+              <img data-parallax-target src="@asset('images/pr-1/9.png')" alt="Image">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 
 
-
   @php the_content() @endphp
 
-  {{-- <div class="trees-block">
-    <div class="container -fluid -p-left -p-right container-md">
-      <div class="row">
-        <div class="col-xl-5">
-          <h2>Lost no more – is it really this easy?</h2>
-        </div>
-
-        <div class="col-xl-7">
-          <p>My introduction to the Pebblebee tracking technology was a quick reminder of life’s frustrations that should no longer plague us in this day and age. With tracking technology gaining momentum, it was Pebblebee’s main objective to optimize growth by bringing the bulk of their sales in-house for self-fulfillment. For that to happen the website needed to be updated and e-commerce infrastructure needed to be built out. Next the brand needed to be revitalized and marketed to drive curiosity, optimizing traffic.</p>
-          <br>
-          <p>This brand revitalization scope included a complete customized Shopify ecommerce experience and refreshed digital campaigns. This cohesive design system went full circle, covering a packaging refresh for all Pebblebee current products, and for the release of their new wallet slim BlackCard.</p>
-        </div>
-      </div>
-    </div>
-  </div> --}}
 
 </section>

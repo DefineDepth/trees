@@ -51,6 +51,10 @@
     letter-spacing: 0.2em;
     font-weight: 500;
 
+    p {
+      color: rgba(white, 0.4);
+    }
+
     @include media-below(md) {
       margin-left: 0;
       margin-top: 24px;
@@ -75,15 +79,8 @@
   }
 
   &__button {
-    display: block;
-    margin-top: 40px;
-    
-    a {
-      color: white;
-    }
-
-    @include media-below(md) {
-      margin-top: 28px;
-    }
+    display: inline-block;
+    color: white;
+    margin-left: 16px;
   }
 }

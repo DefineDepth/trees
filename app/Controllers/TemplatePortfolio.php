@@ -21,4 +21,9 @@ class TemplatePortfolio extends Controller
     return $posts;
   }
 
+  public function portfolio_controls()
+  {
+    return get_field(__FUNCTION__);
+  }
+
 }

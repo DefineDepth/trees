@@ -37,33 +37,35 @@ class FrontPage extends AbstractFields
         $builder->setLocation('page_type', '==', 'front_page');
 
         $builder
-            ->addTab('Hero', [
-                'label' => 'Hero',
-            ])
-            ->addText('hero_subtitle')
-            ->addText('hero_title');
+            ->addTab('Hero', [ 'label' => 'Hero', ])
+            ->addText('hero_subtitle', [ 'label' => 'Subtitle', ])
+            ->addText('hero_title', [ 'label' => 'Title', ])
+        ;
 
 
         $builder = $builder->addRepeater('hero_repeater', [
-            'layout' => 'block',
-            'min' => 0,
+            'layout' => 'row',
         ]);
 
         $builder->addText('text');
 
         $builder = $builder->endRepeater();
-
+        
 
         $builder
-            ->addTab('About', [
-                'label' => 'About',
-            ])
-            ->addImage('about_image', [
-                'label' => 'Image',
-            ])
-            ->addText('about_subtitle')
-            ->addText('about_title')
-            ->addTextarea('about_text');
+            ->addTab('About', [ 'label' => 'About', ])
+            ->addImage('about_image', [ 'label' => 'Image', ])
+            ->addText('about_subtitle', [ 'label' => 'Subtitle', ])
+            ->addText('about_title', [ 'label' => 'Title', ])
+            ->addTextarea('about_text', [ 'label' => 'Text', ])
+        ;
+
+        $builder
+            ->addTab('testimonials', [ 'label' => 'Testimonials', ])
+            ->addText('testimonials_author', [ 'label' => 'Author', ])
+            ->addTextarea('testimonials_content', [ 'label' => 'Comment', ])
+            ->addLink('testimonials_link', [ 'label' => 'Link', ])
+        ;
 
         $this->add_local_field_group($builder);
     }

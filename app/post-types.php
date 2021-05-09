@@ -5,6 +5,7 @@ namespace App\Fields;
 use App\Fields\FrontPage;
 use App\Fields\About;
 use App\Fields\Services;
+use App\Fields\PortfolioPage;
 
 use App\PostTypes\Client;
 use App\PostTypes\Team;
@@ -26,6 +27,7 @@ use App\PostTypes\Post;
 new FrontPage();
 new About();
 new Services();
+new PortfolioPage();
 
 new Client;
 new Team;
