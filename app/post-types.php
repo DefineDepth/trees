@@ -6,6 +6,8 @@ use App\Fields\FrontPage;
 use App\Fields\About;
 use App\Fields\Services;
 use App\Fields\PortfolioPage;
+use App\Fields\Manifest;
+use App\Fields\Careers;
 
 use App\PostTypes\Client;
 use App\PostTypes\Team;
@@ -28,6 +30,8 @@ new FrontPage();
 new About();
 new Services();
 new PortfolioPage();
+new Manifest();
+new Careers();
 
 new Client;
 new Team;
