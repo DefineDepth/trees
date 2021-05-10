@@ -65,7 +65,7 @@ class Careers extends AbstractFields
             $builder = $builder->addRepeater('careers_repeater', [ 'layout' => 'row', 'label' => 'Available careers', ]);
             $builder
                 ->addText('title', [ 'label' => 'Title' ])
-                ->addText('text', [ 'label' => 'Text' ])
+                ->addWysiwyg('text', [ 'label' => 'Text' ])
                 ->addLink('link', [ 'label' => 'Link' ])
             ;
             $builder = $builder->endRepeater();

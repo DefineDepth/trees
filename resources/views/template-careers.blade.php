@@ -14,16 +14,12 @@
       <div class="col-xl-9 col-lg-9">
         <div class="careers-header__content">
           <p class="careers-header__subtitle">
-            {{-- CAREERS --}}
             {{ $header['subtitle'] }}
           </p>
           <h1 class="careers-header__title">
-            {{-- Want to join the team?<br>
-            Help us make something good. --}}
             {!! $header['title'] !!}
           </h1>
           <div class="careers-header__text">
-            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> --}}
             {!! $header['text'] !!}
           </div>
         </div>
@@ -59,55 +55,39 @@
 
             <div class="careers-card__content">
               <h4 class="careers-card__title">
-                Talent Hunt
+                {!! $careers_cards['title'] !!}
               </h4>
         
               <div class="careers-card__text">
-                <p>We’re always on the lookout for talented, creative humans. Drop us a note with your link, and who knows what could happen. Right?</p>
+                {!! $careers_cards['text'] !!}
               </div>
             </div>
       
             <div class="careers-card__link">
-              <a class="button -dash" href="#">Send Us Your Link</a>
+              <a class="button -dash" href="{{ $careers_cards['link']['url'] }}">{!! $careers_cards['link']['title'] !!}</a>
             </div>
           </div>
         </div>
 
-        <div class="col-xl-4 col-lg-6">
-          <div class="careers-card">
-            <div class="careers-card__content">
-              <h4 class="careers-card__title">
-                Senior Designer
-              </h4>
+        @foreach ($careers_cards['careers_repeater'] as $item)
+          <div class="col-xl-4 col-lg-6">
+            <div class="careers-card">
+              <div class="careers-card__content">
+                <h4 class="careers-card__title">
+                  {!! $item['title'] !!}
+                </h4>
+          
+                <div class="careers-card__text">
+                  {!! $item['text'] !!}
+                </div>
+              </div>
         
-              <div class="careers-card__text">
-                <p> art as a vehicle for storytelling and community expression. Our projects are defined by a devotion to craft, narrative and championing arts enduring ability to tell powerful stories, tearing up the rule book on both the traditional art world model and accepted notions.</p>
+              <div class="careers-card__link">
+                <a class="button -dash" href="{{ $item['link']['url'] }}">{!! $item['link']['title'] !!}</a>
               </div>
             </div>
-      
-            <div class="careers-card__link">
-              <a class="button -dash" href="#">Let’s Go</a>
-            </div>
           </div>
-        </div>
-
-        <div class="col-xl-4 col-lg-6">
-          <div class="careers-card">
-            <div class="careers-card__content">
-              <h4 class="careers-card__title">
-                Senior Designer
-              </h4>
-        
-              <div class="careers-card__text">
-                <p> art as a vehicle for storytelling and community expression. Our projects are defined by a devotion to craft, narrative and championing arts enduring ability to tell powerful stories, tearing up the rule book on both the traditional art world model and accepted notions.</p>
-              </div>
-            </div>
-      
-            <div class="careers-card__link">
-              <a class="button -dash" href="#">Let’s Go</a>
-            </div>
-          </div>
-        </div>
+        @endforeach
         
       </div>
     </div>
@@ -153,21 +133,21 @@
               @endfor
             </div>
             <div class="testimonials__author">
-              @if ( $testimonials_author )
-                <p>{!! $testimonials_author !!}</p>
+              @if ( $testimonials['author'] )
+                <p>{!! $testimonials['author'] !!}</p>
               @endif
             </div>
           </div>
 
           <div class="testimonials__text">
             <p>
-              @if ( $testimonials_content )
-                {!! $testimonials_content !!}
+              @if ( $testimonials['content'] )
+                {!! $testimonials['content'] !!}
               @endif
               
-              @if ( $testimonials_link )
-                <a href="{{ $testimonials_link['url'] }}" class="testimonials__button button -dash">
-                  {{ $testimonials_link['title'] }}
+              @if ( $testimonials['link'] )
+                <a href="{{ $testimonials['link']['url'] }}" class="testimonials__button button -dash">
+                  {{ $testimonials['link']['title'] }}
                 </a>
               @endif
             </p>
