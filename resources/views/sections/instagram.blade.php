@@ -1,9 +1,9 @@
 @php
-  if ( !$container_style ) {
-    $container_style = 'container';
-  } else {
-    $container_style = 'container -fluid -p-left -p-right -row-normal';
-  }
+if ( isset($container_style) ) {
+  $container_style = 'container';
+} else {
+  $container_style = 'container -fluid -p-left -p-right -row-normal';
+}
 @endphp
 
 <section class="instagram__section">

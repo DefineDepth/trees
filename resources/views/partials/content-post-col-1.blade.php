@@ -3,6 +3,19 @@ $post = get_post($post);
 @endphp
 <article {{ post_class('postCard -col-1', $post) }}>
   <div class="row">
+    <div class="col-12">
+      <div class="sectionLink -pb-sm">
+        <div class="sectionLink__line"></div>
+        <div class="sectionLink__arrow">
+          <a href="{{ get_permalink($post) }}">
+            <span class="icon" data-feather="arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-lg-6">
       <div class="postCard__image">
         <div class="ratio ratio-3:2">

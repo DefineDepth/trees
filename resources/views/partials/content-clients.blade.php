@@ -5,7 +5,7 @@ $post = get_post($post);
   <div class="clients__image">
     {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, null], false, [
       'class' => 'bg-image lazyload',
-      'data-src' => '{{ get_post_thumbnail_url($post) }}',
+      'data-src' => get_the_post_thumbnail_url($post),
     ]); !!}
   </div>
 

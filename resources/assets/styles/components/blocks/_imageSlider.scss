@@ -57,4 +57,20 @@
     width: 100%;
     height: auto;
   }
+
+  
+  &.-light {
+    .swiper-pagination-progressbar {
+      background-color: rgba($color: white, $alpha: 0.2);
+    }
+
+    .swiper-pagination-progressbar-fill {
+      background-color: white;
+    }
+    
+    .swiper-pagination-counter,
+    .swiper-pagination-total {
+      color: white;
+    }
+  }
 }

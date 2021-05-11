@@ -122,7 +122,6 @@
     </div>
   
     <div class="img-bg">
-      {{-- <div class="ratio ratio-4:3"> --}}
       <div class="ratio ratio-21:11">
         <img class="img-image img-image-ratio" src="{{ $about_image['url'] }}" alt="image">
       </div>
@@ -133,29 +132,13 @@
 
 <section class="front-blog__col-1">
   <div class="container">
-
     @php $post_count_2 = 0; @endphp
     @foreach ($posts as $post)
       @if ($post_count_2 > 2)
-        <div>
-          <div class="row">
-            <div class="col-12">
-              <div class="sectionLink -pb-sm">
-                <div class="sectionLink__line"></div>
-                <div class="sectionLink__arrow">
-                  <a href="#">
-                    <span class="icon" data-feather="arrow-right"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          @include('partials.content-post-col-1', ['post' => $post])
-        </div>
-        @endif
+        @include('partials.content-post-col-1', ['post' => $post])
+      @endif
       @php $post_count_2++; @endphp
     @endforeach
-
   </div>
 </section>
 

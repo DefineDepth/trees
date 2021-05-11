@@ -1,9 +1,9 @@
 @php
-  if ( !$container_style ) {
-    $container_style = 'container';
-  } else {
-    $container_style = 'container -fluid -p-left -p-right -row-normal container-md';
-  }
+if ( isset($container_style) ) {
+  $container_style = 'container';
+} else {
+  $container_style = 'container -fluid -p-left -p-right -row-normal';
+}
 @endphp
 
 <section class="front-blog__col-3 swiper-section related-posts">

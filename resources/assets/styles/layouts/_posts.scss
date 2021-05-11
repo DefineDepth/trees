@@ -156,11 +156,11 @@
   }
 
   &.-post-bottom {
-    margin-top: 100px;
+    // margin-top: 100px;
 
-    @include media-below(md) {
-      margin-top: 80px;
-    }
+    // @include media-below(md) {
+    //   margin-top: 80px;
+    // }
   }
 
   &:not(.-post-bottom) {

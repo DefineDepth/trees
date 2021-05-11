@@ -7,11 +7,11 @@
     padding: 0;
   }
 
-  .trees-block:not(.post-mt-) {
-    margin-top: 180px;
+  .trees-block:first-child {
+    padding-top: 140px;
     
     @include media-below(md) {
-      margin-top: 100px;
+      padding-top: 100px;
     }
   }
 }

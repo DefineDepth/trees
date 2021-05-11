@@ -28,11 +28,11 @@
 
 
 <section class="portfolio-page-content">
-
-
   <div class="post-single-content">
 
-    <div class="trees-block -light trees-block-post_title_text bg-black">
+    @php the_content() @endphp
+
+    {{-- <div class="trees-block -light trees-block-post_title_text bg-black">
       <div class="container -fluid -p-left -p-right container-md">
         <div class="row justify-content-between">
           <div class="col-lg-4">
@@ -51,7 +51,6 @@
       </div>
     </div>
     
-    {{-- wwwwwwwwwwwwwwwwww --}}
     <div class="trees-block trees-block-gallery">
       <div class="container -fluid">
         <div class="row -gap-30">
@@ -84,7 +83,6 @@
       </div>
     </div>
 
-    {{-- wwwwwwwwwwwwwwwwww --}}
     <div class="trees-block trees-block-image_slider">
       <div class="container -fluid container-md">
         <div class="swiper-container js-portfolio-image-slider js-slider-col-1">
@@ -184,7 +182,6 @@
     </div>
 
 
-    {{-- wwwwwwwwwwwwwwwwww --}}
     <div class="trees-block trees-block-portfolio_feature -content-left">
       <div class="portfolio-feature__image">
         <div class="portfolio-feature__container__wrap">
@@ -214,7 +211,6 @@
       </div>
     </div>
 
-    {{-- wwwwwwwwwwwwwwwwww --}}
     <div class="trees-block trees-block-portfolio_feature -content-right post-mt-0">
       <div class="portfolio-feature__image">
         <div class="portfolio-feature__container__wrap">
@@ -390,12 +386,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
   </div>
-
-
-  @php the_content() @endphp
-
-
 </section>
