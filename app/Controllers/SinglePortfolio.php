@@ -7,9 +7,9 @@ use Sober\Controller\Controller;
 class SinglePortfolio extends Controller
 {
   
-  // public function portfolio_controls()
-  // {
-  //   return get_field(__FUNCTION__);
-  // }
+  public function info_repeater()
+  {
+    return get_field(__FUNCTION__);
+  }
 
 }

@@ -1,27 +1,32 @@
 <section class="portfolio-page-header">
   <div data-parallax="0.6" class="portfolio-page-header__image">
-    <img data-parallax-target src="@asset('images/pr-1/main/main.png')" alt="Project header image">
+    <img data-parallax-target src="{{ get_the_post_thumbnail_url() }}" alt="Project header image">
   </div>
 
   <div class="portfolio-page-header__container">
     <div class="row">
       <div class="col-12">
         <h1 class="portfolio-page-header__title">
-          Pebblebee
+          {{ get_the_title() }}
         </h1>
         <div class="portfolio-page-header__line"></div>
       </div>
     </div>
 
     <div class="row portfolio-page-header__row">
-      @for ($i = 0; $i < 3; $i++)
+      @foreach ($info_repeater as $item)
         <div class="col-auto">
           <div class="portfolio-page-header__info">
-            <h4 class="title">Creative Director</h4>
-            <p class="text">Phil Padilla</p>
+            <h4 class="title">{{ $item['title'] }}</h4>
+
+            @if ( $item['link']['url'] === '#' )
+              <p class="text">{{ $item['link']['title'] }}</p>
+            @else
+              <a class="text" href="{{ $item['link']['url'] }}">{{ $item['link']['title'] }}</a>
+            @endif
           </div>
         </div>
-      @endfor
+      @endforeach
     </div>
   </div>
 </section>

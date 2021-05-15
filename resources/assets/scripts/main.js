@@ -21,6 +21,10 @@ const routes = new Router({
   // aboutUs,
 });
 
+function elementorReload() {
+  common.init();
+}
+
 // Load Events
 window.addEventListener('load', function () {
   // common.containerInit()
