@@ -23,4 +23,10 @@ class TemplateInsight extends Controller
         return $posts;
     }
 
+
+    public function header()
+    {
+        return get_field(__FUNCTION__);
+    }
+
 }

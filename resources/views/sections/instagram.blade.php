@@ -19,15 +19,55 @@ if ( isset($container_style) ) {
   
       <div class="swiper swiper-container -instagramSlider">
         <div class="swiper-wrapper">
-          @for ($i = 0; $i < 6; $i++)
-            <div class="swiper-slide">
-              <div class="instagram__feed">
-                <div class="ratio ratio-1:1">
-                  <img src="@asset('images/insta.png')" class="img-image img-image-ratio">
-                </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 1.png')" class="img-image img-image-ratio">
               </div>
-            </div>
-          @endfor
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 2.png')" class="img-image img-image-ratio">
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 3.png')" class="img-image img-image-ratio">
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 4.png')" class="img-image img-image-ratio">
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 5.png')" class="img-image img-image-ratio">
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="#" class="instagram__feed">
+              <div class="ratio ratio-1:1">
+                <img src="@asset('images/instagram/Trees - social 6.png')" class="img-image img-image-ratio">
+              </div>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

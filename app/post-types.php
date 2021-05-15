@@ -8,6 +8,7 @@ use App\Fields\Services;
 use App\Fields\PortfolioPage;
 use App\Fields\Manifest;
 use App\Fields\Careers;
+use App\Fields\Insight;
 
 use App\PostTypes\Client;
 use App\PostTypes\Team;
@@ -32,6 +33,7 @@ new Services();
 new PortfolioPage();
 new Manifest();
 new Careers();
+new Insight();
 
 new Client;
 new Team;

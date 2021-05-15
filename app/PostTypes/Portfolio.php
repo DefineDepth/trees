@@ -37,13 +37,12 @@ class Portfolio extends AbstractPostType
             ->setLocation('post_type', '==', $this->post_type_name());
 
 
-        $builder = $builder->addRepeater('clients_repeater', [
+        $builder = $builder->addRepeater('info_repeater', [
             'layout' => 'row', 'label' => 'Portfolio Info',
         ]);
         $builder
             ->addText('title', [ 'label' => 'Title' ])
-            ->addText('text', [ 'label' => 'Text' ])
-            ->addLink('link', [ 'label' => 'Link' ])
+            ->addLink('link', [ 'label' => 'Link', 'instructions' => 'To make just text without link type # in URL field.', ])
         ;
         $builder = $builder->endRepeater();
 

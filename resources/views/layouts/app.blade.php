@@ -1,3 +1,9 @@
+{{-- @php
+if ( !is_user_logged_in() ) {
+  wp_redirect( 'http://treesdigital.com/?page_id=4689' );
+}
+@endphp --}}
+
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
