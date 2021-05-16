@@ -13,7 +13,7 @@ if ( isset($container_style) ) {
 
         <div class="footer__cta">
           <div class="footer__circle ratio ratio-1:1"></div>
-          <a href="#" class="footer__content">
+          <a href="{{ $footer_url }}" class="footer__content">
             <h2 class="footer__title">
               {{ $footer_title }}
             </h2>

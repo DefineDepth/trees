@@ -22,6 +22,11 @@ class App extends Controller
         return 'Emails are free, drop us a note.';
     }
 
+    public function footer_url()
+    {
+        return '#';
+    }
+
 
     public function siteName()
     {

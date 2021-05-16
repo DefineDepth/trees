@@ -13,6 +13,22 @@ class TemplateAbout extends Controller
         return '-black';
     }
 
+    public function footer_title()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function footer_title_rollover()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+    public function footer_url()
+    {
+        return get_field(__FUNCTION__);
+    }
+
+
     public function team_posts()
     {
         $posts = get_posts([

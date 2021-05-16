@@ -97,11 +97,26 @@ class About extends AbstractFields
         $builder = $builder->endGroup();
 
             
-
         $builder
             ->addTab('CTA')
             ->addText('cta_title')
             ->addLink('cta_button_link')
+        ;
+
+        $builder
+            ->addTab('Footer')
+            ->addText('footer_title', [
+                'label' => 'Title',
+                'default_value' => 'Want to connect on a project?',
+                ])
+            ->addText('footer_title_rollover', [
+                'label' => 'Rollover',
+                'default_value' => 'Emails are free, drop us a note.',
+                ])
+            ->addUrl('footer_url', [
+                'label' => 'URL',
+                'default_value' => '#',
+            ])
         ;
 
 
