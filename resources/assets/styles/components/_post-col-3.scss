@@ -25,7 +25,10 @@
 
 .postCard.-col-3 .postCard {
   &__image {
-    img {}
+    img {
+      width: 100%;
+      height: auto;
+    }
 
     &::after {
       content: "";

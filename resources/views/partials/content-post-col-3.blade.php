@@ -4,12 +4,19 @@ $post = get_post($post);
 <article {{ post_class('postCard -col-3', $post) }}>
   <a href="{{ get_permalink($post) }}">
     <div class="postCard__image">
-      <div class="ratio ratio-3:2">
+
+      {{-- <div class="ratio ratio-3:2">
         {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, 300] , false, [
           'class' => 'img-image img-image-ratio lazyload',
           'data-src' => '{{ get_post_thumbnail_url($post) }}',
         ]); !!}
-      </div>
+      </div> --}}
+
+      {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, 300] , false, [
+        'class' => 'lazyload',
+        'data-src' => '{{ get_post_thumbnail_url($post) }}',
+      ]); !!}
+
     </div>
     <h3 class="postCard__title">
       {!! get_the_title($post) !!}
