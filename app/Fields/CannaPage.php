@@ -10,10 +10,10 @@ use App\Fields\AbstractFields;
 /** https://github.com/Log1x/acf-builder-cheatsheet#relationship */
 
 
-class PortfolioPage extends AbstractFields
+class CannaPage extends AbstractFields
 {
 
-    const PORTFOLIO_TEMPLATE = 'views/template-portfolio.blade.php';
+    const CANNA_TEMPLATE = 'views/template-canna.blade.php';
 
     public function get_portfolio_projects()
     {
@@ -33,7 +33,7 @@ class PortfolioPage extends AbstractFields
 
     public function add_fields()
     {
-        $builder = $this->new_fields_builder('Portfolio Controls', [
+        $builder = $this->new_fields_builder('Work Canna Controls', [
             'style' => 'seamless',
             'hide_on_screen' => array(
                 'permalink',
@@ -52,17 +52,13 @@ class PortfolioPage extends AbstractFields
             ),
         ]);
 
-        $builder->setLocation('page_template', '==', static::PORTFOLIO_TEMPLATE);
+        $builder->setLocation('page_template', '==', static::CANNA_TEMPLATE);
 
 
-        $builder->addTab('Header');
         $builder = $builder->addGroup('portfolio_controls', [ 'layout' => 'row', 'label' => 'Controls' ]);
         $builder
             ->addText('title', [ 'label' => 'Page Header Title' ])
-            ->addText('grid_button_title', [ 'label' => 'Grid Title Button' ])
-            ->addLink('grid_button', [ 'label' => 'Grid Button' ])
         ;
-
 
         $builder = $builder->addRepeater('grid_repeater', [
             'layout' => 'row', 'label' => 'Grid Projects',
@@ -75,7 +71,6 @@ class PortfolioPage extends AbstractFields
             ])
         ;
         $builder = $builder->endRepeater();
-
 
         $builder = $builder->endGroup();
 
