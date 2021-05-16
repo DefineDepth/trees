@@ -1,8 +1,8 @@
-{{-- @php
+@php
 if ( !is_user_logged_in() ) {
   wp_redirect( 'http://treesdigital.com/?page_id=4689' );
 }
-@endphp --}}
+@endphp
 
 <!doctype html>
 <html {!! get_language_attributes() !!}>

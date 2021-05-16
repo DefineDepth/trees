@@ -134,7 +134,7 @@
 
   <div class="container">
     <div class="row align-items-center justify-content-between -fluid inner-item">
-      <div class="col-xl-5 col-lg-6">
+      <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
         <div class="front-about__content">
           <p class="front-about__subtitle">
             {{ $about_subtitle }}
@@ -153,7 +153,7 @@
         </div>
       </div>
   
-      <div class="col-xl-6 col-lg-5 row__side -right -mobile-padding">
+      <div class="col-xl-6 col-lg-5 row__side -right -mobile-padding order-1 order-lg-2">
         <div class="front-about__image ratio ratio-16:9">
           <img src="{{ $about_image['url'] }}" alt="About image">
         </div>
