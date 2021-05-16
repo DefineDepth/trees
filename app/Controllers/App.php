@@ -12,6 +12,17 @@ class App extends Controller
         return '-teal';
     }
 
+    public function footer_title()
+    {
+        return 'Want to connect on a project?';
+    }
+
+    public function footer_title_rollover()
+    {
+        return 'Emails are free, drop us a note.';
+    }
+
+
     public function siteName()
     {
         return get_bloginfo('name');

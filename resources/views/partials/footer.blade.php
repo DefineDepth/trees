@@ -10,11 +10,17 @@ if ( isset($container_style) ) {
   <div class="{{ $container_style }}">
     <div class="row">
       <div class="col-12">
+
         <div class="footer__cta">
           <div class="footer__circle ratio ratio-1:1"></div>
-          <h2 class="footer__title">
-            Want to see what we’re working on?
-          </h2>
+          <a href="#" class="footer__content">
+            <h2 class="footer__title">
+              {{ $footer_title }}
+            </h2>
+            <h2 class="footer__title -rollover">
+              {{ $footer_title_rollover }}
+            </h2>
+          </a>
         </div>
 
         <div class="footer__bottom">
