@@ -3,9 +3,9 @@
     <div class="row projects-nav__row">
 
       <div class="col-lg-6">
-        <a href="#" class="projects-nav__content -prev">
+        <a href="{{ get_permalink( $prev_project->ID ) }}" class="projects-nav__content -prev">
           <div class="projects-nav__bg">
-            <img src="@asset('images/qwe.png')" alt="Prev project image">
+            <img src="{{ get_the_post_thumbnail_url( $prev_project->ID ) }}" alt="Prev project image">
           </div>
 
           <div class="projects-nav__arrow">
@@ -14,15 +14,15 @@
 
           <div class="projects-nav__info">
             <div class="projects-nav__subtitle">Prev</div>
-            <h3 class="projects-nav__title">Clarisonic - Pedi</h3>
+            <h3 class="projects-nav__title">{{ get_the_title( $prev_project->ID ) }}</h3>
           </div>
         </a>
       </div>
 
       <div class="col-lg-6">
-        <a href="#" class="projects-nav__content -next">
+        <a href="{{ get_permalink( $next_project->ID ) }}" class="projects-nav__content -next">
           <div class="projects-nav__bg">
-            <img src="@asset('images/grid-cell.jpg')" alt="Next project image">
+            <img src="{{ get_the_post_thumbnail_url( $next_project->ID ) }}" alt="Next project image">
           </div>
 
           <div class="projects-nav__arrow">
@@ -31,7 +31,7 @@
 
           <div class="projects-nav__info">
             <div class="projects-nav__subtitle">Next</div>
-            <h3 class="projects-nav__title">Clarisonic - Pedi</h3>
+            <h3 class="projects-nav__title">{{ get_the_title( $next_project->ID ) }}</h3>
           </div>
         </a>
       </div>

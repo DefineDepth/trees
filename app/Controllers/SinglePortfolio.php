@@ -11,5 +11,15 @@ class SinglePortfolio extends Controller
   {
     return get_field(__FUNCTION__);
   }
+  
+  public function prev_project()
+  {
+    return get_field(__FUNCTION__);
+  }
+  
+  public function next_project()
+  {
+    return get_field(__FUNCTION__);
+  }
 
 }

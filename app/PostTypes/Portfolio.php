@@ -24,6 +24,22 @@ class Portfolio extends AbstractPostType
         ]);
     }
 
+    public function get_portfolio_projects()
+    {
+        $posts = get_posts([
+            'post_type' => 'portfolio',
+            'numberposts' => -1,
+        ]) ?: [];
+
+        $projects_array = [];
+
+        foreach ( $posts as $single ) {
+            $projects_array[ 'id-' . $single->ID ] = $single->post_title; 
+        }
+
+        return $projects_array;
+    }
+
     public function add_metaboxes()
     {
         $builder = new FieldsBuilder(
@@ -46,8 +62,19 @@ class Portfolio extends AbstractPostType
         ;
         $builder = $builder->endRepeater();
 
-        $builder->addText('prev_project', [ 'label' => 'Prev (This should be select)' ]);
-        $builder->addText('next_project', [ 'label' => 'Next (This should be select)' ]);
+
+        $builder
+            ->addSelect('prev_project', [
+                'label' => 'Previous Project',
+                'choices' => $this->get_portfolio_projects(),
+                'default_value' => '',
+            ])
+            ->addSelect('next_project', [
+                'label' => 'Next Project',
+                'choices' => $this->get_portfolio_projects(),
+                'default_value' => '',
+            ])
+        ;
 
 
         $this->add_local_field_group($builder);
