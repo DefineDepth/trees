@@ -89,6 +89,8 @@
     </div>
   </div>
 
+
+{{-- 
   <div class="wrap">
     <div class="container">
       <div class="row justify-content-between">
@@ -126,7 +128,39 @@
         <img class="img-image img-image-ratio" src="{{ $about_image['url'] }}" alt="image">
       </div>
     </div>
+  </div> --}}
+
+
+
+  <div class="container">
+    <div class="row align-items-center justify-content-between -fluid inner-item">
+      <div class="col-xl-5 col-lg-6">
+        <div class="front-about__content">
+          <p class="front-about__subtitle">
+            {{ $about_subtitle }}
+          </p>
+          <h3 class="front-about__title">
+            {{ $about_title }}
+          </h3>
+          <div class="front-about__text">
+            {{ $about_text }}
+          </div>
+          <div class="front-about__links">
+            @foreach ($about_links_repeater as $item)
+              <a href="{{ $item['link']['url'] }}">{{ $item['link']['title'] }}</a>
+            @endforeach
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-xl-6 col-lg-5 row__side -right -mobile-padding">
+        <div class="front-about__image ratio ratio-16:9">
+          <img src="{{ $about_image['url'] }}" alt="About image">
+        </div>
+      </div>
+    </div>
   </div>
+
 </section>
 
 

@@ -35,6 +35,7 @@ class FrontPage extends AbstractFields
         ]);
 
         $builder->setLocation('page_type', '==', 'front_page');
+        
 
         $builder
             ->addTab('Hero', [ 'label' => 'Hero', ])
@@ -42,13 +43,8 @@ class FrontPage extends AbstractFields
             ->addText('hero_title', [ 'label' => 'Title', ])
         ;
 
-
-        $builder = $builder->addRepeater('hero_repeater', [
-            'layout' => 'row',
-        ]);
-
+        $builder = $builder->addRepeater('hero_repeater', [ 'layout' => 'row', ]);
         $builder->addText('text');
-
         $builder = $builder->endRepeater();
         
 
@@ -59,6 +55,10 @@ class FrontPage extends AbstractFields
             ->addText('about_title', [ 'label' => 'Title', ])
             ->addTextarea('about_text', [ 'label' => 'Text', ])
         ;
+        $builder = $builder->addRepeater('about_links_repeater', [ 'layout' => 'row', ]);
+        $builder->addLink('link');
+        $builder = $builder->endRepeater();
+
 
         $builder
             ->addTab('testimonials', [ 'label' => 'Testimonials', ])

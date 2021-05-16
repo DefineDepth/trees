@@ -7,52 +7,19 @@
     padding-bottom: 0px;
   }
 
-  .wrap {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-
-    .container {
-      @include media-below(md) {
-        order: 2;
-      }
-    }
-  }
-
-  .img-bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    max-width: 42vw;
-    width: 100%;
-
-    img {
-      object-position: left;
-    }
-
-    @include media-below(md) {
-      order: 1;
-      position: relative;      
-      width: 720px;
-      max-width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 80px;
-    }
-
-    @include media-below(sm) {
-      width: 540px;
-    }
-
-    @include media-below(xs) {
-      width: 100%;
-    }
-  }
-
   &__image {
+    img {
+      width: 100%;
+      height: auto;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+
+      height: 100%;
+    }
+
     @include media-below(md) {
       margin-bottom: 80px;
     }

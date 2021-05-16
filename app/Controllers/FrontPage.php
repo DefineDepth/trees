@@ -53,6 +53,11 @@ class FrontPage extends Controller
     return get_field(__FUNCTION__);
   }
   
+  public function about_links_repeater()
+  {
+    return get_field(__FUNCTION__);
+  }
+  
   
   public function testimonials_author()
   {
