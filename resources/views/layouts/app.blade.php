@@ -7,14 +7,13 @@ if ( !is_user_logged_in() ) {
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class( 'body-theme' ) @endphp>
+  <body @php body_class( 'body-theme' ) @endphp data-barba="wrapper">
 
-    @php do_action('get_header') @endphp
+    <div class="barba-container" role="document" data-barba="container">
+      <div class="content js-barba-content">
 
-    @include('partials.header')
-
-    <div class="wrap" role="document">
-      <div class="content">
+        @php do_action('get_header') @endphp
+        @include('partials.header')
         
         <main class="main">
           @yield('content')
@@ -26,14 +25,12 @@ if ( !is_user_logged_in() ) {
           </aside>
         @endif --}}
 
+        @php do_action('get_footer') @endphp
+        @include('partials.footer')
+        @php wp_footer() @endphp
+
       </div>
     </div>
-
-    @php do_action('get_footer') @endphp
-
-    @include('partials.footer')
-
-    @php wp_footer() @endphp
 
   </body>
 </html>

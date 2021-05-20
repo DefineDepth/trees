@@ -12,6 +12,7 @@ export default class Menu {
     const background = document.querySelector('.js-nav-bg');
     const bgLeft = document.querySelector('.js-nav-bg-left');
     const bgRight = document.querySelector('.js-nav-bg-right');
+    const bgRightMobile = document.querySelector('.js-nav-bg-right-mobile');
     const bgColors = document.querySelector('.js-nav-bg-colors');
 
     const header = document.querySelector('.js-nav-header');
@@ -57,7 +58,7 @@ export default class Menu {
           opacity: 1,
         }, '>-0.6')
 
-        .fromTo(bgRight, {
+        .fromTo([bgRight, bgRightMobile], {
           scaleY: 0,
         }, {
           scaleY: 1,
@@ -133,7 +134,7 @@ export default class Menu {
           duration: 0.4,
           ease: "power3.inOut",
         }, '>-0.8')
-        .fromTo(bgRight, {
+        .fromTo([bgRight, bgRightMobile], {
           scaleY: 1,
         }, {
           scaleY: 0,

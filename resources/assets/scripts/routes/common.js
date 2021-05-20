@@ -1,5 +1,4 @@
 import ThemeOnScroll from '../components/ThemeOnScroll'
-// import animatedHeadline from '../autoload/animatedHeadline'
 import FronPageText from '../components/FrontPageText'
 import SectionPostSlider from '../components/SectionPostSlider'
 import SectionClientsSlider from '../components/SectionClientsSlider'
@@ -10,12 +9,13 @@ import MenuBarScroll from '../components/MenuBarScroll'
 import Parallax from '../components/Parallax'
 import Menu from '../components/Menu'
 import feather from 'feather-icons';
+import PJAX from '../components/PJAX'
 
 import 'lazysizes';
 
 export default {
-  init() {
-    // JavaScript to be fired on all pages
+  containerInit() {
+    // on barba enter
 
     new ThemeOnScroll;
     new FronPageText;
@@ -28,6 +28,10 @@ export default {
     new Menu;
     new Parallax;
     feather.replace();
+  },
+  init() {
+    // on first load
+    new PJAX();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

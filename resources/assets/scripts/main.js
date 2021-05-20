@@ -12,7 +12,7 @@ import home from './routes/home';
 // import aboutUs from './routes/about';
 
 /** Populate Router instance with DOM routes */
-const routes = new Router({
+export const routes = new Router({
   // All pages
   common,
   // Home page
@@ -21,12 +21,8 @@ const routes = new Router({
   // aboutUs,
 });
 
-function elementorReload() {
-  common.init();
-}
-
 // Load Events
 window.addEventListener('load', function () {
-  // common.containerInit()
+  common.containerInit();
   routes.loadEvents();
 });

@@ -78,9 +78,11 @@
     "yargs": "^16.1.0"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "bootstrap": "^4.5.3",
     "feather-icons": "^4.28.0",
     "fs": "0.0.1-security",
+    "gsap": "npm:@gsap/business@^3.6.1",
     "jquery": "^3.3.1",
     "lazysizes": "^5.3.2",
     "module": "^1.2.5",

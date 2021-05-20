@@ -34,19 +34,19 @@
           <div class="navList__wrap">
             <ul class="navList js-navList pointer-events-none">
               <li>
-                <a href="{{ $insight_link }}">Insight</a>
+                <a data-barba href="{{ $insight_link }}">Insight</a>
               </li>
 
               <li>
-                <a href="{{ $services_link }}">What We Do</a>
+                <a data-barba href="{{ $services_link }}">What We Do</a>
               </li>
 
               <li>
-                <a href="{{ $about_link }}">Who We Are</a>
+                <a data-barba href="{{ $about_link }}">Who We Are</a>
               </li>
 
               <li>
-                <a href="{{ $portfolio_link }}">Case Studies</a>
+                <a data-barba href="{{ $portfolio_link }}">Case Studies</a>
               </li>
 
               <li>
@@ -66,6 +66,10 @@
             </div>
 
             <div class="nav-form__form js-form-form">
+
+              @php echo do_shortcode('[wpforms id="490" title="false"]'); @endphp
+
+              {{--
               <form action="#">
                 <div class="form-group">
                   <label for="name">Hello, my name is</label>
@@ -83,11 +87,15 @@
                   <button>Send</button>
                 </div>
               </form>
+              --}}
+
             </div>
           </div>
         </div>
 
         <div class="nav__content__right">
+          <div class="nav__content__right__mobile__bg js-nav-bg-right-mobile"></div>
+
           <div class="nav__info">
             <div class="nav__info__item js-navInfo-item">
               <h5 class="text-sm tracking-none fw-500">
