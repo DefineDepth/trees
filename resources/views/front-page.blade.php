@@ -89,49 +89,6 @@
     </div>
   </div>
 
-
-{{-- 
-  <div class="wrap">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-lg-6">
-          <div class="front-about__content">
-            @if ( $about_subtitle )
-              <p class="front-about__subtitle">
-                {{ $about_subtitle }}
-              </p>
-            @endif
-  
-            @if ( $about_title )
-              <h2 class="front-about__title">
-                {{ $about_title }}
-              </h2>
-            @endif
-            
-            @if ( $about_text )
-            <p class="front-about__text">
-              {{ $about_text }}
-            </p>
-            @endif
-  
-            <div class="front-about__links">
-              <a href="{{ $portfolio_link }}">Case studies</a>
-              <a href="{{ $about_link }}">About us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="img-bg">
-      <div class="ratio ratio-21:11">
-        <img class="img-image img-image-ratio" src="{{ $about_image['url'] }}" alt="image">
-      </div>
-    </div>
-  </div> --}}
-
-
-
   <div class="container">
     <div class="row align-items-center justify-content-between -fluid inner-item">
       <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
@@ -154,13 +111,21 @@
       </div>
   
       <div class="col-xl-6 col-lg-5 row__side -right -mobile-padding order-1 order-lg-2">
-        <div class="front-about__image ratio ratio-16:9">
-          <img src="{{ $about_image['url'] }}" alt="About image">
+        <div class="some-wrap js-image-move">
+          <img class="-circle" src="@asset('images/front-about/circle.png')">
+
+          <div class="front-about__image ratio ratio-16:9 overflow-hidden">
+            {{-- <img src="{{ $about_image['url'] }}" alt="About image"> --}}
+            <img class="-img" src="@asset('images/front-about/about-background.png')">
+            <img class="-lines" src="@asset('images/front-about/lines.png')">
+            <div class="-colors">
+              @for ($i = 0; $i < 5; $i++) <span></span> @endfor
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </section>
 
 

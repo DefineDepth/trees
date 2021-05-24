@@ -10,6 +10,7 @@ import Parallax from '../components/Parallax'
 import Menu from '../components/Menu'
 import feather from 'feather-icons';
 import PJAX from '../components/PJAX'
+import ScrollTr from '../components/ScrollTrigger'
 
 import 'lazysizes';
 
@@ -27,6 +28,8 @@ export default {
     new MenuBarScroll;
     new Menu;
     new Parallax;
+    new ScrollTr;
+    
     feather.replace();
   },
   init() {

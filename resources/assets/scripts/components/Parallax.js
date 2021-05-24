@@ -1,6 +1,5 @@
 import { jarallax } from 'jarallax';
 
-
 export default class Parallax {
   constructor() {
     if (!document.querySelector('[data-parallax]')) return;
