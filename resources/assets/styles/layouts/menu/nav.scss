@@ -237,10 +237,21 @@
 
   &__form {
     margin-top: 50px;
+
+    .nf-form-content {
+      padding: 0;
+    }
+
+    .nf-before-form-content { display: none !important; }
+    .nf-after-form-content { display: none !important; }
   }
 
-  form .wpforms-field {
+  form .nf-field-container {
     padding: 0 !important;
+
+    .nf-field-label {
+      margin: 0;
+    }
 
     label {
       font-size: 28px !important;
@@ -255,7 +266,7 @@
       }
     }
 
-    textarea, input {
+    textarea, input:not([type="submit"]):not([type="button"]) {
       border: 0 !important;
       padding: 0 !important;
       margin: 0 !important;
@@ -281,7 +292,7 @@
     }
   }
 
-  .wpforms-field + .wpforms-field {
+  .nf-field-container {
     margin-top: 64px !important;
     
     @include media-below(md) {
@@ -289,7 +300,11 @@
     }
   }
 
-  .wpforms-submit-container {
+  .nf-form-content > * > *:first-child .nf-field-container {
+    margin-top: 0 !important;
+  }
+
+  .submit-container {
     margin-top: 40px !important;
 
     @include media-below(md) {
@@ -297,7 +312,7 @@
       justify-content: center !important;
     }
 
-    button {
+    input {
       text-transform: uppercase !important;
       display: flex !important;
       justify-content: center !important;

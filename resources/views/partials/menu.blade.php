@@ -67,7 +67,7 @@
 
             <div class="nav-form__form js-form-form">
 
-              @php echo do_shortcode('[wpforms id="490" title="false"]'); @endphp
+              @php echo do_shortcode('[ninja_form id=1]'); @endphp
 
               {{--
               <form action="#">
