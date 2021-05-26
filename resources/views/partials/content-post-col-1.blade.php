@@ -8,7 +8,8 @@ $post = get_post($post);
         <div class="sectionLink__line"></div>
         <div class="sectionLink__arrow">
           <a href="{{ get_permalink($post) }}">
-            <span class="icon" data-feather="arrow-right"></span>
+            <i class="icon" data-feather="arrow-right"></i>
+            {{-- <img src="@asset('images/arrow.svg')" alt="arrow icon" class="icon"> --}}
           </a>
         </div>
       </div>

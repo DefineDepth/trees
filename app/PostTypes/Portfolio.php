@@ -77,6 +77,23 @@ class Portfolio extends AbstractPostType
         ;
 
 
+        $builder
+            ->addTab('Footer')
+            ->addText('footer_title', [
+                'label' => 'Title',
+                'default_value' => 'Want to connect on a project?',
+            ])
+            ->addText('footer_title_rollover', [
+                'label' => 'Rollover',
+                'default_value' => 'Emails are free, drop us a note.',
+            ])
+            ->addUrl('footer_url', [
+                'label' => 'URL',
+                'default_value' => '#',
+            ])
+        ;
+
+
         $this->add_local_field_group($builder);
         return;
     }

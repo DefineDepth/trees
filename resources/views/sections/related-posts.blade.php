@@ -4,6 +4,11 @@ if ( isset($container_style) ) {
 } else {
   $container_style = 'container';
 }
+// if ( isset($container_style) ) {
+//   $container_style = 'container -fluid -p-left -p-right -row-normal';
+// } else {
+//   $container_style = 'container';
+// }
 @endphp
 
 <section class="front-blog__col-3 swiper-section related-posts">
@@ -31,9 +36,13 @@ if ( isset($container_style) ) {
 
     <div class="swiper swiper-container -section js-post">
       <div class="row y-space swiper-wrapper">
-        @php $post_count = 0; @endphp
+        @php
+          global $post;
+          $current_post_id = $post->ID;
+          $post_count = 0;
+        @endphp
         @foreach ($posts as $post)
-          @if ($post_count < 3)
+          @if ($current_post_id != get_the_ID( $post ) && $post_count < 3)
             <div class="col-lg-4 col-md-6 swiper-slide">
               @include('partials.content-post-col-3', ['post' => $post])
             </div>

@@ -6,11 +6,6 @@
   $grid_projects = [];
 
   foreach ($portfolio_controls['grid_repeater'] as $key => $single) {
-    if ( $key === 6 ) {
-      $grid_projects[] = 'cta_section';
-      continue;
-    }
-
     $grid_projects[] = get_post( substr( $single['project'], 3 ) );
   }
 @endphp

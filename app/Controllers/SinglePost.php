@@ -17,6 +17,16 @@ class SinglePost extends Controller
     return get_field('post_header_content')['footer_style'];
   }
   
+  // public function posts()
+  // {
+  //   $posts = get_posts([
+  //     'post_type' => 'post',
+  //     'fields' => 'ids',
+  //     'numberposts' => -1,
+  //   ]) ?: [];
+  //   return $posts;
+  // }
+  
   public function posts()
   {
     $posts = get_posts([

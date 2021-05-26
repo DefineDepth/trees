@@ -23,9 +23,10 @@
     margin-top: 24px;
 
     .icon {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       stroke-width: 2;
+      stroke-linecap: butt;
       color: black;
 
       @include media-below(lg) {

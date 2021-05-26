@@ -14,17 +14,17 @@ class App extends Controller
 
     public function footer_title()
     {
-        return 'Want to connect on a project?';
+        return (get_field(__FUNCTION__)) ? get_field(__FUNCTION__) : 'Want to connect on a project?';
     }
 
     public function footer_title_rollover()
     {
-        return 'Emails are free, drop us a note.';
+        return (get_field(__FUNCTION__)) ? get_field(__FUNCTION__) : 'Emails are free, drop us a note.';
     }
 
     public function footer_url()
     {
-        return '#';
+        return (get_field(__FUNCTION__)) ? get_field(__FUNCTION__) : '#';
     }
 
 

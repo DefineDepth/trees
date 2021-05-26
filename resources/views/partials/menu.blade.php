@@ -66,29 +66,7 @@
             </div>
 
             <div class="nav-form__form js-form-form">
-
               @php echo do_shortcode('[ninja_form id=1]'); @endphp
-
-              {{--
-              <form action="#">
-                <div class="form-group">
-                  <label for="name">Hello, my name is</label>
-                  <input type="text" id="name" placeholder="Enter your name here">
-                </div>
-                <div class="form-group">
-                  <label for="email">Here is my email</label>
-                  <input type="email" id="email" placeholder="Enter your email here">
-                </div>
-                <div class="form-group">
-                  <label for="msg">Let’s talk design</label>
-                  <input type="text" id="msg" placeholder="Enter your details here">
-                </div>
-                <div class="nav-form__button">
-                  <button>Send</button>
-                </div>
-              </form>
-              --}}
-
             </div>
           </div>
         </div>
