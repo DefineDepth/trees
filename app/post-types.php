@@ -10,6 +10,7 @@ use App\Fields\Manifest;
 use App\Fields\Careers;
 use App\Fields\Insight;
 use App\Fields\CannaPage;
+use App\Fields\Packages;
 
 use App\PostTypes\Client;
 use App\PostTypes\Team;
@@ -36,6 +37,7 @@ new Manifest();
 new Careers();
 new Insight();
 new CannaPage();
+new Packages();
 
 new Client;
 new Team;

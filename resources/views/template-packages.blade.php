@@ -9,27 +9,24 @@
 
 <section class="packages-header__section">
   <div class="container">
-    <div class="row packages-header__grid">
+    <div class="row align-items-center packages-header__grid">
       <div class="col-xl-7 col-lg-9">
         <div class="packages-header__content">
           <p class="packages-header__subtitle">
-            {{-- {{ $header['subtitle'] }} --}}
-            SMALL BUSINESS PACKAGES
+            {{ $header['subtitle'] }}
           </p>
           <h1 class="packages-header__title">
-            {{-- {!! $header['title'] !!} --}}
-            Brand identity pricing packages
+            {!! $header['title'] !!}
           </h1>
           <div class="packages-header__text">
-            {{-- {!! $header['text'] !!} --}}
-            Pricing can be a wide spectrum when it comes to brand identity. Another agency or creative firm might charge $30,000 to $250,000, depending on who they are and the scope of the project. The truth is, not all businesses need to investment that much, particularly a sole-proprietor. We’ve created brand identities for businesses and entrepreneurs alike, for over 15 years.
+            {!! $header['text'] !!}
           </div>
         </div>
       </div>
 
       <div class="col-xl-5">
         <div class="packages-header__image">
-          <img src="@asset('images/ocean.png')" alt="Packages Header Image">
+          <img src="{{ $header['image']['url'] }}" alt="Packages Header Image">
         </div>
       </div>
     </div>
@@ -39,41 +36,82 @@
 
 <section class="packages-clients__section">
   <div class="container">
-    <div class="row">
-      @for ($i = 0; $i < 12; $i++)
-        <div class="packages-clients__item">
-          <img src="@asset('images/brand-logo.png')" alt="Client">
+    <div class="row packages-clients__grid">
+      @foreach ($clients['clients_repeater'] as $item)
+        <div class="col-lg-3 col-md-6">
+          <div class="packages-clients__item ratio ratio-1:1" data-sal="slide-up">
+            <img src="{{ $item['image']['url'] }}" alt="Client">
+          </div>
         </div>
-      @endfor
+      @endforeach
     </div>
   </div>
 </section>
 
 
-<section class="about-page-team__section">
+<section class="packages-options__section">
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-4">
-        <h2 class="about-page-team__title">
-          Brand Identity Pricing Packages
+        <h2 class="packages-options__title">
+          {!! $packages['title'] !!}
         </h2>
       </div>
 
       <div class="col-lg-7">
-        <div class="about-page-team__text">
-          Brand identity is the special sauce that makes your business unique and different from every other business. It typically includes visual elements, such as a color palette, design methods, logo variations, typography, iconography and more. It’s how a business presents itself to the public and distinguishes the business in consumers’ minds. Below is few suggested pricing packages for small businesses.
+        <div class="packages-options__text">
+          {!! $packages['text'] !!}
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row about-page-team__grid">
+  <div class="container packages-options__container">
+    <div class="packages-options__grid">
+      <div class="row justify-content-center">
 
-      @foreach ($team_posts as $post)
-        <div class="col-lg-3 col-md-6">
-          @include('partials.content-teams')
-        </div>
-      @endforeach
+        @foreach ($packages['packages_repeater'] as $item)
+          <div class="col-xl-10">
 
+            <div class="package__item">
+              <h4 class="package__title">
+                {!! $item['title'] !!}
+              </h4>
+              <div class="package__text">
+                {!! $item['text'] !!}
+              </div>
+
+              <div class="package-features js-accordion">
+                @foreach ($item['features_repeater'] as $feature)
+                  <div class="package-features__item js-accordion-item">
+                    <div class="package-features__header">
+                      <div class="package-features__icon">
+                        <i class="icon" data-feather="plus"></i>
+                      </div>
+                      <h5 class="package-features__title">
+                        {!! $feature['title'] !!}
+                      </h5>
+                    </div>
+
+                    <div class="package-features__content js-accordion-content">
+                      {!! $feature['text'] !!}
+                    </div>
+                  </div>
+                @endforeach
+              </div>
+
+              <h3 class="package__price">{!! $item['price'] !!}</h3>
+
+              <div class="package__button">
+                <a href="{!! $item['link']['url'] !!}">{!! $item['link']['title'] !!}</a>
+                <span class="package__button__timeline">{!! $item['timeline'] !!}</span>
+              </div>
+            </div>
+
+          </div>
+        @endforeach
+
+      </div>
     </div>
   </div>
 </section>

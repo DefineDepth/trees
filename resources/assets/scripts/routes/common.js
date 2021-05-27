@@ -12,6 +12,7 @@ import feather from 'feather-icons';
 import PJAX from '../components/PJAX'
 import ScrollTr from '../components/ScrollTrigger'
 import RevealEls from '../components/RevealEls'
+import Accordion from '../components/Accordion'
 
 import 'lazysizes';
 
@@ -31,6 +32,7 @@ export default {
     new Parallax;
     new ScrollTr;
     new RevealEls;
+    new Accordion;
     
     feather.replace();
   },

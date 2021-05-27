@@ -24,7 +24,13 @@ body {
 
 .container {
   @media (min-width: 1260px) {
+    // max-width: rem(1200px);
     max-width: rem(1200px);
+  }
+
+  @media (min-width: 1660px) {
+    // max-width: rem(1200px);
+    max-width: rem(1600px);
   }
   
   @include media-below(sm) {
@@ -44,9 +50,9 @@ body {
 }
 
 ::selection {
-  color: white;
-  background-color: var(--accent-color);
-  text-shadow: none;
+  // color: white;
+  // background-color: var(--accent-color);
+  // text-shadow: none;
 }
 
 .barba-container {
