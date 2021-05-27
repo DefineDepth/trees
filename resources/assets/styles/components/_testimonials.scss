@@ -1,15 +1,11 @@
-// .container-p-l { padding-left:  9vw; }
-// .container-p-l { padding-left:  calc((100vw - 1580px) \ 2); }
-// .container-p-r { padding-right: 20vw; }
-
 .testimonials {
   background-color: black;
-  padding-top: 100px;
-  padding-bottom: 200px;
+  padding-top: rem(100px);
+  padding-bottom: rem(200px);
 
   @include media-below(md) {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: rem(70px);
+    padding-bottom: rem(70px);
   }
   
   &__content {}
@@ -29,8 +25,8 @@
     display: flex;
 
     .icon {
-      width: 32px;
-      height: 32px;
+      width: rem(32px);
+      height: rem(32px);
       stroke-width: 1;
       color: var(--color-teal);
       fill: var(--color-teal);
@@ -39,13 +35,13 @@
     }
 
     .icon + .icon {
-      margin-left: 5px;
+      margin-left: rem(5px);
     }
   }
 
   &__author {
-    margin-left: 24px;
-    font-size: 14px;
+    margin-left: rem(24px);
+    font-size: rem(14px);
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -57,14 +53,14 @@
 
     @include media-below(md) {
       margin-left: 0;
-      margin-top: 24px;
+      margin-top: rem(24px);
     }
   }
 
   &__text {
-    font-size: 42px;
-    line-height: 64px;
-    margin-top: 30px;
+    font-size: rem(42px);
+    line-height: rem(64px);
+    margin-top: rem(30px);
     font-weight: 300;
     
     p {
@@ -72,15 +68,15 @@
     }
     
     @include media-below(md) {
-      font-size: 24px;
-      line-height: 42px;
-      margin-top: 24px;
+      font-size: rem(24px);
+      line-height: rem(42px);
+      margin-top: rem(24px);
     }
   }
 
   &__button {
     display: inline-block;
     color: white;
-    margin-left: 16px;
+    margin-left: rem(16px);
   }
 }

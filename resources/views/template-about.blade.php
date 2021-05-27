@@ -28,7 +28,17 @@
 
       <div class="col-xl-8 offset-xl-4 col-lg-10 offset-lg-2">
         <div class="about-page-info__image">
-          <img src="{{ $header_second_block['header_second_image']['url'] }}">
+          <div class="moving-image -left js-image-move js-image-left">
+            <img class="-circle" src="@asset('images/front-about/circle.png')">
+  
+            <div class="front-about__image ratio ratio-16:9 overflow-hidden">
+              <img class="-img" src="{{ $header_second_block['header_second_image']['url'] }}">
+              <img class="-lines" src="@asset('images/front-about/lines.png')">
+              <div class="-colors">
+                @for ($i = 0; $i < 5; $i++) <span></span> @endfor
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="about-page-info__content">

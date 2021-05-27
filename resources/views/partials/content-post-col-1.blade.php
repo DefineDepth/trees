@@ -18,7 +18,7 @@ $post = get_post($post);
 
   <div class="row">
     <div class="col-lg-6">
-      <div class="postCard__image">
+      <div class="postCard__image" data-sal="slide-right">
         <div class="ratio ratio-3:2">
           {!! wp_get_attachment_image( get_post_thumbnail_id($post), [400, 300] , false, [
             'class' => 'img-image img-image-ratio lazyload',

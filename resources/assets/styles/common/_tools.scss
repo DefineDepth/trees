@@ -2,10 +2,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  // xl: 1140px,
-  xl: 1580px,
-  // xxl: 1320px
-  // xxl: 1580px
+  xl: 1140px,
 );
 
 $breakpoints: (
@@ -15,16 +12,6 @@ $breakpoints: (
   lg: 1200px,
   xl: 1600px,
 );
-
-// $breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   // xxl: 1400px
-//   xxl: 1600px
-// );
 
 @mixin media-above($breakpoint) {
   $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -97,4 +84,25 @@ $aspect-ratios: ((1:1),
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
   }
+}
+
+
+@function rem($size, $base: $font-size) {
+  @if (type-of($size) == number) {
+    @if (unit($size) != "px") {
+      @error "`#{$size}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$size}` needs to be a number.";
+  }
+
+  @if (type-of($base) == number) {
+    @if (unit($base) != "px") {
+      @error "`#{$base}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$base}` needs to be a number.";
+  }
+
+  @return ($size / $base) * 1rem;
 }

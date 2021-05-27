@@ -9,39 +9,51 @@ export default class ScrollTr {
 
     console.log('ScrollTr init');
 
-    const wrap = document.querySelector('.js-image-move');
-    const lines = wrap.querySelector('.-lines');
-    const circle = wrap.querySelector('.-circle');
-    const colors = wrap.querySelector('.-colors');
-    const image = wrap.querySelector('.-img');
+    const targets = document.querySelectorAll('.js-image-move');
+    
+    targets.forEach(el => {
+      const lines = el.querySelector('.-lines');
+      const circle = el.querySelector('.-circle');
+      const colors = el.querySelector('.-colors');
+      const image = el.querySelector('.-img');
+      let imageDirection;
 
-    gsap.set(image, {
-      scale: 1.2,
-    })
+      if (el.classList.contains('js-image-left')) {
+        imageDirection = 20;
+      } else {
+        imageDirection = -20;
+      }
 
-    gsap.to(image, {
-      xPercent: 20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: wrap,
-        scrub: true,
-      },
-    }, "+=1200");
+      gsap.set(image, {
+        scale: 1.2,
+      })
 
-    gsap.to(lines, {
-      yPercent: 50,
-      ease: "none",
-      scrollTrigger: {
-        trigger: wrap,
-        scrub: true,
-      },
-    });
+      gsap.to(image, {
+        xPercent: imageDirection,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          scrub: true,
+        },
+      }, "+=1200");
 
-    gsap.to(circle, {
-      rotation: "360",
-      ease: "none",
-      duration: 14,
-      repeat: -1,
+      gsap.to(lines, {
+        yPercent: 50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          scrub: true,
+        },
+      });
+
+      if (circle) {
+        gsap.to(circle, {
+          rotation: "360",
+          ease: "none",
+          duration: 14,
+          repeat: -1,
+        });
+      }
     });
   }
 }

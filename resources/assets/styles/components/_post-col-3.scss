@@ -1,15 +1,15 @@
 .front-blog__col-3 {
-  padding-top: 150px;
-  padding-bottom: 80px;
+  padding-top: rem(150px);
+  padding-bottom: rem(80px);
 
   @include media-below(md) {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: rem(120px);
+    padding-bottom: rem(60px);
   }
 
   @include media-below(lg) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: rem(80px);
+    padding-bottom: rem(80px);
   }
 
   .row.swiper-wrapper .swiper-slide {
@@ -35,47 +35,47 @@
       display: block;
       position: relative;
       width: 100%;
-      height: 1px;
+      height: rem(1px);
       background-color: #D8D8D8;
-      margin-top: 16px;
+      margin-top: rem(16px);
     }
   }
 
   // &__content {}
 
   &__title {
-    margin-top: 34px;
+    margin-top: rem(34px);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 34px;
+    font-size: rem(32px);
+    line-height: rem(34px);
 
     display: flex;
     flex: 1 1 auto;
     
     @include media-below(lg) {
-      font-size: 26px;
-      line-height: 28px;
+      font-size: rem(26px);
+      line-height: rem(28px);
     }
   }
 
   &__text {
-    margin-top: 52px;
+    margin-top: rem(52px);
     max-width: 80%;
     
     p {
-      font-size: 21px;
-      line-height: 32px;
+      font-size: rem(21px);
+      line-height: rem(32px);
       color: black;
     }
 
     @include media-below(lg) {
-      margin-top: 30px;
+      margin-top: rem(30px);
       max-width: 100%;
 
       p {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: rem(16px);
+        line-height: rem(24px);
       }
     }
   }
@@ -85,20 +85,19 @@
 
 
 .front-blog__col-1 {
-  padding-top: 100px;
-  padding-bottom: 160px;
+  padding-top: rem(100px);
+  padding-bottom: rem(160px);
 
   @include media-below(md) {
-    padding-top: 100px;
-    // padding-bottom: 180px;
+    padding-top: rem(100px);
   }
 
   > .container {
     > * + * {
-      margin-top: 100px;
+      margin-top: rem(100px);
 
       @include media-below(md) {
-        margin-top: 56px;
+        margin-top: rem(56px);
       }
     }
   }
@@ -114,27 +113,34 @@
     height: 100%;
 
     @include media-below(md) {
-      margin-top: 34px;
+      margin-top: rem(34px);
+      width: 50%;
+    }
+    @include media-below(sm) {
+      width: 80%;
+    }
+    @include media-below(xs) {
+      width: 100%;
     }
   }
 
   &__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
     letter-spacing: 0.2em;
     
     @include media-below(md) {
-      margin-bottom: 30px;
+      margin-bottom: rem(30px);
     }
 
     a {
       text-transform: uppercase;
       font-weight: 500;
-      font-size: 14px;
+      font-size: rem(14px);
       line-height: 1;
       color: var(--color-text-teal);
 
       @include media-below(md) {
-        font-size: 10px;
+        font-size: rem(10px);
       }
     }
   }
@@ -142,29 +148,29 @@
   &__title {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 38px;
+    font-size: rem(36px);
+    line-height: rem(38px);
     
     @include media-below(md) {
-      font-size: 26px;
-      line-height: 30px;
+      font-size: rem(26px);
+      line-height: rem(30px);
     }
   }
 
   &__text {
-    margin-top: 20px;
+    margin-top: rem(20px);
     
     p {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: rem(24px);
+      line-height: rem(36px);
     }
     
     @include media-below(md) {
-      margin-top: 18px;
+      margin-top: rem(18px);
 
       p {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: rem(16px);
+        line-height: rem(26px);
       }
     }
   }
@@ -174,25 +180,26 @@
     bottom: 0;
 
     a {
-      font-size: 18px;
+      font-size: rem(18px);
       font-weight: 500;
 
       @include media-below(md) {
-        font-size: 14px;
+        font-size: rem(14px);
       }
     }
 
     &::before {
+      font-size: rem(18px);
       font-weight: 700;
       content: "\\";
       display: inline-block;
-      margin-right: 10px;
+      margin-right: rem(10px);
       color: var(--color-red);
     }
 
     @include media-below(md) {
       position: relative;
-      margin-top: 30px;
+      margin-top: rem(30px);
     }
   }
 }

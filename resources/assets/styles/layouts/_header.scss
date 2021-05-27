@@ -6,8 +6,8 @@
   z-index: 1000;
 
   &__wrapper {
-    padding: 0 50px;
-    padding-top: 110px;
+    padding: 0 rem(60px);
+    padding-top: rem(110px);
 
     transition:
       box-shadow 0.2s ease-in-out,
@@ -15,30 +15,39 @@
       margin 0.2s ease-in-out,
       padding 0.2s ease-in-out;
 
+    @media (max-width: 1350px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     @include media-below(lg) {
-      padding-top: 80px;
+      padding-top: rem(80px);
     }
     @include media-below(md) {
       padding: 0;
-      padding-top: 40px;
+      padding-top: rem(40px);
     }
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     max-width: 100%;
-    
-    @include media-below(lg) {
-      padding: 0 15px;
-      width: 960px;
-      margin: 0 auto;
+
+    @media (max-width: 1350px) {
+      width: rem(1200px);
     }
-    @include media-below(md) { width: 720px; }
-    @include media-below(sm) { width: 540px; }
-    @include media-below(sm) { padding: 0 25px; }
+
+    @media (max-width: 1259px) {
+      width: rem(1140px);
+    }
+
+    @include media-below(lg) {
+      padding: 0 rem(15px);
+      width: rem(960px);
+    }
+    @include media-below(md) { width: rem(720px); }
+    @include media-below(sm) { width: rem(540px); }
+    @include media-below(sm) { padding: 0 rem(25px); }
   }
 
   &__menu {
@@ -52,13 +61,13 @@
     padding: 0;
 
     span {
-      width: 35px;
-      height: 2px;
+      width: rem(35px);
+      height: rem(2px);
       background-color: black;
     }
 
     span + span {
-      margin-top: 9px;
+      margin-top: rem(9px);
     }
   }
 
@@ -66,8 +75,8 @@
     &__wrap {
       margin-left: auto;
       width: 20%;
-      max-width: 115px;
-      min-width: 88px;
+      max-width: rem(115px);
+      min-width: rem(88px);
       position: relative;
       display: flex;
       align-items: center;
@@ -92,10 +101,10 @@
     position: fixed;
 
     .headerBar__wrapper {
-      padding: 50px 50px;
+      padding: rem(50px) rem(50px);
 
       @include media-below(md) {
-        padding: 24px 0;
+        padding: rem(24px) 0;
       }
     }
   }

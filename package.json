@@ -78,6 +78,7 @@
     "yargs": "^16.1.0"
   },
   "dependencies": {
+    "@animxyz/core": "^0.5.0",
     "@barba/core": "^2.9.7",
     "bootstrap": "^4.5.3",
     "feather-icons": "^4.28.0",
@@ -87,6 +88,7 @@
     "lazysizes": "^5.3.2",
     "module": "^1.2.5",
     "popper.js": "^1.14.7",
+    "sal.js": "^0.8.5",
     "scrollmagic": "^2.0.8"
   }
 }

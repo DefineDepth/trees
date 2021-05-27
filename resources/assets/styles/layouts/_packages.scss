@@ -1,0 +1,78 @@
+.packages-header {
+  &__section {
+    padding-top: rem(300px);
+    padding-bottom: rem(140px);
+
+    @include media-below(md) {
+      padding-top: rem(140px);
+      padding-bottom: rem(120px);
+    }
+
+    .container {
+      overflow: visible;
+    }
+  }
+
+  &__content {
+  }
+
+  &__subtitle {
+    font-size: rem(14px);
+    line-height: 1;
+    margin-bottom: rem(50px);
+    letter-spacing: 0.2em;
+    color: var(--color-teal);
+    font-weight: 500;
+
+    @include media-below(md) {
+      margin-bottom: rem(24px);
+    }
+  }
+
+  &__title {
+    font-size: rem(48px);
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include media-below(md) {
+      font-size: rem(32px);
+    }
+  }
+
+  &__text {
+    margin-top: rem(24px);
+
+    p {
+      font-size: rem(24px);
+      line-height: rem(42px);
+      font-weight: 300;
+
+      @include media-below(md) {
+        font-size: rem(16px);
+        line-height: rem(34px);
+      }
+    }
+
+    p + p {
+      margin-top: rem(12px);
+    }
+  }
+
+  &__grid {
+    margin: 0 rem(-50px);
+
+    > * {
+      padding: 0 rem(50px);
+    }
+  }
+}
+
+
+.packages-clients {
+  &__section {}
+}
+
+
+.packages-options {
+  &__section {}
+}

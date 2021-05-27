@@ -8,18 +8,18 @@ button {
 
 .button.-dash {
   font-weight: 700;
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 1;
   
   @include media-below(md) {
-    font-size: 16px;
+    font-size: rem(16px);
   }
 
   &::before {
     font-weight: 700;
     content: '\\';
     color: var(--color-red);
-    margin-right: 8px;
+    margin-right: rem(8px);
   }
 
   &:hover {

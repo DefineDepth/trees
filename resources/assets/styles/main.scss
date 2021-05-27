@@ -20,6 +20,7 @@
 @import "components/forms";
 @import "components/wp-classes";
 
+@import "components/animations/animations";
 @import "components/blocks/base";
 @import "components/blocks/gallery";
 @import "components/blocks/imageSlider";
@@ -31,11 +32,13 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
-@import "layouts/front-page";
 @import "layouts/menu/background.scss";
 @import "layouts/menu/nav.scss";
+@import "layouts/menu/form";
+@import "layouts/front-page";
 @import "layouts/insight";
 @import "layouts/portfolio";
+@import "layouts/packages";
 @import "layouts/about";
 @import "layouts/services";
 @import "layouts/comments";

@@ -43,6 +43,12 @@
     letter-spacing: 0.02em;
   }
 
+  // .slider-title {
+  //   color: black;
+  //   font-weight: 700;
+  //   letter-spacing: 1.2em;
+  // }
+
   .image-wrap {}
 
   .image-wrap.ratio img {
@@ -59,8 +65,18 @@
     height: auto;
   }
 
+  .portfolio-pagtination-slider {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+
   
   &.-light {
+    .slider-title {
+      color: white;
+    }
+
     .swiper-pagination-progressbar {
       background-color: rgba($color: white, $alpha: 0.2);
     }

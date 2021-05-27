@@ -1,36 +1,38 @@
 .front-header {
-  padding-top: 320px;
-  padding-bottom: 140px;
+  // padding-top: rem(320px);
+  // padding-bottom: rem(140px);
+  padding-top: rem(280px);
+  padding-bottom: rem(80px);
 
   @include media-below(lg) {
-    padding-top: 160px;
-    padding-bottom: 80px;
+    padding-top: rem(160px);
+    padding-bottom: rem(80px);
   }
 
   &__subtitle {
     font-weight: 500;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1;
     color: var(--color-text-teal);
     text-transform: uppercase;
     letter-spacing: 0.2em;
 
     @include media-below(md) {
-      font-size: 10px;
+      font-size: rem(10px);
     }
   }
 
   &__title {
     font-weight: 300;
-    font-size: 64px;
-    line-height: 84px;
-    margin-top: 40px;
+    font-size: rem(64px);
+    line-height: rem(84px);
+    margin-top: rem(40px);
     color: black;
 
     @include media-below(lg) {
-      font-size: 28px;
-      line-height: 38px;
-      margin-top: 18px;
+      font-size: rem(28px);
+      line-height: rem(38px);
+      margin-top: rem(18px);
     }
   }
 }
@@ -41,7 +43,7 @@
     position: relative;
     overflow: hidden;
     width: 40%;
-    min-width: 200px;
+    min-width: rem(200px);
 
     span {
       display: inline-block;

@@ -27,8 +27,20 @@
 
     <div class="row align-items-center -fluid services-page-info__bottom">
       <div class="col-xl-5 col-lg-6 row__side -left">
-        <div class="services-page-info__image ratio ratio-3:2">
+        {{-- <div class="services-page-info__image ratio ratio-3:2">
           <img src="{{ $header_second_block['image']['url'] }}" alt="Services header image">
+        </div> --}}
+
+        <div class="moving-image -right js-image-move js-image-right">
+          <img class="-circle" src="@asset('images/front-about/circle.png')">
+
+          <div class="front-about__image ratio ratio-16:9 overflow-hidden">
+            <img class="-img" src="{{ $header_second_block['image']['url'] }}" alt="Services header image">
+            <img class="-lines" src="@asset('images/front-about/lines-reverse.png')">
+            <div class="-colors">
+              @for ($i = 0; $i < 5; $i++) <span></span> @endfor
+            </div>
+          </div>
         </div>
       </div>
 

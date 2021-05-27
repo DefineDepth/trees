@@ -11,6 +11,7 @@ import Menu from '../components/Menu'
 import feather from 'feather-icons';
 import PJAX from '../components/PJAX'
 import ScrollTr from '../components/ScrollTrigger'
+import RevealEls from '../components/RevealEls'
 
 import 'lazysizes';
 
@@ -29,6 +30,7 @@ export default {
     new Menu;
     new Parallax;
     new ScrollTr;
+    new RevealEls;
     
     feather.replace();
   },

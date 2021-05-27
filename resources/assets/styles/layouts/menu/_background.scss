@@ -4,7 +4,6 @@
 
 .nav {
   &__inner {
-    overflow-y: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,6 +12,12 @@
     height: 100vh;
     opacity: 0;
     pointer-events: none;
+
+    overflow-y: auto;
+
+    @include media-below(md) {
+      overflow-y: auto;
+    }
     
     &.is-active {
       opacity: 1;
@@ -60,12 +65,12 @@
       top: 0;
       right: 0;
       width: 30%;
-      height: 10px;
+      height: rem(10px);
       display: flex;
       transform-origin: top;
       
       @include media-below(md) {
-        height: 8px;
+        height: rem(8px);
         width: 100%;
       }
 
@@ -87,13 +92,15 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+
+    overflow: hidden;
   }
 
 
   &__header {
     position: absolute;
-    top: 100px;
-    padding: 0 70px;
+    top: rem(80px);
+    padding: 0 rem(50px);
     z-index: 200;
     display: flex;
     justify-content: space-between;
@@ -101,8 +108,8 @@
     width: 100%;
 
     @include media-below(md) {
-      top: 30px;
-      padding: 0 25px;
+      top: rem(30px);
+      padding: 0 rem(25px);
     }
     
     .nav-logo {
@@ -110,9 +117,9 @@
       justify-content: flex-end;
 
       img {
-        width: 50%;
-        max-width: 115px;
-        min-width: 88px;
+        width: 100%;
+        max-width: rem(100px);
+        min-width: rem(88px);
       }
       
       @include media-below(md) {
@@ -126,9 +133,9 @@
   &__header__buttons {
     position: relative;
 
-    button:nth-child(1) {}
+    .nav-btn-close {}
 
-    button:nth-child(2) {
+    .nav-form-close {
       position: absolute;
       top: 0;
       left: 0;
@@ -136,40 +143,19 @@
 
     .icon {
       color: white;
-      width: 64px;
-      height: 64px;
-      stroke-width: 0.5;
+      width: rem(48px);
+      height: rem(48px);
+      stroke-width: 1;
+      position: relative;
+      left: rem(-8px);
 
-      @include media-below(md) {
-        width: 56px;
-        height: 56px;
-      }
       @include media-below(sm) {
-        width: 48px;
-        height: 48px;
+        width: rem(48px);
+        height: rem(48px);
       }
     }
   }
 }
-
-//   .nav-button-back .icon,
-//   .nav-btn-close .icon {
-//     color: white;
-//     width: 64px;
-//     height: 64px;
-//     stroke-width: 0.5;
-
-//     @include media-below(md) {
-//       width: 56px;
-//       height: 56px;
-//     }
-
-//     @include media-below(sm) {
-//       width: 48px;
-//       height: 48px;
-//     }
-//   }
-// }
 
 
 
@@ -182,8 +168,8 @@
   align-items: flex-end;
   
   &__left {
-    padding-left: 130px;
-    padding-bottom: 40px;
+    padding-left: rem(130px);
+    padding-bottom: rem(40px);
     position: relative;
     flex: 0 0 70%;
     max-width: 70%;
@@ -194,9 +180,9 @@
     height: 100%;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 80px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-bottom: rem(80px);
+    padding-left: rem(60px);
+    padding-right: rem(60px);
     flex: 0 0 30%;
     max-width: 30%;
   }
@@ -209,20 +195,29 @@
   .nav__content {
     &__left {
       padding-left: 0;
-      padding-bottom: 40px;
+      padding-bottom: rem(40px);
       flex: 0 0 100%;
       max-width: 100%;
-      padding-top: 140px;
+      padding-top: rem(140px);
+      height: 70vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   
     &__right {
-      flex: 0 0 100%;
-      max-width: 100%;
-      height: unset;
-      padding-top: 64px;
+      position: relative;
       display: flex;
       justify-content: center;
-      position: relative;
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0;
+      height: unset;
+
+      // padding-top: rem(40px);
+      align-items: center;
+      height: 30vh;
     }
 
     &__right__mobile__bg {
@@ -243,39 +238,35 @@
 .nav__info {
   &__item {
     overflow: hidden;
-    margin-top: 48px;
+    margin-top: rem(48px);
 
     &:first-child {
       margin-top: 0;
     }
 
     h5 {
-      font-size: 14px;
+      font-size: rem(14px);
       color: rgba(white, 0.6);
     }
 
     a, p {
       display: block;
-      font-size: 18px;
+      font-size: rem(18px);
       
       @include media-below(md) {
-        font-size: 16px;
+        font-size: rem(16px);
       }
     }
   }
 
   &__content {
-    > * { margin-top: 4px; }
+    > * { margin-top: rem(4px); }
     > *:last-child { margin-top: 0; }
   }
 
   @include media-below(md) {
     &__item {
-      margin-top: 32px;
+      margin-top: rem(32px);
     }
   }
-
-  // @include media-below(xs) {
-  //   display: none;
-  // }
 }

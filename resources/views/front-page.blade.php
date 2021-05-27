@@ -61,7 +61,7 @@
         @php $post_count = 0; @endphp
         @foreach ($posts as $post)
           @if ($post_count < 3)
-            <div class="col-lg-4 col-md-6 swiper-slide">
+            <div class="col-lg-4 col-md-6 swiper-slide" data-sal="slide-up">
               @include('partials.content-post-col-3', ['post' => $post])
             </div>
             @php $post_count++; @endphp
@@ -90,8 +90,8 @@
   </div>
 
   <div class="container">
-    <div class="row align-items-center justify-content-between -fluid inner-item">
-      <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
+    <div class="test-row row align-items-center justify-content-between -fluid inner-item">
+      <div class="col-xl-6 col-lg-6 order-2 order-lg-1">
         <div class="front-about__content">
           <p class="front-about__subtitle">
             {{ $about_subtitle }}
@@ -110,13 +110,12 @@
         </div>
       </div>
   
-      <div class="col-xl-6 col-lg-5 row__side -right -mobile-padding order-1 order-lg-2">
-        <div class="some-wrap js-image-move">
+      <div class="col-xl-6 col-lg-6 row__side -right -mobile-padding order-1 order-lg-2">
+        <div class="moving-image -left js-image-move js-image-left">
           <img class="-circle" src="@asset('images/front-about/circle.png')">
 
           <div class="front-about__image ratio ratio-16:9 overflow-hidden">
-            {{-- <img src="{{ $about_image['url'] }}" alt="About image"> --}}
-            <img class="-img" src="@asset('images/front-about/about-background.png')">
+            <img class="-img" src="{{ $about_image['url'] }}" alt="About image">
             <img class="-lines" src="@asset('images/front-about/lines.png')">
             <div class="-colors">
               @for ($i = 0; $i < 5; $i++) <span></span> @endfor
