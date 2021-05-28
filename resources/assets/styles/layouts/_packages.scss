@@ -220,6 +220,10 @@
       }
     }
 
+    p + p {
+      margin-top: rem(16px);
+    }
+
     @include media-below(md) {
       font-size: rem(16px);
     }

@@ -51,14 +51,14 @@
 
 <section class="packages-options__section">
   <div class="container">
-    <div class="row justify-content-between">
+    <div class="row">
       <div class="col-lg-4">
         <h2 class="packages-options__title">
           {!! $packages['title'] !!}
         </h2>
       </div>
 
-      <div class="col-lg-7">
+      <div class="col-xl-6 offset-lg-1 col-lg-7">
         <div class="packages-options__text">
           {!! $packages['text'] !!}
         </div>
@@ -81,30 +81,36 @@
                 {!! $item['text'] !!}
               </div>
 
-              <div class="package-features js-accordion">
-                @foreach ($item['features_repeater'] as $feature)
-                  <div class="package-features__item js-accordion-item">
-                    <div class="package-features__header">
-                      <div class="package-features__icon">
-                        <i class="icon" data-feather="plus"></i>
+              @if ($item['features_repeater'])
+                <div class="package-features js-accordion">
+                  @foreach ($item['features_repeater'] as $feature)
+                    <div class="package-features__item js-accordion-item">
+                      <div class="package-features__header">
+                        <div class="package-features__icon">
+                          <i class="icon" data-feather="plus"></i>
+                        </div>
+                        <h5 class="package-features__title">
+                          {!! $feature['title'] !!}
+                        </h5>
                       </div>
-                      <h5 class="package-features__title">
-                        {!! $feature['title'] !!}
-                      </h5>
-                    </div>
 
-                    <div class="package-features__content js-accordion-content">
-                      {!! $feature['text'] !!}
+                      <div class="package-features__content js-accordion-content">
+                        {!! $feature['text'] !!}
+                      </div>
                     </div>
-                  </div>
-                @endforeach
-              </div>
+                  @endforeach
+                </div>
+              @endif
 
-              <h3 class="package__price">{!! $item['price'] !!}</h3>
+              @if ($item['price'])
+                <h3 class="package__price">{!! $item['price'] !!}</h3>
+              @endif
 
               <div class="package__button">
                 <a href="{!! $item['link']['url'] !!}">{!! $item['link']['title'] !!}</a>
-                <span class="package__button__timeline">{!! $item['timeline'] !!}</span>
+                @if ($item['timeline'])
+                  <span class="package__button__timeline">{!! $item['timeline'] !!}</span>
+                @endif
               </div>
             </div>
 

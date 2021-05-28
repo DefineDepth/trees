@@ -28,8 +28,11 @@ body {
     max-width: rem(1200px);
   }
 
+  @media (min-width: 1460px) {
+    max-width: rem(1400px);
+  }
+
   @media (min-width: 1660px) {
-    // max-width: rem(1200px);
     max-width: rem(1600px);
   }
   

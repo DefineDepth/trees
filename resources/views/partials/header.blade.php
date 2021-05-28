@@ -7,6 +7,7 @@
             <button class="headerBar__menu__button js-menu-open">
               <span></span>
               <span></span>
+              Some
             </button>
           </div>
         </div>
