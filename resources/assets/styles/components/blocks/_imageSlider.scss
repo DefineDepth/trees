@@ -1,13 +1,13 @@
 .trees-block.trees-block-image_slider {
   .swiper-container {
     overflow: visible;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: rem(60px);
+    padding-right: rem(60px);
   }
 
   .swiper-wrapper {
     align-items: center;
-    padding-bottom: 80px;
+    padding-bottom: rem(80px);
   }
 
   .swiper-slide {}
@@ -25,9 +25,9 @@
 
   .swiper-pagination-progressbar {
     position: relative;
-    margin: 0 20px;
-    width: 180px;
-    height: 2px;
+    margin: 0 rem(20px);
+    width: rem(180px);
+    height: rem(2px);
     background-color: rgba($color: black, $alpha: 0.2);
   }
   
@@ -39,7 +39,7 @@
   .swiper-pagination-total {
     font-weight: 500;
     color: black;
-    font-size: 14px;
+    font-size: rem(14px);
     letter-spacing: 0.02em;
   }
 

@@ -1,26 +1,26 @@
 .services-page-info {
   &__section {
-    padding-top: 300px;
-    padding-bottom: 300px;
+    padding-top: rem(300px);
+    padding-bottom: rem(300px);
 
     @include media-below(md) {
-      padding-top: 120px;
-      padding-bottom: 140px;
+      padding-top: rem(120px);
+      padding-bottom: rem(140px);
     }
   }
 
   &__bottom {
-    margin-top: 160px;
-    margin-left: -50px;
-    margin-right: -50px;
+    margin-top: rem(160px);
+    margin-left: rem(-50px);
+    margin-right: rem(-50px);
 
     @include media-below(md) {
-      margin-top: 140px;
+      margin-top: rem(140px);
     }
 
     > * {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: rem(50px);
+      padding-right: rem(50px);
     }
   }
 
@@ -37,63 +37,63 @@
 
   &__content {
     @include media-below(md) {
-      margin-top: 80px;
+      margin-top: rem(80px);
     }
   }
 
   &__subtitle {
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-text-teal);
     letter-spacing: 0.2em;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 
     @include media-below(md) {
-      font-size: 10px;
-      margin-bottom: 22px;
+      font-size: rem(10px);
+      margin-bottom: rem(22px);
     }
   }
 
   &__title {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: rem(48px);
+    line-height: rem(56px);
     font-weight: 500;
     
     @include media-below(md) {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: rem(32px);
+      line-height: rem(44px);
       font-weight: 700;
     }
   }
 
   &__text {
-    margin-top: 16px;
+    margin-top: rem(16px);
 
     a {
-      font-size: 18px;
+      font-size: rem(18px);
       font-weight: 700;
       color: black;
 
       &::before {
         content: "\\";
-        font-size: 18px;
+        font-size: rem(18px);
         font-weight: 700;
-        margin-left: 12px;
-        margin-right: 12px;
+        margin-left: rem(12px);
+        margin-right: rem(12px);
         color: var(--color-orange);
       }
     }
 
     p {
-      font-size: 24px;
-      line-height: 42px;
+      font-size: rem(24px);
+      line-height: rem(42px);
       font-weight: 300;
 
       @include media-below(md) {
-        font-size: 16px;
-        line-height: 34px;
+        font-size: rem(16px);
+        line-height: rem(34px);
       }
     }
 
@@ -106,87 +106,87 @@
 
 
 .services-page-services__content + .services-page-services__content {
-  margin-top: 60px;
+  margin-top: rem(60px);
 }
 
 .services-page-services {
   &__section {
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding-top: rem(160px);
+    padding-bottom: rem(160px);
 
     @include media-below(md) {
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: rem(100px);
+      padding-bottom: rem(100px);
     }
 
     .container > div:last-child {
-      border-bottom: 1px solid black;
-      padding-bottom: 60px;
+      border-bottom: rem(1px) solid black;
+      padding-bottom: rem(60px);
     }
   }
 
   &__subtitle {
     display: block;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-text-teal);
     letter-spacing: 0.2em;
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
 
     @include media-below(md) {
-      font-size: 10px;
-      margin-bottom: 22px;
+      font-size: rem(10px);
+      margin-bottom: rem(22px);
     }
   }
 
   &__title {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: rem(48px);
+    line-height: rem(56px);
     font-weight: 500;
-    margin-bottom: 80px;
+    margin-bottom: rem(80px);
     
     @include media-below(md) {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: rem(32px);
+      line-height: rem(44px);
       font-weight: 700;
     }
   }
 
 
   &__content {
-    padding-top: 60px;
-    border-top: 1px solid black;
+    padding-top: rem(60px);
+    border-top: rem(1px) solid black;
   }
 
   &__item__title {
-    font-size: 42px;
-    line-height: 51px;
+    font-size: rem(42px);
+    line-height: rem(51px);
     font-weight: 700;
-    padding-right: 120px;
+    padding-right: rem(120px);
 
     @include media-below(lg) {
       padding-right: 0;
     }
     
     @include media-below(md) {
-      font-size: 26px;
-      line-height: 31px;
+      font-size: rem(26px);
+      line-height: rem(31px);
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: rem(20px);
     }
   }
 
   &__item__text {
     p {
-      font-size: 24px;
-      line-height: 42px;
+      font-size: rem(24px);
+      line-height: rem(42px);
       font-weight: 300;
 
       @include media-below(md) {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: rem(18px);
+        line-height: rem(28px);
       }
     }
 
@@ -199,11 +199,11 @@
 
 .services-page-clients {
   &__section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: rem(200px);
+    padding-bottom: rem(200px);
 
     @include media-below(md) {
-      margin-bottom: 100px;
+      margin-bottom: rem(100px);
     }
 
     @include media-below(sm) {
@@ -212,23 +212,23 @@
   }
 
   &__title {
-    font-size: 42px;
-    line-height: 56px;
+    font-size: rem(42px);
+    line-height: rem(56px);
     font-weight: 700;
     color: white;
 
     @include media-below(md) {
-      font-size: 32px;
-      line-height: 44px;
+      font-size: rem(32px);
+      line-height: rem(44px);
     }
 
     &::after {
       content: '';
       display: block;
-      width: 78px;
-      height: 1px;
+      width: rem(78px);
+      height: rem(1px);
       background-color: white;
-      margin-top: 50px;
+      margin-top: rem(50px);
 
       @include media-below(md) {
         display: none;
@@ -238,29 +238,29 @@
 
   &__text {
     p {
-      font-size: 24px;
-      line-height: 42px;
+      font-size: rem(24px);
+      line-height: rem(42px);
       font-weight: 300;
       color: white;
     }
 
     @include media-below(md) {
-      margin-top: 36px;
+      margin-top: rem(36px);
 
       p {
-        font-size: 16px;
-        line-height: 34px;
+        font-size: rem(16px);
+        line-height: rem(34px);
       }
     }
   }
 
 
   &__grid {
-    margin-top: calc(200px - 80px) !important;
-    margin: -80px -100px;
+    margin-top: calc(rem(200px) - rem(80px)) !important;
+    margin: rem(-80px) rem(-100px);
 
     > * {
-      padding: 80px 100px;
+      padding: rem(80px) rem(100px);
     }
   }
 

@@ -33,8 +33,8 @@
     height: 90vh;
 
     @include media-below(md) {
-      margin-left: -rem(15px);
-      margin-right: -rem(15px);
+      margin-left: rem(-15px);
+      margin-right: rem(-15px);
     }
   }
 

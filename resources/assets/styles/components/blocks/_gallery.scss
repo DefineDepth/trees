@@ -1,7 +1,7 @@
 .trees-block.trees-block-gallery {
   .row {
-    margin: -20px !important;
-    > * { padding: 20px !important; }
+    margin: rem(-20px) !important;
+    > * { padding: rem(20px) !important; }
 
     &.-gap-0 {
       margin: 0 !important;
@@ -9,13 +9,13 @@
     }
 
     &.-gap-30 {
-      margin: -15px !important;
-      > * { padding: 15px !important; }
+      margin: rem(-15px) !important;
+      > * { padding: rem(15px) !important; }
     }
 
     &.-gap-60 {
-      margin: -30px !important;
-      > * { padding: 30px !important; }
+      margin: rem(-30px) !important;
+      > * { padding: rem(30px) !important; }
     }
   }
 

@@ -7,7 +7,7 @@
 
 .instagram {
   &__section {
-    padding-top: 160px;
+    padding-top: rem(160px);
     
     @include media-below(md) {
       padding-top: 0;
@@ -21,23 +21,23 @@
 
   &__inner {
     overflow: hidden;
-    padding: 160px 100px;
+    padding: rem(160px) rem(100px);
     
     @include media-below(md) {
-      padding: 180px 25px;
+      padding: rem(180px) rem(25px);
     }
   }
 
   &__title {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: rem(48px);
+    line-height: rem(56px);
     font-weight: 500;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
     
     @include media-below(md) {
-      font-size: 21px;
-      line-height: 32px;
-      margin-bottom: 10px;
+      font-size: rem(21px);
+      line-height: rem(32px);
+      margin-bottom: rem(10px);
     }
   }
 

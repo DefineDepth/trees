@@ -8,10 +8,10 @@
   }
 
   .trees-block:first-child {
-    padding-top: 140px;
+    padding-top: rem(140px);
     
     @include media-below(md) {
-      padding-top: 100px;
+      padding-top: rem(100px);
     }
   }
 }

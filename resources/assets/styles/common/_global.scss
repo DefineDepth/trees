@@ -19,7 +19,7 @@ body {
   max-width: 100%;
   padding: 0;
   font-size: $font-size;
-  line-height: 32px;
+  line-height: rem(32px);
 }
 
 .container {
@@ -109,12 +109,12 @@ a {
 }
 
 .y-space {
-  margin-top: -20px;
-  margin-bottom: -20px;
+  margin-top: rem(-20px);
+  margin-bottom: rem(-20px);
 
   > * {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
   }
 }
 
@@ -153,8 +153,8 @@ a {
       width: 100%;
 
       &.-mobile-padding {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
+        padding-left: rem(60px) !important;
+        padding-right: rem(60px) !important;
       }
     }
   }
@@ -165,7 +165,7 @@ a {
 }
 
 .y-space-big + .y-space-big {
-  margin-top: 200px;
+  margin-top: rem(200px);
 }
 
 

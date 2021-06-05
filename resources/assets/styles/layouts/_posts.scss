@@ -1,11 +1,11 @@
 .post-single {
   &__section {
     overflow: hidden;
-    padding-top: 280px;
-    padding-bottom: 80px;
+    padding-top: rem(280px);
+    padding-bottom: rem(80px);
 
     @include media-below(md) {
-      padding-top: 50px;
+      padding-top: rem(50px);
     }
   }
 
@@ -23,19 +23,19 @@
 
     span {
       width: 120vw;
-      height: 1px;
-      margin: 30px 0;
+      height: rem(1px);
+      margin: rem(30px) 0;
       background-color: rgba(black, 0.5);
       
       @include media-below(md) {
-        margin: 20px 0;
+        margin: rem(20px) 0;
         background-color: rgba(black, 0.2);
       }
     }
   }
 
   &__left {
-    padding-right: 30px;
+    padding-right: rem(30px);
     
     @include media-below(md) {
       padding-right: 0;
@@ -43,68 +43,68 @@
   }
 
   &__category {
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1;
     letter-spacing: 0.2em;
     color: var(--color-text-teal);
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
     
     @include media-below(md) {
-      font-size: 10px;
+      font-size: rem(10px);
     }
   }
 
   &__title {
-    font-size: 64px;
-    line-height: 72px;
+    font-size: rem(64px);
+    line-height: rem(72px);
     font-weight: 700;
 
     @include media-below(md) {
-      font-size: 32px;
-      line-height: 48px;
+      font-size: rem(32px);
+      line-height: rem(48px);
     }
   }
 
   &__excerpt {
-    margin-top: 12px;
-    font-size: 40px;
-    line-height: 52px;
-    padding-right: 80px;
+    margin-top: rem(12px);
+    font-size: rem(40px);
+    line-height: rem(52px);
+    padding-right: rem(80px);
     
     @include media-below(md) {
-      margin-top: 24px;
-      font-size: 28px;
-      line-height: 38px;
+      margin-top: rem(24px);
+      font-size: rem(28px);
+      line-height: rem(38px);
       padding-right: 0;
     }
   }
 
   &__content {
-    margin-top: 45px;
+    margin-top: rem(45px);
 
     @include media-below(md) {
-      margin-top: 35px;
+      margin-top: rem(35px);
     }
     
     p {
-      margin-top: 30px;
-      font-size: 21px;
-      line-height: 42px;
+      margin-top: rem(30px);
+      font-size: rem(21px);
+      line-height: rem(42px);
       font-weight: 300;
 
       @include media-below(md) {
-        margin-top: 24px;
-        font-size: 16px;
-        line-height: 34px;
+        margin-top: rem(24px);
+        font-size: rem(16px);
+        line-height: rem(34px);
       }
     }
   }
 
 
   &__right {
-    padding-left: 72px;
+    padding-left: rem(72px);
 
     @include media-below(md) {
       padding-left: 0;
@@ -114,7 +114,7 @@
 
   &__image {
     @include media-below(md) {
-      margin-top: 48px;
+      margin-top: rem(48px);
     }
 
     img {
@@ -129,7 +129,7 @@
 
   // &__mobile-image {
   //   display: none;
-  //   margin-bottom: 60px;
+  //   margin-bottom: rem(60px);
 
   //   @include media-below(md) {
   //     display: block;
@@ -145,31 +145,31 @@
 
 .post-author {
   position: relative;
-  padding: 24px;
+  padding: rem(24px);
   background-color: black;
   display: flex;
-  margin-top: 15px;
+  margin-top: rem(15px);
   align-items: center;
 
-  @media (min-width: 992px) and (max-width: (1470px)) {
+  @media (min-width: rem(992px)) and (max-width: (rem(1470px))) {
     flex-wrap: wrap;
   }
 
   &.-post-bottom {
-    // margin-top: 100px;
+    // margin-top: rem(100px);
 
     // @include media-below(md) {
-    //   margin-top: 80px;
+    //   margin-top: rem(80px);
     // }
   }
 
   &:not(.-post-bottom) {
     .post-author__content {
-      @media (min-width: 992px) and (max-width: (1470px)) {
+      @media (min-width: rem(992px)) and (max-width: (rem(1470px))) {
         margin-left: 0;
         padding-right: 0;
         width: 100%;
-        margin-top: 20px;
+        margin-top: rem(20px);
       }
     }
   }
@@ -201,39 +201,39 @@
 
   &__image {
     img {
-      border: 2px solid white;
+      border: rem(2px) solid white;
       border-radius: 100%;
-      width: 68px;
-      height: 68px;
+      width: rem(68px);
+      height: rem(68px);
 
       @include media-below(md) {
-        width: 48px;
-        height: 48px;
+        width: rem(48px);
+        height: rem(48px);
       }
     }
   }
 
   &__content {
     // color: white;
-    font-size: 18px !important;
-    line-height: 26px !important;
+    font-size: rem(18px) !important;
+    line-height: rem(26px) !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 20px;
-    padding-right: calc(12px + 36px + 36px + 6px + 10px);
+    margin-left: rem(20px);
+    padding-right: calc(rem(12px) + rem(36px) + rem(36px) + rem(6px) + rem(10px));
 
-    // @media (min-width: 992px) and (max-width: (1470px)) {
+    // @media (min-width: rem(992px)) and (max-width: (rem(1470px))) {
     //   margin-left: 0;
     //   padding-right: 0;
     //   width: 100%;
-    //   margin-top: 20px;
+    //   margin-top: rem(20px);
     // }
 
     @include media-below(md) {
-      font-size: 12px !important;
-      line-height: 21px !important;
-      padding-right: calc(12px + 25px + 25px + 6px + 10px - 24px);
+      font-size: rem(12px) !important;
+      line-height: rem(21px) !important;
+      padding-right: calc(rem(12px) + rem(25px) + rem(25px) + rem(6px) + rem(10px) - rem(24px));
     }
   }
 
@@ -252,49 +252,49 @@
 
     span {
       color: var(--color-red);
-      padding: 0 8px;
+      padding: 0 rem(8px);
     }
   }
 
   &__socials {
     display: flex;
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: rem(12px);
+    right: rem(12px);
 
     .item {
       background-color: white;
       border-radius: 100%;
-      width: 36px;
-      height: 36px;
+      width: rem(36px);
+      height: rem(36px);
       display: flex;
       justify-content: center;
       align-items: center;
 
       @include media-below(md) {
-        width: 25px;
-        height: 25px;
+        width: rem(25px);
+        height: rem(25px);
       }
     }
 
     .item + .item {
-      margin-left: 6px;
+      margin-left: rem(6px);
     }
 
     .icon {
-      font-size: 16px;
+      font-size: rem(16px);
       color: black;
     }
   }
 }
 
 .post-quote {
-  margin-top: 15px;
-  padding: 120px 70px;
-  padding-bottom: 100px;
+  margin-top: rem(15px);
+  padding: rem(120px) rem(70px);
+  padding-bottom: rem(100px);
 
   @include media-below(md) {
-    padding: 80px 48px;
+    padding: rem(80px) rem(48px);
   }
   
   &.-grey {
@@ -323,27 +323,27 @@
   }
 
   .quote {
-    font-size: 22px;
-    line-height: 42px;
+    font-size: rem(22px);
+    line-height: rem(42px);
     color: white;
   
     @include media-below(md) {
-      font-size: 18px;
-      line-height: 32px;
+      font-size: rem(18px);
+      line-height: rem(32px);
     }
   }
 
   .author {
-    margin-top: 40px;
-    font-size: 22px;
-    line-height: 42px;
+    margin-top: rem(40px);
+    font-size: rem(22px);
+    line-height: rem(42px);
     font-weight: 700;
     color: white;
 
     @include media-below(md) {
-      margin-top: 36px;
-      font-size: 18px;
-      line-height: 32px;
+      margin-top: rem(36px);
+      font-size: rem(18px);
+      line-height: rem(32px);
     }
   }
 }
@@ -361,16 +361,16 @@
     @include media-below(md) {
       flex: unset;
       width: 100%;
-      max-width: 720px;
-      padding-right: 15px !important;
-      padding-left: 15px !important;
+      max-width: rem(720px);
+      padding-right: rem(15px) !important;
+      padding-left: rem(15px) !important;
       margin-right: auto;
       margin-left: auto;
     }
     @include media-below(sm) {
-      padding-right: 25px !important;
-      padding-left: 25px !important;
-      max-width: 540px;
+      padding-right: rem(25px) !important;
+      padding-left: rem(25px) !important;
+      max-width: rem(540px);
     }
     @include media-below(xs) {
       width: 100%;
@@ -383,12 +383,12 @@
   &.-p-right { padding-right: 7vw; }
 
   &.-row-normal .row {
-    margin-left: -25px;
-    margin-right: -25px;
+    margin-left: rem(-25px);
+    margin-right: rem(-25px);
 
     > * {
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: rem(25px);
+      padding-right: rem(25px);
     }
   }
 
@@ -411,13 +411,13 @@
 
 
 .post-single-content {
-  padding-top: 200px;
-  padding-bottom: 80px;
+  padding-top: rem(200px);
+  padding-bottom: rem(80px);
   width: 100%;
 
   @include media-below(md) {
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: rem(100px);
+    padding-bottom: rem(80px);
   }
 
   .trees-block {
@@ -427,18 +427,18 @@
 
   .elementor-section:first-child {
     .trees-block {
-      padding-bottom: 90px;
+      padding-bottom: rem(90px);
     }
   }
 
   .elementor-section:not(:first-child) {
     .trees-block {
-      padding-top: 90px;
-      padding-bottom: 90px;
+      padding-top: rem(90px);
+      padding-bottom: rem(90px);
       
       @include media-below(md) {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: rem(50px);
+        padding-bottom: rem(50px);
       }
     }
   }
@@ -461,25 +461,25 @@
   
     h2 {
       font-weight: 700;
-      font-size: 42px;
-      line-height: 51px;
+      font-size: rem(42px);
+      line-height: rem(51px);
   
       @include media-below(md) {
-        font-size: 32px;
-        line-height: 48px;
+        font-size: rem(32px);
+        line-height: rem(48px);
       }
     }
   
     p {
-      margin-top: 44px;
-      font-size: 21px;
+      margin-top: rem(44px);
+      font-size: rem(21px);
       font-weight: 300;
-      line-height: 42px;
+      line-height: rem(42px);
       
       @include media-below(md) {
-        font-size: 16px;
-        line-height: 34px;
-        margin-top: 30px;
+        font-size: rem(16px);
+        line-height: rem(34px);
+        margin-top: rem(30px);
       }
     }
   }
@@ -498,10 +498,10 @@
 .trees-block {
   .text-content {
     > * {
-      margin-top: 44px;
+      margin-top: rem(44px);
 
       @include media-below(md) {
-        margin-top: 28px;
+        margin-top: rem(28px);
       }
     }
     > *:first-child {
@@ -514,44 +514,44 @@
 .trees-block {
   &-post_content_left {
     .row {
-      margin-top: -40px;
-      margin-bottom: -40px;
+      margin-top: rem(-40px);
+      margin-bottom: rem(-40px);
 
       > * {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
       }
     }
 
     &.-with-bg {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: rem(80px);
+      padding-bottom: rem(80px);
 
       @include media-below(md) {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: rem(100px);
+        padding-bottom: rem(100px);
       }
     }
   }
 
   &-post_content_right {
     .row {
-      margin-top: -40px;
-      margin-bottom: -40px;
+      margin-top: rem(-40px);
+      margin-bottom: rem(-40px);
 
       > * {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
       }
     }
 
     &.-with-bg {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: rem(80px);
+      padding-bottom: rem(80px);
 
       @include media-below(md) {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: rem(100px);
+        padding-bottom: rem(100px);
       }
     }
   }
@@ -571,24 +571,24 @@
 
   &-post_cta {
     .wrapper {
-      padding-top: 200px;
-      padding-bottom: 200px;
-      border-top: 1px solid #D8D8D8;
-      border-bottom: 1px solid #D8D8D8;
+      padding-top: rem(200px);
+      padding-bottom: rem(200px);
+      border-top: rem(1px) solid #D8D8D8;
+      border-bottom: rem(1px) solid #D8D8D8;
 
       @include media-below(md) {
-        padding-top: 130px;
-        padding-bottom: 130px;
+        padding-top: rem(130px);
+        padding-bottom: rem(130px);
       }
     }
 
     .title {
-      font-size: 48px;
+      font-size: rem(48px);
       line-height: 1.2;
       font-weight: 500;
       
       @include media-below(md) {
-        font-size: 34px;
+        font-size: rem(34px);
         text-align: center;
       }
     }
@@ -597,7 +597,7 @@
       text-align: center;
 
       @include media-below(md) {
-        margin-top: 40px;
+        margin-top: rem(40px);
       }
 
       a {
@@ -607,11 +607,11 @@
         border-radius: 100%;
         text-transform: uppercase;
         color: white;
-        padding: 15px;
-        width: 140px;
-        height: 140px;
+        padding: rem(15px);
+        width: rem(140px);
+        height: rem(140px);
         background-color: var(--color-red);
-        font-size: 14px;
+        font-size: rem(14px);
         line-height: 1.1;
         font-weight: 500;
       }
@@ -620,8 +620,8 @@
   
   &-post_features {
     .row {
-      margin: -20px !important;
-      > * { padding: 20px !important; }
+      margin: rem(-20px) !important;
+      > * { padding: rem(20px) !important; }
 
       @include media-below(md) {
         margin: 0 !important;
@@ -635,24 +635,24 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 300px;
+      height: rem(300px);
       width: 100%;
-      padding: 40px 60px;
+      padding: rem(40px) rem(60px);
       
       @include media-below(md) {
-        padding: 40px 40px;
-        height: 260px;
+        padding: rem(40px) rem(40px);
+        height: rem(260px);
       }
     }
 
     .title {
-      font-size: 28px;
+      font-size: rem(28px);
       line-height: 1.4;
       font-weight: 500;
       letter-spacing: 0.04;
 
       @include media-below(md) {
-        font-size: 21px;
+        font-size: rem(21px);
       }
     }
 
@@ -666,35 +666,35 @@
 
   &-post_two_colums_text {
     .row {
-      margin-top: -40px;
-      margin-bottom: -40px;
+      margin-top: rem(-40px);
+      margin-bottom: rem(-40px);
 
       > * {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: rem(40px);
+        padding-bottom: rem(40px);
       }
     }
   }
 
   &-post_title_text {
     .title {
-      font-size: 32px !important;
-      line-height: 39px !important;
+      font-size: rem(32px) !important;
+      line-height: rem(39px) !important;
       font-weight: 700;
   
       @include media-below(md) {
-        font-size: 32px !important;
-        line-height: 48px !important;
-        margin-bottom: 20px;
+        font-size: rem(32px) !important;
+        line-height: rem(48px) !important;
+        margin-bottom: rem(20px);
       }
   
       &::after {
         content: '';
         display: block;
-        width: 78px;
-        height: 1px;
+        width: rem(78px);
+        height: rem(1px);
         background-color: black;
-        margin-top: 40px;
+        margin-top: rem(40px);
   
         @include media-below(md) {
           display: none;
@@ -730,31 +730,31 @@
 
 .-trees-pt {
   &-0 { padding-top: 0 !important; }
-  &-sm { padding-top: 60px !important; }
-  &-md { padding-top: 90px !important; }
-  &-lg { padding-top: 120px !important; }
-  &-xl { padding-top: 160px !important; }
+  &-sm { padding-top: rem(60px) !important; }
+  &-md { padding-top: rem(90px) !important; }
+  &-lg { padding-top: rem(120px) !important; }
+  &-xl { padding-top: rem(160px) !important; }
 
   @include media-below(md) {
-    &-sm { padding-top: 60px !important; }
-    &-md { padding-top: 60px !important; }
-    &-lg { padding-top: 60px !important; }
-    &-xl { padding-top: 60px !important; }
+    &-sm { padding-top: rem(60px) !important; }
+    &-md { padding-top: rem(60px) !important; }
+    &-lg { padding-top: rem(60px) !important; }
+    &-xl { padding-top: rem(60px) !important; }
   }
 }
 
 .-trees-pb {
   &-0 { padding-bottom: 0 !important; }
-  &-sm { padding-bottom: 60px !important; }
-  &-md { padding-bottom: 90px !important; }
-  &-lg { padding-bottom: 120px !important; }
-  &-xl { padding-bottom: 160px !important; }
+  &-sm { padding-bottom: rem(60px) !important; }
+  &-md { padding-bottom: rem(90px) !important; }
+  &-lg { padding-bottom: rem(120px) !important; }
+  &-xl { padding-bottom: rem(160px) !important; }
 
   @include media-below(md) {
-    &-sm { padding-bottom: 60px !important; }
-    &-md { padding-bottom: 60px !important; }
-    &-lg { padding-bottom: 60px !important; }
-    &-xl { padding-bottom: 60px !important; }
+    &-sm { padding-bottom: rem(60px) !important; }
+    &-md { padding-bottom: rem(60px) !important; }
+    &-lg { padding-bottom: rem(60px) !important; }
+    &-xl { padding-bottom: rem(60px) !important; }
   }
 }
 
@@ -777,21 +777,21 @@
   padding: 0 !important;
 
   .container {
-    padding-top: 120px;
-    padding-bottom: 20px;
+    padding-top: rem(120px);
+    padding-bottom: rem(20px);
 
     @include media-below(md) {
-      // padding-top: 80px !important;
-      padding-bottom: 80px !important;
+      // padding-top: rem(80px) !important;
+      padding-bottom: rem(80px) !important;
     }
   }
 
   &__title {
-    border-top: 1px solid black;
-    font-size: 32px;
-    line-height: 40px;
-    padding-top: 100px;
-    padding-bottom: 30px;
+    border-top: rem(1px) solid black;
+    font-size: rem(32px);
+    line-height: rem(40px);
+    padding-top: rem(100px);
+    padding-bottom: rem(30px);
 
     @include media-below(md) {
       display: none;
