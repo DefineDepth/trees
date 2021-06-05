@@ -142,7 +142,7 @@
   }
 
   &__grid {
-    margin-top: calc(rem(140px) - rem(30px));
+    margin-top: rem(110px);
     margin-bottom: rem(-30px);
     margin-left: rem(-30px);
     margin-right: rem(-30px);
@@ -160,7 +160,7 @@
 
 
     > *:nth-child(2n) {
-      padding-top: calc(rem(90px) + rem(30px));
+      padding-top: rem(120px);
       @include media-below(md) { padding-top: rem(30px); }
     }
   }

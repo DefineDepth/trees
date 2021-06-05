@@ -83,8 +83,8 @@
   }
 
   @include media-below(md) {
-    margin-right: -rem(15px);
-    margin-left: -rem(15px);
+    margin-right: rem(-15px);
+    margin-left: rem(-15px);
 
     > * {
       padding-right: rem(15px);
