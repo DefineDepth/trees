@@ -1,7 +1,37 @@
+.-mobile-padding.-about-right {
+  padding-left: rem(36px) !important;
+
+  @include media-below(md) {
+    padding-left: rem(15px) !important;
+    padding-right: rem(15px) !important;
+  }
+
+  @include media-below(xs) {
+    // padding-left: 0 !important;
+    // padding-right: 0 !important;
+  }
+}
+
+@include media-below(md) {
+  .md\:d-none {
+    display: none;
+  }
+}
+
+
+.about-page-info {
+  &__image {}
+
+  &__row_1 {}
+
+  &__row_2 {}
+}
+
+
 .about-page-info {
   &__section {
     padding-top: rem(300px);
-    padding-bottom: rem(140px);
+    padding-bottom: rem(180px);
 
     @include media-below(md) {
       padding-top: rem(120px);
@@ -16,6 +46,11 @@
     @include media-below(md) {
       margin-top: rem(100px);
       margin-bottom: rem(60px);
+    }
+
+    @include media-below(sm) {
+      margin-top: rem(60px);
+      margin-bottom: rem(30px);
     }
 
     // img {
@@ -91,7 +126,7 @@
 
 .about-page-team {
   &__section {
-    padding-top: rem(160px);
+    padding-top: rem(180px);
     padding-bottom: rem(160px);
 
     @include media-below(md) {
@@ -173,8 +208,8 @@
     transform-origin: right;
     transform: rotate(-90deg);
     position: absolute;
-    top: rem(-7px);
-    right: calc(100% - rem(7px));
+    top: -rem(7px);
+    right: calc(100% - 7px);
     text-align: right;
     white-space: nowrap;
 
@@ -190,6 +225,8 @@
     padding-left: rem(29px);
 
     img {
+      padding: 15px;
+      background-color: white;
       position: absolute;
       top: 0;
       left: 0;

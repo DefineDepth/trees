@@ -1,7 +1,8 @@
 .footer {
   &__section {
+    background-color: white;
     // padding-top: rem(150px);
-    padding-bottom: rem(20px);
+    padding-bottom: rem(114px);
 
     &.-black .footer__cta { background-color: black; }
     &.-blue .footer__cta { background-color: var(--color-blue); }
@@ -13,6 +14,13 @@
       .footer__cta { background-color: #E6F4F4; }
       .footer__circle { background-color: #F2F6F6; }
       .footer__title { color: #6BBCB9; }
+    }
+
+    @include media-below(md) {
+      .container {
+        padding: 0;
+        max-width: 100%;
+      }
     }
 
     @include media-below(sm) {
@@ -35,6 +43,7 @@
     @include media-below(md) {
       margin-left: rem(-15px);
       margin-right: rem(-15px);
+      height: 80vh;
     }
   }
 
@@ -79,6 +88,12 @@
       transform 0.2s ease-in-out;
 
     @include media-below(md) {
+      font-size: rem(38px);
+      padding: 0 rem(40px);
+      padding: 0 17vw;
+    }
+
+    @include media-below(sm) {
       font-size: rem(24px);
       padding: 0 rem(40px);
       padding: 0 17vw;
@@ -110,7 +125,6 @@
     font-size: rem(16px);
 
     @include media-below(md) {
-      // display: none;
       margin-bottom: rem(4px);
     }
 

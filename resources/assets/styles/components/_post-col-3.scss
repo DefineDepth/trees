@@ -47,21 +47,20 @@
     margin-top: rem(34px);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: rem(32px);
-    line-height: rem(34px);
+    font-size: rem(30px);
+    line-height: 1.05;
 
     display: flex;
     flex: 1 1 auto;
     
     @include media-below(lg) {
       font-size: rem(26px);
-      line-height: rem(28px);
     }
   }
 
   &__text {
-    margin-top: rem(52px);
-    max-width: 80%;
+    margin-top: rem(32px);
+    max-width: 90%;
     
     p {
       font-size: rem(21px);
@@ -87,6 +86,7 @@
 .front-blog__col-1 {
   padding-top: rem(100px);
   padding-bottom: rem(160px);
+  padding-bottom: rem(200px);
 
   @include media-below(md) {
     padding-top: rem(100px);
@@ -108,13 +108,23 @@
     img {}
   }
 
+  &__link {
+    display: block;
+
+    @include media-below(md) {
+      .row {
+        align-items: center;
+      }
+    }
+  }
+
   &__content {
     position: relative;
     height: 100%;
 
     @include media-below(md) {
-      margin-top: rem(34px);
-      width: 50%;
+      // margin-top: rem(34px);
+      // width: 50%;
     }
     @include media-below(sm) {
       width: 80%;
@@ -132,7 +142,7 @@
       margin-bottom: rem(30px);
     }
 
-    a {
+    a, span {
       text-transform: uppercase;
       font-weight: 500;
       font-size: rem(14px);
@@ -149,11 +159,10 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: rem(36px);
-    line-height: rem(38px);
+    line-height: 1.05;
     
     @include media-below(md) {
       font-size: rem(26px);
-      line-height: rem(30px);
     }
   }
 
@@ -179,7 +188,7 @@
     position: absolute;
     bottom: 0;
 
-    a {
+    a, span {
       font-size: rem(18px);
       font-weight: 500;
 

@@ -12,7 +12,7 @@ export default class PJAX {
   }
 
   init() {
-    // if (!document.body.hasAttribute('data-barba')) return;
+    if (!document.body.hasAttribute('data-barba')) return;
 
     return barba.init({
       sync: false,

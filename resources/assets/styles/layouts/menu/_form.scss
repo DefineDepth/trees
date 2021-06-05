@@ -78,7 +78,12 @@
   }
 
   &__form {
-    margin-top: rem(52px);
+    // margin-top: rem(52px);
+    margin-top: 10vh;
+
+    @include media-below(lg) {
+      margin-top: rem(52px);
+    }
 
     .nf-form-content {
       padding: 0;

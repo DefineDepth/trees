@@ -6,7 +6,7 @@ if ( isset($container_style) ) {
 }
 @endphp
 
-<section class="instagram__section">
+<section class="instagram__section md:bg-grey">
   <div class="{{ $container_style }}">
     <div class="instagram__inner bg-grey">
       <div class="row">

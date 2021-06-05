@@ -13,16 +13,15 @@
     
         <div class="col">
           <div class="headerBar__logo">
-            {{-- <img src="@asset('images/logo.png')"> --}}
-            <a href="{{ home_url('/') }}" class="headerBar__logo__wrap">
-              <img class="logo" src="@asset('images/logo.svg')">
-              <img class="logo-light" src="@asset('images/logo-light.svg')">
+            <a data-barba href="{{ home_url('/') }}" class="headerBar__logo__wrap">
+              <img class="logo" src="@asset('images/logo-light.svg')">
             </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  @include('partials.menu')
 </header>
+
+
+@include('partials.menu')

@@ -1,7 +1,7 @@
 .services-page-info {
   &__section {
     padding-top: rem(300px);
-    padding-bottom: rem(300px);
+    padding-bottom: rem(220px);
 
     @include media-below(md) {
       padding-top: rem(120px);
@@ -10,7 +10,7 @@
   }
 
   &__bottom {
-    margin-top: rem(160px);
+    margin-top: rem(200px);
     margin-left: rem(-50px);
     margin-right: rem(-50px);
 

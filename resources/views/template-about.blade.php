@@ -9,8 +9,7 @@
 
 <section class="about-page-info__section">
   <div class="container">
-    <div class="row">
-
+    <div class="row about-page-info__row_1">
       <div class="col-xl-8 col-lg-10">
         <div class="about-page-info__content">
           <p class="about-page-info__subtitle">
@@ -24,23 +23,30 @@
           </div>
         </div>
       </div>
+    </div>
 
-
-      <div class="col-xl-8 offset-xl-4 col-lg-10 offset-lg-2">
-        <div class="about-page-info__image">
-          <div class="moving-image -left js-image-move js-image-left">
-            <img class="-circle" src="@asset('images/front-about/circle.png')">
+    <div class="row test-row -fluid inner-item about-page-info__image">
+      <div class="col-xl-5 col-lg-6 md:d-none">
+        <div class="ratio ratio-3:4 col-12"></div>
+      </div>
   
-            <div class="front-about__image ratio ratio-16:9 overflow-hidden">
-              <img class="-img" src="{{ $header_second_block['header_second_image']['url'] }}">
-              <img class="-lines" src="@asset('images/front-about/lines.png')">
-              <div class="-colors">
-                @for ($i = 0; $i < 5; $i++) <span></span> @endfor
-              </div>
+      <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-2 row__side -right -mobile-padding -about-right">
+        <div class="moving-image -left js-image-move js-image-left">
+          <img class="-circle" src="@asset('images/front-about/circle.png')">
+
+          <div class="front-about__image ratio ratio-16:9 overflow-hidden">
+            <img class="-img" src="{{ $header_second_block['header_second_image']['url'] }}">
+            <img class="-lines" src="@asset('images/front-about/lines.png')">
+            <div class="-colors">
+              @for ($i = 0; $i < 5; $i++) <span></span> @endfor
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
+    <div class="row about-page-info__row_2">
+      <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-2">
         <div class="about-page-info__content">
           <p class="about-page-info__subtitle">
             {{ $header_second_block['header_second_subtitle'] }}
@@ -53,8 +59,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
   </div>
 </section>
 

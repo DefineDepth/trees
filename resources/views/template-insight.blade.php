@@ -23,7 +23,7 @@
       </div>
 
       <div class="col-xl-5 col-lg-5">
-        <div class="insight-header-quote">
+        <div class="insight-header-quote insight-page">
           <p class="insight-header-quote__comment">
             “{!! $header['quote'] !!}”
           </p>

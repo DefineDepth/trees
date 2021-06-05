@@ -79,7 +79,7 @@
     @foreach ($services_repeater as $item)
       <div class="services-page-services__content">
         <div class="row justify-content-between">
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <h3 class="services-page-services__item__title">
               {!! $item['title'] !!}
             </h3>

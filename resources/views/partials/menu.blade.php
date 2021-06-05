@@ -34,19 +34,19 @@
           <div class="navList__wrap">
             <ul class="navList js-navList pointer-events-none">
               <li>
-                <a href="{{ $insight_link }}">Insight</a>
+                <a data-barba href="{{ $insight_link }}">Insight</a>
               </li>
 
               <li>
-                <a href="{{ $services_link }}">What We Do</a>
+                <a data-barba href="{{ $services_link }}">What We Do</a>
               </li>
 
               <li>
-                <a href="{{ $about_link }}">Who We Are</a>
+                <a data-barba href="{{ $about_link }}">Who We Are</a>
               </li>
 
               <li>
-                <a href="{{ $portfolio_link }}">Case Studies</a>
+                <a data-barba href="{{ $portfolio_link }}">Case Studies</a>
               </li>
 
               <li>

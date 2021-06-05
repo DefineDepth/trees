@@ -1,3 +1,12 @@
+// .-new-fluid {
+//   position: unset !important;
+
+//   .new-test-right {
+//     // position: absolute;
+//   }
+// }
+
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,6 +21,7 @@ html {
 }
 
 body {
+  background-color: white;
   font-family: var(--font-primary);
   overflow-x: hidden;
   color: black;
@@ -24,16 +34,20 @@ body {
 
 .container {
   @media (min-width: 1260px) {
-    // max-width: rem(1200px);
     max-width: rem(1200px);
   }
 
-  @media (min-width: 1460px) {
-    max-width: rem(1400px);
+  @media (min-width: 1300px) {
+    max-width: 100%;
+    padding-left: rem(160px);
+    padding-right: rem(160px);
   }
 
-  @media (min-width: 1660px) {
-    max-width: rem(1600px);
+  @media (min-width: 1600px) {
+    padding: 0;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+    max-width: rem(1410px);
   }
   
   @include media-below(sm) {
@@ -63,6 +77,7 @@ body {
 
 main {
   overflow-x: hidden;
+  background-color: white;
 }
 
 
@@ -177,63 +192,39 @@ a {
 
 
 
+.text-grey {
+  color: rgba(black, 0.6);
+}
 
+.bg-grey {
+  background-color: #F7F7F7;
+}
 
-body {
-  background-color: white;
-  transition: background-color 0.25s ease-out;
-
-  .text-grey {
-    color: rgba(black, 0.6);
-  }
-
-  .bg-grey {
+@include media-below(md) {
+  .md\:bg-grey {
     background-color: #F7F7F7;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    transition: color 0.25s ease-out;
-    color: black;
-  }
+}
 
-  button,
-  a,
-  p {
-    transition: color 0.25s ease-out;
-    color: black;
-  }
+h1, h2, h3, h4, h5, h6 {
+  transition: color 0.25s ease-out;
+  color: black;
+}
 
-  .theme-dark-hidden {
-    position: relative;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.25s ease-out;
-  }
-  
-  &.dark-theme {
-    background-color: black;
+button,
+a,
+p {
+  transition: color 0.25s ease-out;
+  color: black;
+}
 
-    .theme-dark-hidden {
-      pointer-events: auto;
-      opacity: 1;
-    }
 
-    .text-grey {
-      color: rgba(white, 0.4);
-    }
+.row.x-gap-20 {
+  margin-left: rem(-10px);
+  margin-right: rem(-10px);
 
-    .bg-grey {
-      background-color: rgba(white, 0.15);
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      color: white;
-    }
-
-    button,
-    a,
-    p {
-      color: white;
-    }
+  > * {
+    padding-left: rem(10px);
+    padding-right: rem(10px);
   }
 }

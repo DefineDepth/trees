@@ -64,13 +64,17 @@
   }
 }
 
+.insight-header-quote.insight-page {
+  padding: rem(110px) rem(56px);
+}
+
 .insight-header-quote {
   background-color: black;
   padding: rem(120px) rem(70px);
 
   p {
     font-size: rem(22px);
-    line-height: rem(42px);
+    line-height: 1.8;
     color: white;
   }
 
@@ -80,7 +84,6 @@
 
     p {
       font-size: rem(18px);
-      line-height: rem(32px);
     }
   }
 

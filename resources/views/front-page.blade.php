@@ -57,7 +57,7 @@
     </div>
 
     <div class="swiper swiper-container -section js-post">
-      <div class="row y-space swiper-wrapper">
+      <div class="row x-gap-20 y-space swiper-wrapper">
         @php $post_count = 0; @endphp
         @foreach ($posts as $post)
           @if ($post_count < 3)
@@ -114,7 +114,7 @@
         <div class="moving-image -left js-image-move js-image-left">
           <img class="-circle" src="@asset('images/front-about/circle.png')">
 
-          <div class="front-about__image ratio ratio-16:9 overflow-hidden">
+          <div class="front-about__image ratio ratio-2:1 overflow-hidden">
             <img class="-img" src="{{ $about_image['url'] }}" alt="About image">
             <img class="-lines" src="@asset('images/front-about/lines.png')">
             <div class="-colors">
