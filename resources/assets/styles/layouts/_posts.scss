@@ -717,11 +717,12 @@
   padding: 0 !important;
 
   .container {
-    padding-top: rem(120px);
+    // padding-top: rem(120px);
+    padding-top: rem(40px);
     padding-bottom: rem(20px);
-
+    
     @include media-below(md) {
-      // padding-top: rem(80px) !important;
+      padding-top: rem(60px) !important;
       padding-bottom: rem(80px) !important;
     }
   }

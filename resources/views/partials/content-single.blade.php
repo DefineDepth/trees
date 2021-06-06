@@ -74,7 +74,7 @@
       @php the_content() @endphp
 
       <div class="content-bottom">
-        <div class="container -fluid -p-left -p-right container-md">
+        <div class="container -fluid {{ $post_header_content['comments_container'] }} container-md">
           <div class="row justify-content-{{ $post_header_content['comments_align'] }}">
             <div class="col-xl-{{ $post_header_content['comments_column'] }}">
               <div class="row">

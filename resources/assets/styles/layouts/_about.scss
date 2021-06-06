@@ -160,6 +160,21 @@
   }
 
   &__text {
+    a {
+      font-size: rem(18px);
+      font-weight: 700;
+      color: black;
+
+      &::before {
+        content: "\\";
+        font-size: rem(18px);
+        font-weight: 700;
+        margin-left: rem(12px);
+        margin-right: rem(12px);
+        color: var(--color-orange);
+      }
+    }
+    
     p {
       font-size: rem(24px);
       line-height: rem(42px);

@@ -1,6 +1,6 @@
 @php
 if ( isset($container_style) ) {
-  $container_style = 'container -fluid -p-left -p-right -row-normal';
+  $container_style = 'container -fluid -p-left -p-right -row-normal container-md';
 } else {
   $container_style = 'container';
 }

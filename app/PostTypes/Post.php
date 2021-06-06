@@ -51,6 +51,15 @@ class Post extends AbstractPostType
                 ],
                 'default_value' => '6',
             ])
+            ->addSelect('comments_container', [
+                'label' => 'Author & Comments Container',
+                'choices' => [
+                    '-p-left -p-right' => 'Both',
+                    '-p-left' => 'Left',
+                    '-p-right' => 'Right',
+                ],
+                'default_value' => '-p-left -p-right',
+            ])
             ->addSelect('comments_align', [
                 'label' => 'Author & Comments Aligning',
                 'choices' => [
