@@ -349,66 +349,6 @@
 }
 
 
-.container.-fluid {
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-
-  &.container-md,
-  .container-md {
-    padding: 0;
-
-    @include media-below(md) {
-      flex: unset;
-      width: 100%;
-      max-width: rem(720px);
-      padding-right: rem(15px) !important;
-      padding-left: rem(15px) !important;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    @include media-below(sm) {
-      padding-right: rem(25px) !important;
-      padding-left: rem(25px) !important;
-      max-width: rem(540px);
-    }
-    @include media-below(xs) {
-      width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
-  &.-p-left { padding-left: 7vw; }
-  &.-p-right { padding-right: 7vw; }
-
-  &.-row-normal .row {
-    margin-left: rem(-25px);
-    margin-right: rem(-25px);
-
-    > * {
-      padding-left: rem(25px);
-      padding-right: rem(25px);
-    }
-  }
-
-  @include media-below(md) {
-    &.-p-left { padding-left: 0; }
-    &.-p-right { padding-right: 0; }
-  }
-
-  .row {
-    margin-left: -4vw;
-    margin-right: -4vw;
-
-    > * {
-      padding-left: 4vw;
-      padding-right: 4vw;
-    }
-  }
-}
-
-
 
 .post-single-content {
   padding-top: rem(200px);

@@ -34,9 +34,13 @@
         <div class="moving-image -left js-image-move js-image-left">
           <img class="-circle" src="@asset('images/front-about/circle.png')">
 
-          <div class="front-about__image ratio ratio-16:9 overflow-hidden">
-            <img class="-img" src="{{ $header_second_block['header_second_image']['url'] }}">
-            <img class="-lines" src="@asset('images/front-about/lines.png')">
+          <div class="front-about__image">
+            <div class="ratio ratio-2:1 overflow-hidden">
+              <img class="-img" src="{{ $header_second_block['header_second_image']['url'] }}">
+            </div>
+            <div class="-lines">
+              <img src="@asset('images/front-about/lines.png')">
+            </div>
             <div class="-colors">
               @for ($i = 0; $i < 5; $i++) <span></span> @endfor
             </div>

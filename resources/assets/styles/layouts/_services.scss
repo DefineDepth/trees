@@ -15,7 +15,7 @@
     margin-right: rem(-50px);
 
     @include media-below(md) {
-      margin-top: rem(140px);
+      margin-top: rem(100px);
     }
 
     > * {

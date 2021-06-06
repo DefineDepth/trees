@@ -41,7 +41,7 @@
 
   &__image {
     margin-top: rem(100px);
-    margin-bottom: rem(100px);
+    // margin-bottom: rem(100px);
 
     @include media-below(md) {
       margin-top: rem(100px);
