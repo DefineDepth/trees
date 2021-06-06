@@ -35,7 +35,7 @@
 
     @include media-below(md) {
       padding-top: rem(120px);
-      padding-bottom: rem(60px);
+      padding-bottom: rem(100px);
     }
   }
 
@@ -130,8 +130,8 @@
     padding-bottom: rem(160px);
 
     @include media-below(md) {
-      padding-top: rem(140px);
-      padding-bottom: rem(140px);
+      padding-top: rem(100px);
+      padding-bottom: rem(120px);
     }
   }
 

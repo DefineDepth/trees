@@ -166,6 +166,13 @@
   width: 100%;
   height: 100%;
   align-items: flex-end;
+
+
+  .insight-active .insight-link { color: var(--color-teal); }
+  .services-active .services-link { color: var(--color-teal); }
+  .about-active .about-link { color: var(--color-teal); }
+  .portfolio-active .portfolio-link { color: var(--color-teal); }
+
   
   &__left {
     padding-left: rem(130px);

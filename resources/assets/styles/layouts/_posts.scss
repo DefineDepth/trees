@@ -5,7 +5,7 @@
     padding-bottom: rem(80px);
 
     @include media-below(md) {
-      padding-top: rem(50px);
+      padding-top: rem(100px);
     }
   }
 
@@ -53,30 +53,29 @@
     
     @include media-below(md) {
       font-size: rem(10px);
+      margin-bottom: rem(34px);
     }
   }
 
   &__title {
     font-size: rem(64px);
-    line-height: rem(72px);
+    line-height: 1.2;
     font-weight: 700;
 
     @include media-below(md) {
       font-size: rem(32px);
-      line-height: rem(48px);
     }
   }
 
   &__excerpt {
     margin-top: rem(12px);
     font-size: rem(40px);
-    line-height: rem(52px);
+    line-height: 1.3;
     padding-right: rem(80px);
     
     @include media-below(md) {
-      margin-top: rem(24px);
-      font-size: rem(28px);
-      line-height: rem(38px);
+      margin-top: rem(20px);
+      font-size: rem(22px);
       padding-right: 0;
     }
   }

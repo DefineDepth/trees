@@ -203,7 +203,8 @@
     padding-bottom: rem(200px);
 
     @include media-below(md) {
-      margin-bottom: rem(100px);
+      padding-top: rem(120px);
+      padding-bottom: rem(120px);
     }
 
     @include media-below(sm) {
@@ -257,10 +258,38 @@
 
   &__grid {
     margin-top: rem(120px) !important;
-    margin: rem(-80px) rem(-100px);
+    margin: rem(-80px) rem(-80px);
+    padding-left: rem(120px);
+    padding-right: rem(120px);
 
     > * {
-      padding: rem(80px) rem(100px);
+      padding: rem(80px) rem(80px);
+    }
+
+
+    @include media-below(xl) {
+      margin: rem(-50px) rem(-50px);
+      > * { padding: rem(50px) rem(50px); }
+    }
+    
+    @include media-below(lg) {
+      padding-left: 0;
+      padding-right: 0;
+
+      margin-top: rem(80px) !important;
+      margin: rem(-80px) rem(-80px);
+      > * { padding: rem(80px) rem(80px); }
+    }
+
+    @include media-below(md) {
+      margin: rem(-60px) rem(-60px);
+      > * { padding: rem(60px) rem(60px); }
+    }
+
+    @include media-below(sm) {
+      margin-top: rem(60px) !important;
+      margin: rem(-30px) rem(-30px);
+      > * { padding: rem(30px) rem(30px); }
     }
   }
 

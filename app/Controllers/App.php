@@ -12,6 +12,11 @@ class App extends Controller
         return '-teal';
     }
 
+    public function nav_link_active()
+    {
+        return '';
+    }
+
     public function footer_title()
     {
         return (get_field(__FUNCTION__)) ? get_field(__FUNCTION__) : 'Want to connect on a project?';

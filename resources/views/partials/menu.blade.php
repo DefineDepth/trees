@@ -32,21 +32,21 @@
       <div class="nav__content">
         <div class="nav__content__left">
           <div class="navList__wrap">
-            <ul class="navList js-navList pointer-events-none">
+            <ul class="navList js-navList pointer-events-none {{ $nav_link_active }}">
               <li>
-                <a data-barba href="{{ $insight_link }}">Insight</a>
+                <a class="insight-link" data-barba href="{{ $insight_link }}">Insight</a>
               </li>
 
               <li>
-                <a data-barba href="{{ $services_link }}">What We Do</a>
+                <a class="services-link" data-barba href="{{ $services_link }}">What We Do</a>
               </li>
 
               <li>
-                <a data-barba href="{{ $about_link }}">Who We Are</a>
+                <a class="about-link" data-barba href="{{ $about_link }}">Who We Are</a>
               </li>
 
               <li>
-                <a data-barba href="{{ $portfolio_link }}">Case Studies</a>
+                <a class="portfolio-link" data-barba href="{{ $portfolio_link }}">Case Studies</a>
               </li>
 
               <li>

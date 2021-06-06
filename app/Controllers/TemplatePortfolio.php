@@ -12,6 +12,11 @@ class TemplatePortfolio extends Controller
     return '-orange';
   }
 
+  public function nav_link_active()
+  {
+      return 'portfolio-active';
+  }
+
   public function posts_posts()
   {
     $posts = get_posts([

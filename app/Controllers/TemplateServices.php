@@ -13,6 +13,11 @@ class TemplateServices extends Controller
         return '-blue';
     }
 
+    public function nav_link_active()
+    {
+        return 'services-active';
+    }
+
 
     public function header_first_block()
     {

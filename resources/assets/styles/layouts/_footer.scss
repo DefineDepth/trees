@@ -1,7 +1,6 @@
 .footer {
   &__section {
     background-color: white;
-    // padding-top: rem(150px);
     padding-bottom: rem(114px);
 
     &.-black .footer__cta { background-color: black; }
@@ -17,6 +16,8 @@
     }
 
     @include media-below(md) {
+      padding-bottom: rem(20px);
+      
       .container {
         padding: 0;
         max-width: 100%;

@@ -30,7 +30,7 @@
         <div class="ratio ratio-3:4 col-12"></div>
       </div>
   
-      <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-2 row__side -right -mobile-padding -about-right">
+      <div class="col-xl-7 offset-xl-5 col-lg-10 offset-lg-2 row__side -right -about-right">
         <div class="moving-image -left js-image-move js-image-left">
           <img class="-circle" src="@asset('images/front-about/circle.png')">
 

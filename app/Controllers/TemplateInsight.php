@@ -13,6 +13,11 @@ class TemplateInsight extends Controller
         return '-beige';
     }
 
+    public function nav_link_active()
+    {
+        return 'insight-active';
+    }
+
     public function posts()
     {
         $posts = get_posts([
