@@ -13,6 +13,7 @@ import PJAX from '../components/PJAX'
 import ScrollTr from '../components/ScrollTrigger'
 import RevealEls from '../components/RevealEls'
 import Accordion from '../components/Accordion'
+import SectionSlider from '../components/SectionSlider'
 
 import 'lazysizes';
 
@@ -33,6 +34,7 @@ export default {
     new ScrollTr;
     new RevealEls;
     new Accordion;
+    new SectionSlider();
     
     feather.replace();
   },

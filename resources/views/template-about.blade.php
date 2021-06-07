@@ -85,14 +85,18 @@
       </div>
     </div>
 
-    <div class="row about-page-team__grid">
+    <div class="swiper swiper-container -new-section js-section-slider">
+      <div class="row about-page-team__grid | swiper-wrapper">
 
-      @foreach ($team_posts as $post)
-        <div class="col-lg-3 col-md-6">
-          @include('partials.content-teams')
-        </div>
-      @endforeach
+        @foreach ($team_posts as $post)
+          <div class="col-lg-3 col-md-6 swiper-slide">
+            @include('partials.content-teams')
+          </div>
+        @endforeach
 
+      </div>
+
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
@@ -115,72 +119,76 @@
     </div>
 
 
-    <div class="about-page-about__inner">
-      <div class="row align-items-center -fluid inner-item">
-        <div class="col-xl-7 col-lg-5 row__side -left -mobile-padding">
-          <div class="image bg-grey">
-            <img src="{{ $value_first['value_image']['url'] }}" alt="Value image">
+    <div class="swiper swiper-container -new-section js-section-slider">
+      <div class="about-page-about__inner | swiper-wrapper d-block">
+        <div class="swiper-slide row align-items-center -fluid inner-item">
+          <div class="col-xl-7 col-lg-5 row__side -left -mobile-padding">
+            <div class="image bg-grey">
+              <img src="{{ $value_first['value_image']['url'] }}" alt="Value image">
+            </div>
+          </div>
+  
+          <div class="offset-xl-7 col-xl-5 offset-lg-5 col-lg-6">
+            <div class="content">
+              <p class="subtitle">
+                {{ $value_first['value_subtitle'] }}
+              </p>
+              <h3 class="title">
+                {!! $value_first['value_title'] !!}
+              </h3>
+              <div class="text">
+                {!! $value_first['value_text'] !!}
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="offset-xl-7 col-xl-5 offset-lg-5 col-lg-6">
-          <div class="content">
-            <p class="subtitle">
-              {{ $value_first['value_subtitle'] }}
-            </p>
-            <h3 class="title">
-              {!! $value_first['value_title'] !!}
-            </h3>
-            <div class="text">
-              {!! $value_first['value_text'] !!}
+  
+        <div class="swiper-slide row align-items-center inner-item">
+          <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
+            <div class="content">
+              <p class="subtitle">
+                {{ $value_second['value_subtitle'] }}
+              </p>
+              <h3 class="title">
+                {!! $value_second['value_title'] !!}
+              </h3>
+              <div class="text">
+                {!! $value_second['value_text'] !!}
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xl-7 col-lg-6 order-1 order-lg-2">
+            <div class="image bg-grey">
+              <img src="{{ $value_second['value_image']['url'] }}" alt="Value image">
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide row align-items-center inner-item">
+          <div class="col-xl-7 col-lg-6">
+            <div class="image bg-grey">
+              <img src="{{ $value_third['value_image']['url'] }}" alt="Value image">
+            </div>
+          </div>
+  
+          <div class="col-xl-5 col-lg-6">
+            <div class="content">
+              <p class="subtitle">
+                {{ $value_third['value_subtitle'] }}
+              </p>
+              <h3 class="title">
+                {!! $value_third['value_title'] !!}
+              </h3>
+              <div class="text">
+                {!! $value_third['value_text'] !!}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row align-items-center inner-item">
-        <div class="col-xl-5 col-lg-6 order-2 order-lg-1">
-          <div class="content">
-            <p class="subtitle">
-              {{ $value_second['value_subtitle'] }}
-            </p>
-            <h3 class="title">
-              {!! $value_second['value_title'] !!}
-            </h3>
-            <div class="text">
-              {!! $value_second['value_text'] !!}
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xl-7 col-lg-6 order-1 order-lg-2">
-          <div class="image bg-grey">
-            <img src="{{ $value_second['value_image']['url'] }}" alt="Value image">
-          </div>
-        </div>
-      </div>
-
-      <div class="row align-items-center inner-item">
-        <div class="col-xl-7 col-lg-6">
-          <div class="image bg-grey">
-            <img src="{{ $value_third['value_image']['url'] }}" alt="Value image">
-          </div>
-        </div>
-
-        <div class="col-xl-5 col-lg-6">
-          <div class="content">
-            <p class="subtitle">
-              {{ $value_third['value_subtitle'] }}
-            </p>
-            <h3 class="title">
-              {!! $value_third['value_title'] !!}
-            </h3>
-            <div class="text">
-              {!! $value_third['value_text'] !!}
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="swiper-pagination -light"></div>
     </div>
 
   </div>

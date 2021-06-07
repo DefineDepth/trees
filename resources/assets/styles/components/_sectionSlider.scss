@@ -52,3 +52,76 @@
 
   .swiper-slide {}
 }
+
+
+.swiper.swiper-container.-new-section {
+  .team-card {
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    box-sizing: inherit;
+    width: unset;
+    height: unset;
+    flex-wrap: nowrap;
+    
+    @include media-below(md) {
+      width: 100%;
+      box-sizing: content-box;
+      display: flex !important;
+      flex-wrap: nowrap;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+    position: relative;
+    top: unset; bottom: unset; left: unset; right: unset;
+    margin-top: rem(36px);
+
+    @include media-below(md) {
+      display: block;
+    }
+
+    span {
+      width: rem(11px);
+      height: rem(11px);
+    }
+
+    span + span {
+      margin-left: rem(6px);
+    }
+
+    span.swiper-pagination-bullet-active {
+      background-color: var(--color-blue) !important;
+    }
+
+    &.-light {
+      span {
+        background-color: white;
+      }
+    }
+  }
+
+  @include media-below(md) {
+    overflow: visible;
+
+    .swiper-slide {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    .row > * {
+      padding: 0 !important;
+      flex: unset;
+      flex-shrink: 0;
+      max-width: unset;
+
+      display: flex;
+      align-items: stretch;
+    }
+  }
+}
