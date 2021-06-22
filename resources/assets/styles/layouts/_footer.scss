@@ -54,9 +54,8 @@
     border-radius: 100%;
     background-color: rgba(white, 0.1);
     
-    @include media-below(md) { width: 120%; }
-    @include media-below(sm) { width: 130%; }
-    @include media-below(xs) { width: 160%; }
+    @include media-below(md) { width: 90%; }
+    @include media-below(sm) { width: 120%; }
   }
 
   &__content {

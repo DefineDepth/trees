@@ -3,6 +3,10 @@ import gsap from '../vendors/gsap.min.js'
 
 export default class Menu {
   constructor() {
+    this.init()
+  }
+
+  init() {
     console.log('Menu');
 
     const btnOpen = document.querySelector('.js-menu-open');
@@ -217,7 +221,6 @@ export default class Menu {
         }, '>-0.4')
     })
 
-
     btnContactClose.addEventListener('click', () => {
       gsap.timeline()
         .fromTo(btnContactClose, {
@@ -268,6 +271,5 @@ export default class Menu {
           },
         }, '<')
     })
-
   }
 }

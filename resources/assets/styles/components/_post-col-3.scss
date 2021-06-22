@@ -86,11 +86,11 @@
 
 .front-blog__col-1 {
   padding-top: rem(100px);
-  padding-bottom: rem(160px);
   padding-bottom: rem(200px);
-
+  
   @include media-below(md) {
     padding-top: rem(100px);
+    padding-bottom: rem(100px);
   }
 
   > .container {
@@ -124,7 +124,7 @@
     height: 100%;
 
     @include media-below(md) {
-      // margin-top: rem(34px);
+      margin-top: rem(20px);
       // width: 50%;
     }
     @include media-below(sm) {

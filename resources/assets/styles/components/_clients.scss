@@ -17,6 +17,16 @@
 
     .swiper.swiper-container {
     }
+
+    .row {
+      padding-left: rem(80px);
+      padding-right: rem(80px);
+
+      @include media-below(md) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
   &__image {
@@ -72,14 +82,14 @@
 .row.clients-gap {
   margin-top: rem(-40px);
   margin-bottom: rem(-40px);
-  margin-right: rem(-40px);
-  margin-left: rem(-40px);
+  margin-right: rem(-32px);
+  margin-left: rem(-32px);
 
   > * {
     padding-top: rem(40px);
     padding-bottom: rem(40px);
-    padding-right: rem(40px);
-    padding-left: rem(40px);
+    padding-right: rem(32px);
+    padding-left: rem(32px);
   }
 
   @include media-below(md) {

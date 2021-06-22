@@ -97,10 +97,12 @@
             {{ $about_subtitle }}
           </p>
           <h3 class="front-about__title">
-            {{ $about_title }}
+            {{-- {{ $about_title }} --}}
+            Connecting brands with people
           </h3>
           <div class="front-about__text">
-            {{ $about_text }}
+            {{-- {{ $about_text }} --}}
+            Experienced. Award-winning. Humble. We’ve built our designer-owned agency with one primary focus: To create engaging and memorable human experiences with design, driven by strategy and purpose for an undeniable impact. We specialize in multi-platform stories that connect brands with people.
           </div>
           <div class="front-about__links">
             @foreach ($about_links_repeater as $item)

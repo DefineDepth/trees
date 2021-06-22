@@ -50,6 +50,13 @@ body {
     padding-right: rem(15px);
     max-width: rem(1410px);
   }
+
+  @media (min-width: 1700px) {
+    padding: 0;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+    max-width: rem(1450px);
+  }
   
   @include media-below(sm) {
     padding-right: rem(24px);

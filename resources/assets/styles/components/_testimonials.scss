@@ -3,6 +3,16 @@
   padding-top: rem(100px);
   padding-bottom: rem(200px);
 
+  .row {
+    padding-left: rem(80px);
+    padding-right: rem(80px);
+
+    @include media-below(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   @include media-below(md) {
     padding-top: rem(100px);
     padding-bottom: rem(140px);
@@ -31,7 +41,10 @@
       color: var(--color-teal);
       fill: var(--color-teal);
 
-      @include media-below(md) {}
+      @include media-below(md) {
+        width: rem(25px);
+        height: rem(25px);
+      }
     }
 
     .icon + .icon {
@@ -58,7 +71,7 @@
   }
 
   &__text {
-    font-size: rem(42px);
+    font-size: rem(40px);
     line-height: rem(64px);
     margin-top: rem(30px);
     font-weight: 300;

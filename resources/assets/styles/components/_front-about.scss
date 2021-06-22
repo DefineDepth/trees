@@ -124,12 +124,12 @@
   }
 
   .test-row {
-    margin-left: rem(-60px);
-    margin-right: rem(-60px);
+    margin-left: rem(-30px);
+    margin-right: rem(-30px);
 
     > * {
-      padding-left: rem(60px);
-      padding-right: rem(60px);
+      padding-left: rem(30px);
+      padding-right: rem(30px);
     }
 
     > *:last-child {
@@ -145,6 +145,12 @@
         padding-left: rem(15px);
         padding-right: rem(15px);
       }
+    }
+  }
+
+  &__content {
+    @include media-below(md) {
+      margin-top: rem(80px);
     }
   }
 
@@ -178,8 +184,9 @@
     font-size: rem(24px);
     line-height: rem(42px);
     margin-top: rem(12px);
-
+    
     @include media-below(md) {
+      margin-top: rem(20px);
       font-size: rem(16px);
       line-height: rem(26px);
     }
