@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-12">
         <h1 class="portfolio-page-header__title">
-          {{ get_the_title() }}
+          {!! get_the_title() !!}
         </h1>
         <div class="portfolio-page-header__line"></div>
       </div>

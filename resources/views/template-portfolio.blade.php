@@ -47,15 +47,15 @@
               <div class="cta">
                 @if ( $portfolio_controls['grid_button_title'] )
                   <h5 class="cta_title">
-                    {{ $portfolio_controls['grid_button_title'] }}
+                    {!! $portfolio_controls['grid_button_title'] !!}
                   </h5>
                 @endif
 
-                @if ( $portfolio_controls['grid_button']['title'] )
+                {{-- @if ( $portfolio_controls['grid_button']['title'] )
                   <a href="{{ $portfolio_controls['grid_button']['url'] }}" class="cta_button">
                     {{ $portfolio_controls['grid_button']['title'] }}
                   </a>
-                @endif
+                @endif --}}
               </div>
             </div>
           </div>
