@@ -22,8 +22,11 @@
     font-weight: 700;
     
     @include media-below(md) {
-      font-size: clamp(25px, 5vw, 40px);
+      font-size: rem(34px);
       padding: rem(16px) 0;
+    }
+    @include media-below(xs) {
+      font-size: clamp(25px, 7.4vw, 40px);
     }
 
     &:hover {

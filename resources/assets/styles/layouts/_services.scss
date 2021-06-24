@@ -105,10 +105,6 @@
 
 
 
-.services-page-services__content + .services-page-services__content {
-  margin-top: rem(60px);
-}
-
 .services-page-services {
   &__section {
     padding-top: rem(160px);
@@ -122,6 +118,18 @@
     .container > div:last-child {
       border-bottom: rem(1px) solid black;
       padding-bottom: rem(60px);
+
+      @include media-below(md) {
+        border-bottom: none;
+      }
+    }
+
+    .swiper-slide + .swiper-slide {
+      margin-top: rem(60px);
+
+      @include media-below(md) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -158,6 +166,10 @@
   &__content {
     padding-top: rem(60px);
     border-top: rem(1px) solid black;
+
+    // @include media-below(md) {
+    //   border-top: none;
+    // }
   }
 
   &__item__title {
@@ -203,7 +215,7 @@
     padding-bottom: rem(200px);
 
     @include media-below(md) {
-      padding-top: rem(120px);
+      padding-top: rem(100px);
       padding-bottom: rem(120px);
     }
 

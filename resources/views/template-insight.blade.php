@@ -46,7 +46,7 @@
 </section>
 
 
-@include('sections.instagram')
+@include('sections.instagram', ['section_class' => '-insight-page'])
 
 
 @endsection

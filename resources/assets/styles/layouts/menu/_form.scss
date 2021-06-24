@@ -102,6 +102,10 @@
 
     .nf-field-label {
       margin: 0 !important;
+
+      @include media-below(md) {
+        line-height: 1 !important;
+      }
     }
 
     label {
@@ -112,10 +116,9 @@
       margin-bottom: 0 !important;
       color: white !important;
       
-      
       @include media-below(md) {
         margin-bottom: rem(0px) !important;
-        font-size: rem(24px) !important;
+        font-size: rem(18px) !important;
       }
       
       @media only screen and (max-width: 799.98px) {
@@ -198,10 +201,11 @@
   }
 
   .nf-field-container {
+    margin: 0 !important;
     margin-top: rem(52px) !important;
     
     @include media-below(md) {
-      margin-top: rem(44px) !important;
+      margin-top: rem(37px) !important;
     }
   }
 

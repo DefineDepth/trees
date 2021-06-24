@@ -85,8 +85,8 @@
     }
 
     span {
-      width: rem(11px);
-      height: rem(11px);
+      width: rem(10px);
+      height: rem(10px);
     }
 
     span + span {
@@ -121,5 +121,30 @@
       display: flex;
       align-items: stretch;
     }
+  }
+}
+
+
+
+.swiper.swiper-container .swiper-pagination {
+  display: none;
+  position: relative;
+  bottom: unset;
+  left: unset;
+  margin-top: rem(38px);
+
+  @include media-below(md) { display: block; }
+
+  &-bullet {
+    width: rem(10px);
+    height: rem(10px);
+  }
+
+  span + span {
+    margin-left: rem(6px);
+  }
+
+  &-bullet-active {
+    background-color: var(--color-blue);
   }
 }

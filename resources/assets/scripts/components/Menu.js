@@ -9,6 +9,11 @@ export default class Menu {
   init() {
     console.log('Menu');
 
+    this.navMenu();
+    this.bindEvents();
+  }
+
+  navMenu() {
     const btnOpen = document.querySelector('.js-menu-open');
     const btnClose = document.querySelector('.js-menu-close');
 
@@ -158,10 +163,52 @@ export default class Menu {
         }, '>-0.2')
         
     })
+  }
 
+  bindEvents() {
+    const btnContactMenuOpen = document.querySelector('.js-from-menu-main-contact-open');
+    const btnContactOpen = document.querySelectorAll('.js-menu-main-contact-open');
+    const btnContactClose = document.querySelectorAll('.js-menu-main-contact-close');
 
-    const btnContactOpen = document.querySelector('.js-contact-open');
-    const btnContactClose = document.querySelector('.js-contact-close');
+    const mainContact = this.mainContact();
+
+    btnContactMenuOpen.addEventListener('click', () => {
+      // console.log('main contact form open from menu');
+      mainContact.fromMenuOpen();
+    })
+
+    btnContactOpen.forEach(el => {
+      el.addEventListener('click', () => {
+        // console.log('main contact form open');
+        mainContact.open();
+      })
+    });
+    
+    btnContactClose.forEach(el => {
+      el.addEventListener('click', () => {
+        // console.log('main contact form close');
+        mainContact.close();
+      })
+    });
+  }
+
+  mainContact() {
+    const btnOpen = document.querySelector('.js-menu-open');
+    const btnClose = document.querySelector('.js-menu-close');
+
+    const inner = document.querySelector('.js-nav-inner');
+    const background = document.querySelector('.js-nav-bg');
+    const bgLeft = document.querySelector('.js-nav-bg-left');
+    const bgRight = document.querySelector('.js-nav-bg-right');
+    const bgRightMobile = document.querySelector('.js-nav-bg-right-mobile');
+    const bgColors = document.querySelector('.js-nav-bg-colors');
+
+    const header = document.querySelector('.js-nav-header');
+    const listLinks = document.querySelector('.js-navList');
+    const infoItems = document.querySelectorAll('.js-navInfo-item');
+
+    const btnContactOpen = document.querySelector('.js-menu-main-contact-open');
+    const btnContactClose = document.querySelector('.js-menu-main-contact-close');
 
     const contactFormWrap = document.querySelector('.js-nav-form');
     const contactContent = document.querySelector('.js-form-content');
@@ -175,7 +222,7 @@ export default class Menu {
       .set(contactHeader, { opacity: 0 })
       .set(contactForm, { opacity: 0 })
 
-    btnContactOpen.addEventListener('click', () => {
+    const fromMenuOpen = () => {
       gsap.timeline()
         .to(btnClose, {
           ease: "power3.out",
@@ -219,9 +266,95 @@ export default class Menu {
             btnContactClose.classList.remove('pointer-events-none');
           },
         }, '>-0.4')
-    })
+    }
 
-    btnContactClose.addEventListener('click', () => {
+    const open = () => {
+      gsap.timeline()
+        .set(listLinks, { opacity: 0 })
+        .set(background, { opacity: 1 })
+
+        .fromTo(bgLeft, {
+          scaleX: 0,
+        }, {
+          ease: "power3.inOut",
+          duration: 0.7,
+          scaleX: 1,
+          onStart: () => {
+            inner.classList.add('is-active');
+            background.classList.add('is-active');
+
+            btnContactOpen.classList.add('pointer-events-none');
+            inner.classList.add('is-active');
+            background.classList.add('is-active');
+          },
+        })
+
+        .to(contactBg, {
+          ease: "power3.inOut",
+          duration: 0.7,
+          scaleX: 1,
+        }, '<')
+        .fromTo(btnContactClose, {
+          y: '24px',
+        }, {
+          ease: "power3.out",
+          duration: 0.6,
+          opacity: 1,
+          y: '0px',
+        }, '>-0.2')
+
+        .fromTo([bgRight, bgRightMobile], {
+          scaleY: 0,
+        }, {
+          scaleY: 1,
+          duration: 0.5,
+          ease: "power3.inOut",
+        }, '<')
+        .fromTo(bgColors, {
+          scaleY: 0,
+        }, {
+          scaleY: 1,
+          duration: 0.2,
+          ease: "power3.inOut",
+        }, '<')
+        .fromTo(infoItems, {
+          opacity: 0,
+          y: '34px',
+        }, {
+          ease: "power3.out",
+          stagger: 0.08,
+          duration: 0.8,
+          opacity: 1,
+          y: '0px',
+          onComplete: () => {
+            listLinks.classList.remove('pointer-events-none');
+            btnClose.classList.remove('pointer-events-none');
+          },
+        }, '>-0.2')
+
+        .fromTo(contactHeader, {
+          y: '24px',
+        }, {
+          ease: "power3.out",
+          duration: 0.6,
+          opacity: 1,
+          y: '0px',
+        }, '>-0.4')
+        .fromTo(contactForm, {
+          y: '24px',
+        }, {
+          ease: "power3.out",
+          duration: 0.6,
+          opacity: 1,
+          y: '0px',
+          onComplete: () => {
+            contactFormWrap.classList.remove('pointer-events-none');
+            btnContactClose.classList.remove('pointer-events-none');
+          },
+        }, '>-0.4')
+    }
+
+    const close = () => {
       gsap.timeline()
         .fromTo(btnContactClose, {
           y: '0',
@@ -270,6 +403,12 @@ export default class Menu {
             btnContactOpen.classList.remove('pointer-events-none');
           },
         }, '<')
-    })
+    }
+
+    return {
+      fromMenuOpen,
+      open,
+      close,
+    }
   }
 }

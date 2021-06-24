@@ -6,6 +6,7 @@
 
     @include media-below(md) {
       padding-top: rem(100px);
+      padding-bottom: rem(20px);
     }
   }
 
@@ -230,7 +231,7 @@
     // }
 
     @include media-below(md) {
-      font-size: rem(12px) !important;
+      font-size: rem(13px) !important;
       line-height: rem(21px) !important;
       padding-right: rem(54px);
     }
@@ -241,6 +242,10 @@
     font-size: inherit;
     line-height: inherit;
     font-weight: 700;
+
+    @include media-below(sm) {
+      display: block;
+    }
   }
   
   &__position {
@@ -252,6 +257,20 @@
     span {
       color: var(--color-red);
       padding: 0 rem(8px);
+    }
+
+    @include media-below(md) {
+      margin-top: 4px;
+    }
+
+    @include media-below(sm) {
+      display: block;
+      
+      span {
+        display: none;
+        display: block;
+        height: 0;
+      }
     }
   }
 
@@ -294,6 +313,10 @@
 
   @include media-below(md) {
     padding: rem(80px) rem(48px);
+  }
+
+  @include media-below(xs) {
+    padding: rem(40px) rem(34px);
   }
   
   &.-grey {
@@ -412,13 +435,33 @@
     p {
       margin-top: rem(44px);
       font-size: rem(21px);
-      font-weight: 300;
       line-height: rem(42px);
+      font-weight: 300;
       
       @include media-below(md) {
         font-size: rem(16px);
         line-height: rem(34px);
         margin-top: rem(30px);
+      }
+    }
+
+    ul {
+      padding-left: rem(20px);
+      list-style: disc;
+
+      li {
+        font-size: rem(21px);
+        line-height: rem(42px);
+        font-weight: 300;
+
+        @include media-below(md) {
+          font-size: rem(16px);
+          line-height: rem(26px);
+
+          + li {
+            margin-top: rem(14px);
+          }
+        }
       }
     }
   }
@@ -605,12 +648,12 @@
 
   &-post_two_colums_text {
     .row {
-      margin-top: rem(-40px);
-      margin-bottom: rem(-40px);
+      margin-top: rem(-26px);
+      margin-bottom: rem(-26px);
 
       > * {
-        padding-top: rem(40px);
-        padding-bottom: rem(40px);
+        padding-top: rem(26px);
+        padding-bottom: rem(26px);
       }
     }
   }

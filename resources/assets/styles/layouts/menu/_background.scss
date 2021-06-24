@@ -167,6 +167,10 @@
   height: 100%;
   align-items: flex-end;
 
+  @include media-below(md) {
+    overflow: hidden;
+  }
+
 
   .insight-active .insight-link { color: var(--color-teal); }
   .services-active .services-link { color: var(--color-teal); }

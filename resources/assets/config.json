@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/trees",
-  "devUrl": "http://trees-new.lndo.site/",
+  "devUrl": "http://trees.lndo.site/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

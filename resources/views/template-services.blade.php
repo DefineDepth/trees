@@ -64,6 +64,7 @@
 
 <section class="services-page-services__section bg-grey">
   <div class="container">
+
     <div class="row justify-content-center">
       <div class="col-12 text-center">
         <p class="services-page-services__subtitle">
@@ -76,22 +77,30 @@
     </div>
 
 
-    @foreach ($services_repeater as $item)
-      <div class="services-page-services__content">
-        <div class="row justify-content-between">
-          <div class="col-lg-5">
-            <h3 class="services-page-services__item__title">
-              {!! $item['title'] !!}
-            </h3>
-          </div>
-          <div class="col-lg-7">
-            <div class="services-page-services__item__text">
-              {!! $item['text'] !!}
+    <div class="swiper swiper-container -section js-section-slider">
+      <div class="swiper-wrapper d-block md:d-flex">
+        @foreach ($services_repeater as $item)
+          <div class="swiper-slide">
+            <div class="services-page-services__content">
+              <div class="row justify-content-between md:flex-wrap">
+                <div class="col-lg-5">
+                  <h3 class="services-page-services__item__title">
+                    {!! $item['title'] !!}
+                  </h3>
+                </div>
+                <div class="col-lg-7">
+                  <div class="services-page-services__item__text">
+                    {!! $item['text'] !!}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>    
-    @endforeach
+        @endforeach
+      </div>
+
+      <div class="swiper-pagination mt-32"></div>
+    </div>
 
   </div>
 </section>

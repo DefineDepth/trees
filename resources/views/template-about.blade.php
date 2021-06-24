@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div class="row test-row -fluid inner-item about-page-info__image">
+    <div class="row test-row -fluid inner-item about-page-info__image -services-row-fluid">
       <div class="col-xl-5 col-lg-6 md:d-none">
         <div class="ratio ratio-3:4 col-12"></div>
       </div>

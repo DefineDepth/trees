@@ -19,7 +19,7 @@
             <i class="icon" data-feather="x"></i>
           </button>
   
-          <button type="button" class="nav-form-close js-contact-close pointer-events-none">
+          <button type="button" class="nav-form-close js-menu-main-contact-close pointer-events-none">
             <i class="icon" data-feather="x"></i>
           </button>
         </div>
@@ -50,7 +50,7 @@
               </li>
 
               <li>
-                <a class="js-contact-open" href="#">Contact</a>
+                <a class="js-from-menu-main-contact-open" href="#">Contact</a>
               </li>
             </ul>
           </div>

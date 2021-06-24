@@ -69,10 +69,8 @@
   <div class="container packages-options__container">
     <div class="packages-options__grid">
       <div class="row justify-content-center">
-
         @foreach ($packages['packages_repeater'] as $item)
           <div class="col-xl-10">
-
             <div class="package__item">
               <h4 class="package__title">
                 {!! $item['title'] !!}
@@ -113,10 +111,8 @@
                 @endif
               </div>
             </div>
-
           </div>
         @endforeach
-
       </div>
     </div>
   </div>
