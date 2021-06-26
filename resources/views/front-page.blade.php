@@ -41,6 +41,9 @@
 </section>
 
 
+@php echo do_shortcode("[mc4wp_form id='5856']"); @endphp
+
+
 <section class="front-blog__col-3 swiper-section">
   <div class="container">
     <div class="row">
