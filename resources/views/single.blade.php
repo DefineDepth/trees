@@ -6,6 +6,7 @@
     @include('partials.content-single-' . get_post_type())
   @endwhile
 
+  @include('sections.newsletter', ['section_class' => '-border-top'])
   @include('sections.related-posts')
   @include('sections.instagram')
 

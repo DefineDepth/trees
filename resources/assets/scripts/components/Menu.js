@@ -166,9 +166,9 @@ export default class Menu {
   }
 
   bindEvents() {
-    const btnContactMenuOpen = document.querySelector('.js-from-menu-main-contact-open');
-    const btnContactOpen = document.querySelectorAll('.js-menu-main-contact-open');
-    const btnContactClose = document.querySelectorAll('.js-menu-main-contact-close');
+    const btnContactMenuOpen = document.querySelector('.js-nav-menu-form-open');
+    // const btnContactOpen = document.querySelectorAll('.js-nav-menu-form-open');
+    const btnContactClose = document.querySelectorAll('.js-nav-menu-form-close');
 
     const mainContact = this.mainContact();
 
@@ -177,12 +177,12 @@ export default class Menu {
       mainContact.fromMenuOpen();
     })
 
-    btnContactOpen.forEach(el => {
-      el.addEventListener('click', () => {
-        // console.log('main contact form open');
-        mainContact.open();
-      })
-    });
+    // btnContactOpen.forEach(el => {
+    //   el.addEventListener('click', () => {
+    //     // console.log('main contact form open');
+    //     mainContact.open();
+    //   })
+    // });
     
     btnContactClose.forEach(el => {
       el.addEventListener('click', () => {
@@ -193,8 +193,8 @@ export default class Menu {
   }
 
   mainContact() {
-    const btnOpen = document.querySelector('.js-menu-open');
-    const btnClose = document.querySelector('.js-menu-close');
+    // const btnOpen = document.querySelector('.js-menu-open');
+    // const btnClose = document.querySelector('.js-menu-close');
 
     const inner = document.querySelector('.js-nav-inner');
     const background = document.querySelector('.js-nav-bg');
@@ -207,10 +207,10 @@ export default class Menu {
     const listLinks = document.querySelector('.js-navList');
     const infoItems = document.querySelectorAll('.js-navInfo-item');
 
-    const btnContactOpen = document.querySelector('.js-menu-main-contact-open');
-    const btnContactClose = document.querySelector('.js-menu-main-contact-close');
+    const btnContactOpen = document.querySelector('.js-nav-menu-form-open');
+    const btnContactClose = document.querySelector('.js-nav-menu-form-close');
 
-    const contactFormWrap = document.querySelector('.js-nav-form');
+    const contactFormWrap = document.querySelector('.js-nav-menu-form');
     const contactContent = document.querySelector('.js-form-content');
     const contactBg = document.querySelector('.js-form-bg');
     const contactHeader = document.querySelector('.js-form-header');
@@ -224,19 +224,19 @@ export default class Menu {
 
     const fromMenuOpen = () => {
       gsap.timeline()
-        .to(btnClose, {
-          ease: "power3.out",
-          duration: 0.4,
-          opacity: 0,
-          onStart: () => {
-            btnClose.classList.add('pointer-events-none');
-            btnContactOpen.classList.add('pointer-events-none');
-          },
-        })
+        // .to(btnClose, {
+        //   ease: "power3.out",
+        //   duration: 0.4,
+        //   opacity: 0,
+          
+        // })
         .to(contactBg, {
           ease: "power3.inOut",
           duration: 0.6,
-          scaleX: 1,
+          scaleX: 0.7,
+          onStart: () => {
+            btnContactOpen.classList.add('pointer-events-none');
+          },
         }, '<')
         .fromTo(btnContactClose, {
           y: '24px',
@@ -328,7 +328,7 @@ export default class Menu {
           y: '0px',
           onComplete: () => {
             listLinks.classList.remove('pointer-events-none');
-            btnClose.classList.remove('pointer-events-none');
+            // btnClose.classList.remove('pointer-events-none');
           },
         }, '>-0.2')
 
@@ -392,17 +392,20 @@ export default class Menu {
           ease: "power3.inOut",
           duration: 0.6,
           scaleX: 0,
-        }, '>-0.2')
-
-        .to(btnClose, {
-          ease: "power3.out",
-          duration: 0.4,
-          opacity: 1,
           onComplete: () => {
-            btnClose.classList.remove('pointer-events-none');
             btnContactOpen.classList.remove('pointer-events-none');
           },
-        }, '<')
+        }, '>-0.2')
+
+        // .to(btnClose, {
+        //   ease: "power3.out",
+        //   duration: 0.4,
+        //   opacity: 1,
+        //   onComplete: () => {
+        //     btnClose.classList.remove('pointer-events-none');
+        //     btnContactOpen.classList.remove('pointer-events-none');
+        //   },
+        // }, '<')
     }
 
     return {

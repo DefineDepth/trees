@@ -1,0 +1,114 @@
+.newsletter {
+  &__content {
+    padding-top: rem(230px);
+    padding-bottom: rem(230px);
+
+    @include media-below(md) {
+      padding-top: rem(190px);
+      padding-bottom: rem(130px);
+    }
+    @include media-below(sm) {
+      padding-top: rem(120px);
+      padding-bottom: rem(60px);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(30px);
+    font-size: rem(42px);
+    line-height: 1.2;
+
+    @include media-below(sm) {
+      margin-bottom: rem(20px);
+      font-size: rem(32px);
+    }
+  }
+
+  &.-border-top {
+    .newsletter__content {
+      border-top: 0.5px solid black;
+
+      @include media-below(md) {
+        border-top: 0.5px solid #D8D8D8;
+      }
+    }
+  }
+
+  &.-border-bottom {
+    .newsletter__content {
+      border-bottom: 0.5px solid black;
+
+      @include media-below(md) {
+        border-bottom: 0.5px solid #D8D8D8;
+      }
+    }
+  }
+}
+
+.newsletter form {
+
+
+  .mc4wp-form-fields {}
+
+  .mc4wp-form-single {
+    position: relative;
+    max-width: rem(585px);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .mc4wp-response {}
+
+  input[type="email"] {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: rem(200px);
+    padding: rem(15px) rem(30px);
+    font-size: rem(21px);
+    line-height: 1.8;
+    font-weight: 300;
+    transition: all 0.1s ease-out;
+
+    @include media-below(md) {
+      padding: rem(14px) rem(22px);
+      font-size: rem(17px);
+    }
+
+    &::placeholder {
+      color: rgba(black, 0.35);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 rem(3px) rgba(#D44B36, 0.25);
+      border-radius: rem(200px);
+    }
+  }
+
+  input[type="submit"] {
+    border: none;
+    outline: none;
+
+    position: absolute;
+    top: 50%;
+    right: rem(12.5px);
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    background-color: var(--color-red);
+    text-transform: uppercase;
+    color: white;
+    font-size: rem(14px);
+    font-weight: 500;
+    width: rem(44px);
+    height: rem(44px);
+
+    @include media-below(md) {
+      right: rem(8px);
+    }
+  }
+}
