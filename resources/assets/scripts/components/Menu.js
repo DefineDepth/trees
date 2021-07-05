@@ -224,12 +224,6 @@ export default class Menu {
 
     const fromMenuOpen = () => {
       gsap.timeline()
-        // .to(btnClose, {
-        //   ease: "power3.out",
-        //   duration: 0.4,
-        //   opacity: 0,
-          
-        // })
         .to(contactBg, {
           ease: "power3.inOut",
           duration: 0.6,
@@ -273,80 +267,43 @@ export default class Menu {
         .set(listLinks, { opacity: 0 })
         .set(background, { opacity: 1 })
 
-        .fromTo(bgLeft, {
-          scaleX: 0,
-        }, {
-          ease: "power3.inOut",
-          duration: 0.7,
-          scaleX: 1,
+        .fromTo(bgLeft, { scaleX: 0, }, {
+          ease: "power3.inOut", duration: 0.7, scaleX: 1,
           onStart: () => {
             inner.classList.add('is-active');
             background.classList.add('is-active');
-
             btnContactOpen.classList.add('pointer-events-none');
-            inner.classList.add('is-active');
-            background.classList.add('is-active');
           },
         })
 
-        .to(contactBg, {
-          ease: "power3.inOut",
-          duration: 0.7,
-          scaleX: 1,
-        }, '<')
-        .fromTo(btnContactClose, {
-          y: '24px',
-        }, {
-          ease: "power3.out",
-          duration: 0.6,
-          opacity: 1,
-          y: '0px',
+        .to(contactBg, { ease: "power3.inOut", duration: 0.7, scaleX: 1, }, '<')
+
+        .fromTo(btnContactClose, { y: '24px', }, {
+          ease: "power3.out", duration: 0.6, opacity: 1, y: '0px',
         }, '>-0.2')
 
-        .fromTo([bgRight, bgRightMobile], {
-          scaleY: 0,
-        }, {
-          scaleY: 1,
-          duration: 0.5,
-          ease: "power3.inOut",
+        .fromTo([bgRight, bgRightMobile], { scaleY: 0, }, {
+          ease: "power3.inOut", duration: 0.5, scaleY: 1,
         }, '<')
-        .fromTo(bgColors, {
-          scaleY: 0,
-        }, {
-          scaleY: 1,
-          duration: 0.2,
-          ease: "power3.inOut",
+
+        .fromTo(bgColors, { scaleY: 0, }, {
+          ease: "power3.inOut", duration: 0.2, scaleY: 1,
         }, '<')
-        .fromTo(infoItems, {
-          opacity: 0,
-          y: '34px',
-        }, {
-          ease: "power3.out",
-          stagger: 0.08,
-          duration: 0.8,
-          opacity: 1,
-          y: '0px',
+
+        .fromTo(infoItems, { opacity: 0, y: '34px', }, {
+          ease: "power3.out", duration: 0.8, stagger: 0.08, opacity: 1, y: '0px',
           onComplete: () => {
             listLinks.classList.remove('pointer-events-none');
             // btnClose.classList.remove('pointer-events-none');
           },
         }, '>-0.2')
 
-        .fromTo(contactHeader, {
-          y: '24px',
-        }, {
-          ease: "power3.out",
-          duration: 0.6,
-          opacity: 1,
-          y: '0px',
+        .fromTo(contactHeader, { y: '24px', }, {
+          ease: "power3.out", duration: 0.6, opacity: 1, y: '0px',
         }, '>-0.4')
-        .fromTo(contactForm, {
-          y: '24px',
-        }, {
-          ease: "power3.out",
-          duration: 0.6,
-          opacity: 1,
-          y: '0px',
+
+        .fromTo(contactForm, { y: '24px', }, {
+          ease: "power3.out", duration: 0.6, opacity: 1, y: '0px',
           onComplete: () => {
             contactFormWrap.classList.remove('pointer-events-none');
             btnContactClose.classList.remove('pointer-events-none');
