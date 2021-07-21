@@ -122,8 +122,10 @@ body {
   }
 
   @media (min-width: 1600px) {
-    &.-p-left  { padding-left:  rem(160px); }
-    &.-p-right { padding-right: rem(160px); }
+    // &.-p-left  { padding-left:  rem(160px); }
+    // &.-p-right { padding-right: rem(160px); }
+    &.-p-left  { padding-left:  rem(136px); }
+    &.-p-right { padding-right: rem(136px); }
   }
 
   @include media-below(md) {

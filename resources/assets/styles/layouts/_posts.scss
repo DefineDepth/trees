@@ -2,6 +2,7 @@
   &__section {
     overflow: hidden;
     padding-top: rem(280px);
+    padding-top: rem(220px);
     padding-bottom: rem(80px);
 
     @include media-below(md) {
@@ -60,6 +61,7 @@
 
   &__title {
     font-size: rem(64px);
+    font-size: rem(48px);
     line-height: 1.2;
     font-weight: 700;
 
@@ -71,6 +73,7 @@
   &__excerpt {
     margin-top: rem(12px);
     font-size: rem(40px);
+    font-size: rem(30px);
     line-height: 1.3;
     padding-right: rem(80px);
     
@@ -92,6 +95,8 @@
       margin-top: rem(30px);
       font-size: rem(21px);
       line-height: rem(42px);
+      font-size: rem(18px);
+      line-height: 1.9;
       font-weight: 300;
 
       @include media-below(md) {
@@ -104,7 +109,7 @@
 
 
   &__right {
-    padding-left: rem(72px);
+    padding-left: rem(56px);
 
     @include media-below(md) {
       padding-left: 0;
@@ -215,20 +220,13 @@
 
   &__content {
     // color: white;
-    font-size: rem(18px) !important;
+    font-size: rem(15px) !important;
     line-height: rem(26px) !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-left: rem(20px);
     padding-right: rem(100px);
-
-    // @media (min-width: rem(992px)) and (max-width: (rem(1470px))) {
-    //   margin-left: 0;
-    //   padding-right: 0;
-    //   width: 100%;
-    //   margin-top: rem(20px);
-    // }
 
     @include media-below(md) {
       font-size: rem(13px) !important;
@@ -256,7 +254,7 @@
 
     span {
       color: var(--color-red);
-      padding: 0 rem(8px);
+      padding: 0 rem(6px);
     }
 
     @include media-below(md) {
@@ -308,8 +306,8 @@
 
 .post-quote {
   margin-top: rem(15px);
-  padding: rem(120px) rem(70px);
-  padding-bottom: rem(100px);
+  padding: 100px 70px 90px;
+  padding: rem(76px) rem(56px) rem(70px);
 
   @include media-below(md) {
     padding: rem(80px) rem(48px);
@@ -345,27 +343,25 @@
   }
 
   .quote {
-    font-size: rem(22px);
-    line-height: rem(42px);
+    font-size: rem(16px);
+    line-height: 1.8;
     color: white;
   
     @include media-below(md) {
       font-size: rem(18px);
-      line-height: rem(32px);
     }
   }
 
   .author {
-    margin-top: rem(40px);
-    font-size: rem(22px);
-    line-height: rem(42px);
+    margin-top: rem(32px);
+    font-size: rem(16px);
+    line-height: 1.8;
     font-weight: 700;
     color: white;
 
     @include media-below(md) {
       margin-top: rem(36px);
       font-size: rem(18px);
-      line-height: rem(32px);
     }
   }
 }

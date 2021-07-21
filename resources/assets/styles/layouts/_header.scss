@@ -7,9 +7,9 @@
   mix-blend-mode: difference;
 
   &__wrapper {
-    padding: 0 rem(56px);
-    padding-right: rem(40px);
-    padding-top: rem(110px);
+    padding: 0 rem(48px);
+    padding-right: rem(34px);
+    padding-top: rem(80px);
 
     transition:
       box-shadow 0.2s ease-in-out,
@@ -60,12 +60,13 @@
       display: block;
       position: relative;
       width: rem(34px);
+      width: rem(28px);
       height: rem(1px);
       background-color: white;
     }
 
     span + span {
-      margin-top: rem(9px);
+      margin-top: rem(8px);
     }
   }
 
