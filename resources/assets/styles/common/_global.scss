@@ -1,10 +1,23 @@
-// .-new-fluid {
-//   position: unset !important;
+.img-w-85 img {
+  width: 85% !important;
+}
 
-//   .new-test-right {
-//     // position: absolute;
-//   }
-// }
+.img-w-75 img {
+  width: 75% !important;
+}
+
+.img-w-65 img {
+  width: 65% !important
+}
+
+.trees-block-post_cta .button a {
+  text-decoration: none;
+}
+
+.img-align-center .portfolio-feature__image__wrap,
+.img-align-center .image {
+  text-align: center !important;
+}
 
 @include media-below(md) {
   .md\:d-flex {
@@ -24,8 +37,9 @@ html {
   line-height: 1;
   font-size: $font-size;
 
-  @media (min-width: 1600px) { font-size: 0.94vw; }
-  @media (min-width: 1800px) { font-size: 0.92vw; }
+  @media (min-width: 1400px) { font-size: 0.96vw; }
+  @media (min-width: 1600px) { font-size: 0.90vw; }
+  @media (min-width: 1900px) { font-size: 0.86vw; }
 }
 
 body {
@@ -56,14 +70,14 @@ body {
     padding: 0;
     padding-left: rem(15px);
     padding-right: rem(15px);
-    max-width: rem(1410px);
+    max-width: rem(1500px);
   }
 
   @media (min-width: 1700px) {
     padding: 0;
     padding-left: rem(15px);
     padding-right: rem(15px);
-    max-width: rem(1450px);
+    max-width: rem(1600px);
   }
   
   @include media-below(sm) {
@@ -122,10 +136,8 @@ body {
   }
 
   @media (min-width: 1600px) {
-    // &.-p-left  { padding-left:  rem(160px); }
-    // &.-p-right { padding-right: rem(160px); }
-    &.-p-left  { padding-left:  rem(136px); }
-    &.-p-right { padding-right: rem(136px); }
+    &.-p-left  { padding-left:  rem(160px); }
+    &.-p-right { padding-right: rem(160px); }
   }
 
   @include media-below(md) {
@@ -140,6 +152,19 @@ body {
     > * {
       padding-left: 4vw;
       padding-right: 4vw;
+    }
+  }
+}
+
+.single-portfolio-page {
+  @media (min-width: 1600px) {
+    .container.-fluid {
+      &.-p-left {
+        padding-left: 16.2rem !important;
+      }
+      &.-p-right {
+        padding-right: 16.2rem !important;
+      }
     }
   }
 }

@@ -104,7 +104,7 @@
                 <h3 class="package__price">{!! $item['price'] !!}</h3>
               @endif
 
-              <div class="package__button">
+              <div class="package__button js-open-brand-contact">
                 <a href="{!! $item['link']['url'] !!}">{!! $item['link']['title'] !!}</a>
                 @if ($item['timeline'])
                   <span class="package__button__timeline">{!! $item['timeline'] !!}</span>

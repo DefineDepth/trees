@@ -2,7 +2,6 @@ import Swiper from 'swiper/bundle';
 
 export default class PostFeaturesSlider {
   constructor() {
-    console.log('PostFeaturesSlider init');
 
     this.selector = '.js-post-features-slider';
 

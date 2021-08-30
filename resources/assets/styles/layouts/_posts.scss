@@ -61,26 +61,55 @@
 
   &__title {
     font-size: rem(64px);
-    font-size: rem(48px);
     line-height: 1.2;
     font-weight: 700;
 
-    @include media-below(md) {
-      font-size: rem(32px);
+    @media (max-width: 1800px) {
+      font-size: 3.6rem;
+    }
+  
+    @media (max-width: 1400px) {
+      font-size: 3.2rem;
+    }
+    
+    @media (max-width: 1199px) {
+      font-size: 3.0rem;
+    }
+    
+    @media (max-width: 991px) {
+      font-size: 2.8rem;
+    }
+  
+    @media (max-width: 575px) {
+      font-size: 2.4rem;
     }
   }
 
   &__excerpt {
-    margin-top: rem(12px);
-    font-size: rem(40px);
-    font-size: rem(30px);
+    margin-top: 1.0rem;
+    font-size: 2.5rem;
     line-height: 1.3;
-    padding-right: rem(80px);
+    padding-right: 5rem;
+
+    @media (max-width: 1800px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 1400px) {
+      font-size: 2.0rem;
+    }
     
-    @include media-below(md) {
-      margin-top: rem(20px);
-      font-size: rem(22px);
+    @media (max-width: 1199px) {
+      font-size: 1.9rem;
+    }
+    
+    @media (max-width: 991px) {
+      font-size: 1.8rem;
       padding-right: 0;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 1.4rem;
     }
   }
 
@@ -92,24 +121,20 @@
     }
     
     p {
-      margin-top: rem(30px);
+      margin-top: 1.875rem;
       font-size: rem(21px);
-      line-height: rem(42px);
-      font-size: rem(18px);
-      line-height: 1.9;
+      line-height: 2;
       font-weight: 300;
 
-      @include media-below(md) {
-        margin-top: rem(24px);
-        font-size: rem(16px);
-        line-height: rem(34px);
+      @media (max-width: 1600px) {
+        font-size: rem(19px);
       }
     }
   }
 
 
   &__right {
-    padding-left: rem(56px);
+    padding-left: rem(72px);
 
     @include media-below(md) {
       padding-left: 0;
@@ -131,20 +156,6 @@
     //   display: none;
     // }
   }
-
-  // &__mobile-image {
-  //   display: none;
-  //   margin-bottom: rem(60px);
-
-  //   @include media-below(md) {
-  //     display: block;
-  //   }
-
-  //   img {
-  //     width: 100%;
-  //     height: auto;
-  //   }
-  // }
 }
 
 
@@ -160,13 +171,7 @@
     flex-wrap: wrap;
   }
 
-  &.-post-bottom {
-    // margin-top: rem(100px);
-
-    // @include media-below(md) {
-    //   margin-top: rem(80px);
-    // }
-  }
+  &.-post-bottom {}
 
   &:not(.-post-bottom) {
     .post-author__content {

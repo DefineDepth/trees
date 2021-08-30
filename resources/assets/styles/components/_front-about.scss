@@ -118,10 +118,7 @@
     }
   }
 
-  &__image {
-    
-    
-  }
+  &__image {}
 
   .test-row {
     margin-left: rem(-16px);
@@ -183,7 +180,7 @@
     font-weight: 300;
     font-size: rem(24px);
     line-height: rem(42px);
-    margin-top: rem(12px);
+    margin-top: rem(20px);
     
     @include media-below(md) {
       margin-top: rem(20px);

@@ -2,17 +2,16 @@ import Swiper from 'swiper/bundle';
 
 export default class SectionPostSlider {
   constructor() {
-    console.log('SectionPostSlider init');
 
     this.selector = '.swiper.swiper-container.-section.js-post';
 
     if (!document.querySelector(this.selector)) return;
     
     this.params = {
-      spaceBetween: 15,
+      spaceBetween: 0,
       slidesPerView: 1,
       init: false,
-      autoHeight: true,
+      autoHeight: false,
       breakpoints: {
         768: {
           spaceBetween: 20,

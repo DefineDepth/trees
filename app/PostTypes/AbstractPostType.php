@@ -13,8 +13,6 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 abstract class AbstractPostType
 {
 
-    // use Separator, RelatedArtworks;
-
     const POST_TYPE = 'custom-post-type';
 
     const POST_TYPE_OPTIONS = [

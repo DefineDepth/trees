@@ -22,6 +22,8 @@ class Portfolio extends AbstractPostType
         $this->post_type_object()->columns()->add([
             'thumbnail' => __('Rating'),
         ]);
+
+        $this->post_type_object()->taxonomy('category');
     }
 
     public function get_portfolio_projects()

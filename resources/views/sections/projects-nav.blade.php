@@ -14,7 +14,7 @@
 
           <div class="projects-nav__info">
             <div class="projects-nav__subtitle">Prev</div>
-            <h3 class="projects-nav__title">{{ get_the_title( $prev_project->ID ) }}</h3>
+            <h3 class="projects-nav__title">{!! get_the_title( $prev_project->ID ) !!}</h3>
           </div>
         </a>
       </div>
@@ -31,7 +31,7 @@
 
           <div class="projects-nav__info">
             <div class="projects-nav__subtitle">Next</div>
-            <h3 class="projects-nav__title">{{ get_the_title( $next_project->ID ) }}</h3>
+            <h3 class="projects-nav__title">{!! get_the_title( $next_project->ID ) !!}</h3>
           </div>
         </a>
       </div>

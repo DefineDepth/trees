@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 70vw;
   height: 100%;
   z-index: 20;
   overflow-y: auto;
@@ -29,7 +29,8 @@
     padding-bottom: rem(30px);
 
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
 
@@ -108,14 +109,15 @@
   }
 
   &__form {
-    // height: 85%;
-    // margin-top: rem(52px);
-    margin-top: 10vh;
-    margin-top: 2vh;
+    margin-top: 4vh;
 
     @include media-below(lg) {
       margin-top: rem(52px);
     }
+
+    .-main {}
+
+    .-brand {}
 
     .nf-form-content {
       padding: 0;
@@ -259,6 +261,7 @@
     }
 
     input {
+      border: none !important;
       text-transform: uppercase !important;
       display: flex !important;
       justify-content: center !important;
@@ -288,13 +291,14 @@
   .field-wrap {
     display: flex;
     align-items: center;
+    flex-direction: initial;
+    flex-flow: unset;
   }
 
   .nf-field-label {
   }
 
   .nf-field-element {
-    margin-left: rem(24px);
   }
 
   .nf-field-element ul {
@@ -302,16 +306,16 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
-    margin: rem(-5px);
+    margin: rem(-6px);
+    margin-left: rem(20px);
   }
 
   .nf-field-element li {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 
     position: relative;
-    padding: rem(5px);
+    padding: rem(6px) !important;
 
     input {
       display: none !important;
@@ -324,6 +328,7 @@
 
     label {
       cursor: pointer;
+      vertical-align: middle;
       text-transform: uppercase;
       font-size: rem(13px) !important;
       font-weight: 500 !important;
@@ -331,8 +336,12 @@
       border: 1px solid white;
       color: white !important;
       border-radius: 200px;
+      margin-left: 0 !important;
       transition: all 0.15s ease-out;
     }
+
+    label::before { display: none; }
+    label::after { display: none; }
 
     input:checked + label {
       background-color: white !important;
@@ -341,6 +350,9 @@
   }
 }
 
+.d-none {
+  display: none !important;
+}
 
 @keyframes gradient {
 	0% {

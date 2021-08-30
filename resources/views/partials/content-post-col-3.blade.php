@@ -13,8 +13,5 @@ $post = get_post($post);
     <h3 class="postCard__title">
       {!! get_the_title($post) !!}
     </h3>
-    <div class="postCard__text">
-      <p>{!! get_the_excerpt($post) !!}</p>
-    </div>
   </article>
 </a>
