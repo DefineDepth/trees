@@ -45,8 +45,6 @@
     }
   }
 
-  // &__content {}
-
   &__title {
     margin-top: rem(34px);
     font-size: rem(30px);
@@ -115,6 +113,12 @@
 
   &__link {
     display: block;
+
+    &:hover {
+      .postCard__category {
+        color: black !important;
+      }
+    }
 
     @include media-below(md) {
       .row {
@@ -206,6 +210,7 @@
     a, span {
       font-size: rem(18px);
       font-weight: 500;
+      color: black !important;
 
       @include media-below(md) {
         font-size: rem(14px);
