@@ -2,7 +2,6 @@
   &__section {
     overflow: hidden;
     padding-top: rem(280px);
-    padding-top: rem(220px);
     padding-bottom: rem(80px);
 
     @include media-below(md) {

@@ -37,9 +37,10 @@ html {
   line-height: 1;
   font-size: $font-size;
 
-  @media (min-width: 1400px) { font-size: 0.96vw; }
-  @media (min-width: 1600px) { font-size: 0.90vw; }
-  @media (min-width: 1900px) { font-size: 0.86vw; }
+  // @media (min-width: 1400px) { font-size: 0.96vw; }
+  // @media (min-width: 1600px) { font-size: 0.90vw; }
+  // @media (min-width: 1900px) { font-size: 0.86vw; }
+  @media (min-width: 1900px) { font-size: $font-size; }
 }
 
 body {
@@ -57,28 +58,31 @@ body {
 
 .container {
   @media (min-width: 1260px) {
-    max-width: rem(1200px);
-  }
-
-  @media (min-width: 1300px) {
     max-width: 100%;
-    padding-left: rem(160px);
-    padding-right: rem(160px);
+    width: 100%;
+    padding-left: rem(120px);
+    padding-right: rem(120px);
   }
 
-  @media (min-width: 1600px) {
-    padding: 0;
-    padding-left: rem(15px);
-    padding-right: rem(15px);
-    max-width: rem(1500px);
-  }
+  // @media (min-width: 1300px) {
+  //   max-width: 100%;
+  //   padding-left: rem(160px);
+  //   padding-right: rem(160px);
+  // }
 
-  @media (min-width: 1700px) {
-    padding: 0;
-    padding-left: rem(15px);
-    padding-right: rem(15px);
-    max-width: rem(1600px);
-  }
+  // @media (min-width: 1600px) {
+  //   padding: 0;
+  //   padding-left: rem(15px);
+  //   padding-right: rem(15px);
+  //   max-width: rem(1500px);
+  // }
+
+  // @media (min-width: 1700px) {
+  //   padding: 0;
+  //   padding-left: rem(15px);
+  //   padding-right: rem(15px);
+  //   max-width: rem(1600px);
+  // }
   
   @include media-below(sm) {
     padding-right: rem(24px);

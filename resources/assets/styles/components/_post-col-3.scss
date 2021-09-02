@@ -7,7 +7,7 @@
     padding-bottom: rem(60px);
   }
 
-  @include media-below(lg) {
+  @media (max-width: 1300px) {
     padding-top: rem(80px);
     padding-bottom: rem(80px);
   }
@@ -57,7 +57,7 @@
     display: flex;
     flex: 1 1 auto;
     
-    @include media-below(lg) {
+    @media (max-width: 1300px) {
       font-size: rem(26px);
     }
   }
@@ -73,7 +73,7 @@
       color: black;
     }
 
-    @include media-below(lg) {
+    @media (max-width: 1300px) {
       margin-top: rem(30px);
       max-width: 100%;
 
@@ -165,6 +165,10 @@
     font-size: rem(36px);
     line-height: 1.05;
     
+    @media (max-width: 1300px) {
+      font-size: rem(30px);
+    }
+
     @include media-below(md) {
       font-size: rem(26px);
     }
@@ -177,6 +181,12 @@
       font-size: rem(24px);
       line-height: 1.5;
       font-weight: 300;
+    }
+
+    @media (max-width: 1300px) {
+      p {
+        font-size: rem(21px);
+      }
     }
     
     @include media-below(md) {
