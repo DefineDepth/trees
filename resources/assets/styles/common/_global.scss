@@ -37,10 +37,7 @@ html {
   line-height: 1;
   font-size: $font-size;
 
-  // @media (min-width: 1400px) { font-size: 0.96vw; }
-  // @media (min-width: 1600px) { font-size: 0.90vw; }
-  // @media (min-width: 1900px) { font-size: 0.86vw; }
-  @media (min-width: 1900px) { font-size: $font-size; }
+  @media (min-width: 1900px) { font-size: 0.85vw; }
 }
 
 body {

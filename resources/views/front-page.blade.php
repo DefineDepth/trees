@@ -120,9 +120,11 @@
             <div class="ratio ratio-2:1 overflow-hidden">
               <img class="-img" src="{{ $about_image['url'] }}" alt="About image">
             </div>
+
             <div class="-lines">
               <img src="@asset('images/front-about/lines.png')">
             </div>
+            
             <div class="-colors">
               @for ($i = 0; $i < 5; $i++) <span></span> @endfor
             </div>

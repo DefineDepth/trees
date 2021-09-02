@@ -2,7 +2,6 @@
   position: relative;
 
   @include media-below(md) {
-    // margin-bottom: rem(30px);
   }
   
   img {}
@@ -131,7 +130,6 @@
 
     > *:last-child {
       padding-left: rem(120px);
-      // padding-right: rem(60px);
     }
 
     @include media-below(md) {
